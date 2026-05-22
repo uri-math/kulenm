@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+         
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+         
+  <meta name="GENERATOR" content="Mozilla/4.75 [en] (WinNT; U) [Netscape]">
+  <title>Prime numbers</title>
+</head>
+<body bgcolor="#ffffff">
+<center>
+<h1><font color="#ff0000">Difference Equations</font></h1>
+</center>
+<center>
+<h1><font color="#ff0000">and</font></h1>
+</center>
+<center>
+<h1><font color="#ff0000">Recursive Relations</font></h1>
+</center>
+<center><font color="#ff0000">1750-1799</font><br>
+<hr></center>
+<center>
+<table border="0" cellspacing="0" cellpadding="4" bgcolor="#ccccff">
+  <tbody>
+    <tr>
+      <td><a href="http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Number_Theory.html">
+Numbertheory index</a></td>
+      <td align="Right"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Indexes/HistoryTopics.html">
+HistoryTopics Index</a></td>
+    </tr>
+      
+  </tbody>
+</table>
+</center>
+<hr><br>
+Difference Equations and Recursive Relations in this period have been studied
+by several mathematicians.&nbsp; Some of these mathematicians include:<br>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a>,<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gauss.html">
+Gauss</a>,<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gompertz.html">
+Gompertz</a>,<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Legendre.html">
+Legendre</a>,and <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Parseval.html">
+Parseval</a>.<br>
+<i>
+<hr></i><br>
+<div align="Center"><font face="Times New Roman, Times, serif"><big><big><b>
+Farey Series</b></big></big></font><br>
+</div>
+<br>
+The <i>Farey series</i> <b>F<small>N </small></b>is the set of all fractions
+between 0 and 1 written in lowest terms.&nbsp; The denominators do not exceed
+N ( where N is the order of the series) and they are arranged in order of
+magintude. In 1816, Farey published a statement in which he declared that
+the middle of any three successive terms in the Farey series is the mediant
+of the other two.&nbsp; It was Cauchy who eventually supplied the proof of
+this statement.&nbsp; <br>
+A proof of this statement is as follows:<br>
+&nbsp; Start with <b>F<sub>1 </sub></b>which is 0/1, 1/1.&nbsp; In order
+to get<b>F<sub>2</sub></b>, insert the mediant into <b>F<sub>1</sub></b>:
+0/1, 1/2,1/1.&nbsp; <br>
+ &nbsp; For <b>F<sub>3</sub></b> we add two mediants: 0/1,1/3,1/2,2/3,1/1.
+To get<b>F<sub>4</sub></b> we also addonly 2 fractions: 0/1,1/4,1/3,1/2,2/3,3/4,1/1.&nbsp;
+Next, add 4 fractions to get <b>F<sub>5</sub></b>:0/1,1/5,1/4,1/3,2/5,1/2,3/5,2/3,3/4,4/5,1/1.
+The general rule is this: to move from <b>F<sub>N-1</sub></b> to <b>F<sub>
+N</sub></b> add all possible mediants (that come out to be in the lowest
+terms)with N in the denominator. Since forming a mediant may only increase
+thedenominator we are led to think that following this rule we indeed will
+getthe wholeof <b>F<sub>N</sub></b>. To complete the proof we refer to the
+<a href="Stern.html">Stern-Brocot</a> tree which contains all positive fractions.
+So in the processof constructing a Farey series no fraction will be missed.
+<p>When N is prime, the rule adds N-1 fractions. In general, <a href="Euler.html"><img src="../gifs/fi.gif" width="12" height="13" border="0">
+(N)</a> fractions are added. For all reducible fractions m/N will have appeared
+in one of the earlier series. </p>
+<center><img src="farey7.gif" width="245" height="28"></center>
+<p><a href="Euclid.html#important"></a>The Farey series is important in the
+proof of a corollary of Euclid's algorithm.&nbsp; The algorithm is as follows:<br>
+For integers m and n with gcd(m,n) = 1 and m<img src="../gifs/le.gif" width="14" height="13">
+n, there exist positive integers a and b such that ma - nb = 1. The proof&nbsp;
+relies on the properties of the <a href="Stern.html">Stern-Brocot</a> &nbsp;
+tree. For any two consecutive fractions m<sub>1</sub>/n<sub>1</sub>&nbsp;
+andm<sub>2</sub>/n<sub>2</sub> in the Farey series, m<sub>2</sub>n<sub>1</sub>
+- m<sub>1</sub>n<sub>2</sub> = 1. So, depending on whether m or nis larger,
+locate either m/n or n/m in a Farey series and select (as a/b)either thepreceding
+or the following fraction.</p>
+<p><i>
+<hr></i><br>
+</p>
+<div align="Center">
+<div align="Center"><big><big><b>Gauss and the Gamma Function</b></big></big><br>
+<br>
+<br>
+<div align="Left">The logarithm can be defined by and integral.&nbsp; The
+gamma function can also be defined by an integral, but in a different way.&nbsp;
+It is:<br>
+<div align="Center"><b><br>
+G(x)= <img src="integral.gif" alt="integral"> s<big><sup><small>x-1</small></sup></big>
+ e<big><sup><small>-s</small></sup></big></b> <b>ds &nbsp; for 0&lt;x&lt;<img src="infinity.gif" alt="infinity">
+.</b><br>
+<br>
+<div align="Left">The integral converges because the exponential makes it
+small as s-&gt; <img src="infinity.gif" alt="infinity">.&nbsp; As s-&gt;
+0, the factor s^<small>x-1<big> is integrable because x&gt;0. <br>
+ The gamma function is a generalization of the factorial.&nbsp; In fact,
+</big></small>it has the following properties:<br>
+<div align="Center">
+<div align="Center"><br>
+<b>G(x+1)=xG(x).</b><br>
+<br>
+<br>
+<div align="Left"> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; <b>G(n+1)=n!&nbsp; ,&nbsp; if n is a positive
+integer.<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; <br>
+<br>
+ &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; G(1/2)=sqrt<img src="pi.gif" alt="pi"></b><br>
+Another useful identity with respect to the gamma function is:<br>
+<br>
+<div align="Center">
+<div align="Center"><b>G(x)= <big>(</big>2<small><sup>x-1</sup>)<big>/(sqrt
+</big></small></b><img src="pi.gif" alt="pi">) <b>G(x/2)G(x+1/2).</b><br>
+<br>
+<div align="Left">This can be used to give another derivation of the gamma
+function on the "half-integers."<br>
+<br>
+The formula for the surface area of the sphere of radius R in <i>n</i> dimensions
+is:<br>
+<br>
+<div align="Center"><b>A<sub>n</sub><sub> </sub> =( </b><b>2<img src="pi.gif" alt="pi"><sup>
+n/2 &nbsp; </sup></b><b>R<sup>n-1</sup>)/</b> <b>G (n/2).<br>
+<br>
+</b><br>
+</div>
+</div>
+</div>
+<div align="Left"><i>
+<hr></i><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div align="Center">
+<p><big><big><b>Gompertz Equation</b></big></big></p>
+</div>
+<div align="Center">
+<p><br>
+</p>
+<div align="Left">The Gompertz growth law has been shown to provide a good
+fit for the growth data of numerous tumors.&nbsp; It can be described by
+the following system of differential equations:<br>
+<br>
+Let V(t) measure the size of the tumor (e.g. volume, number, etc.)<br>
+<div align="Center"><br>
+<b>dV/dx = r(t)V(t), V(0) =V</b><small><b>0</b><big><big><b> </b><small><small><b>
+ </b><big><big><b> &nbsp; <br>
+</b><br>
+dr/dx = alpha r(t), r(0) = beta<br>
+<br>
+</big></big></small></small></big></big></small>
+<div align="Left">Here&nbsp; r(t)= tumor growth,<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alpha= retardation constant,<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; beta= initial growth or regression rate.<br>
+<br>
+The sign of beta determines where the tumor grows or regresses.&nbsp; The
+solution is given by:<br>
+<br>
+<div align="Center"><b>V(t) = V<small>0 <big>e<sup>

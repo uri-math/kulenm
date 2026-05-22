@@ -1,0 +1,326 @@
+<html>
+<head>
+  <title>Prime numbers</title>
+</head>
+<body bgcolor="#ffffff">
+<center><font color="red">
+<h1>Prime numbers</h1>
+</font>
+<hr>
+<table border="0" cellpadding="4" cellspacing="0" bgcolor="#ccccff">
+  <tbody>
+    <tr>
+      <td><a href="../Indexes/Number_Theory.html">Number theory index</a>
+      </td>
+      <td align="Right"><a href="../Indexes/HistoryTopics.html">History Topics
+Index</a><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<hr>Prime numbers and their properties were first studied extensively by
+the ancient Greek mathematicians.
+<p><a name="3">The mathematicians of </a><a href="../Mathematicians/Pythagoras.html">
+Pythagoras</a>'s school (500 BC to 300 BC) were interested in numbers for
+their mystical and numerological properties. They understood the idea of
+primality and were interested in <i>perfect</i> and <i>amicable</i> numbers.
+<br>
+(A <i>perfect number</i> is one whose proper divisors sum to the number itself.
+e.g. The number 6 has proper divisors 1, 2 and 3 and 1 + 2 + 3 = 6, 28 has
+divisors 1, 2, 4, 7 and 14 and 1 + 2 + 4 + 7 + 14 = 28. <br>
+A <i>pair of amicable numbers</i> is a pair like 220 and 284 such that the
+proper divisors of one number sum to the other and vice versa.)</p>
+<p><a name="7">By the time </a><a href="../Mathematicians/Euclid.html">Euclid</a>
+'s <i>Elements</i> appeared in about 300 BC, several important results about
+primes had been proved. In Book IX of the <i>Elements</i>, <a href="../Mathematicians/Euclid.html">
+Euclid</a> proves that there are infinitely many prime numbers. This is one
+of the first proofs known which uses the method of contradiction to establish
+a result. <a href="../Mathematicians/Euclid.html">Euclid</a> also gives a
+proof of the Fundamental Theorem of Arithmetic: Every integer can be written
+as a product of primes in an essentially unique way.</p>
+<p><a name="9"></a><a href="../Mathematicians/Euclid.html">Euclid</a> also
+showed that if the number 2<sup><i>n</i></sup> - 1 is prime then the number
+2<sup><i>n</i>-1</sup>(2<sup><i>n</i></sup> - 1) is a perfect number. The
+mathematician <a href="../Mathematicians/Euler.html">Euler</a> (much later
+in 1747) was able to show that <i>all</i> even perfect numbers are of this
+form. It is not known to this day whether there are any <i>odd</i> perfect
+numbers.</p>
+<p><a name="11">In about 200 BC the Greek </a><a href="../Mathematicians/Eratosthenes.html">
+Eratosthenes</a> devised an <i>algorithm</i> for calculating primes called
+the <i>Sieve of Eratosthenes</i>.</p>
+<p>There is then a long gap in the history of prime numbers during what is
+usually called the Dark Ages.</p>
+<p><a name="15">The next important developments were made by </a><a href="../Mathematicians/Fermat.html">
+Fermat</a> at the beginning of the 17th Century. He proved a speculation
+of <a href="../Mathematicians/Girard_Albert.html">Albert Girard</a> that
+every prime number of the form 4 <i>n</i> + 1 can be written in a unique
+way as the sum of two squares and was able to show how any number could be
+written as a sum of four squares.<br>
+He devised a new method of factorising large numbers which he demonstrated
+by factorising the number 2027651281 = 44021 <img src="../Symbolgifs/cross.gif" alt="cross">
+ 46061.</p>
+<p>He proved what has come to be known as <i>Fermat's Little Theorem</i>
+(to distinguish it from his so-called <i>Last Theorem</i>). <br>
+This states that if <i>p</i> is a prime then for any integer a we have <i>
+a</i><sup><i>p</i></sup> = <i>a</i> modulo <i>p</i>. <br>
+This proves one half of what has been called the <i>Chinese hypothesis</i>
+ which dates from about 2000 years earlier, that an integer <i>n</i> is prime
+if and only if the number 2<sup><i>n</i></sup> - 2 is divisible by <i>n</i>
+. The other half of this is false, since, for example, 2<sup>341</sup> -
+2 is divisible by 341 even though 341 = 31 <img src="../Symbolgifs/cross.gif" alt="cross">
+ 11 is composite. <a href="../Mathematicians/Fermat.html">Fermat</a>'s Little
+Theorem is the basis for many other results in Number Theory and is the basis
+for methods of checking whether numbers are prime which are still in use
+on today's electronic computers.</p>
+<p><a name="21"></a><a href="../Mathematicians/Fermat.html">Fermat</a> corresponded
+with other mathematicians of his day and in particular with the monk Marin
+<a href="../Mathematicians/Mersenne.html">Mersenne</a>. In one of his letters
+to <a href="../Mathematicians/Mersenne.html">Mersenne</a> he conjectured
+that the numbers 2<sup><i>n</i></sup> + 1 were always prime if <i>n</i> is
+a power of 2. He had verified this for <i>n</i> = 1, 2, 4, 8 and 16 and he
+knew that if <i>n</i> were not a power of 2, the result failed. Numbers of
+this form are called <i>Fermat numbers</i> and it was not until more than
+100 years later that <a href="../Mathematicians/Euler.html">Euler</a> showed
+that the next case 2<sup>32</sup> + 1 = 4294967297 is divisible by 641 and
+so is not prime.</p>
+<p>Number of the form 2<sup><i>n</i></sup> - 1 also attracted attention because
+it is easy to show that if unless n is prime these number must be composite.
+These are often called <i>Mersenne numbers</i> <i>M</i><sub><i>n</i></sub>
+ because <a href="../Mathematicians/Mersenne.html">Mersenne</a> studied them.
+</p>
+<p>Not all numbers of the form 2<sup><i>n</i></sup> - 1 with <i>n</i> prime
+are prime. For example 2<sup>11</sup> - 1 = 2047 = 23 <img src="../Symbolgifs/cross.gif" alt="cross">
+ 89 is composite, though this was first noted as late as 1536. <br>
+<a name="27"> For many years numbers of this form provided the largest known
+primes. The number <i>M</i><sub>19</sub> was proved to be prime by </a><a href="../Mathematicians/Cataldi.html">
+Cataldi</a> in 1588 and this was the largest known prime for about 200 years
+until <a href="../Mathematicians/Euler.html">Euler</a> proved that <i>M</i><sub>
+31</sub> <a name="28"> is prime. This established the record for another
+century and when </a><a href="../Mathematicians/Lucas.html">Lucas</a> showed
+that <i>M</i><sub>127</sub> (which is a 39 digit number) is prime that took
+the record as far as the age of the electronic computer.<br>
+In 1952 the <a href="../Mathematicians/Mersenne.html">Mersenne</a> numbers
+<i>M</i><sub>521</sub>, <i>M</i><sub>607</sub>, <i>M</i><sub>1279</sub>,
+<i>M</i><sub>2203</sub> and <i>M</i><sub>2281</sub> were proved to be prime
+by Robinson using an early computer and the electronic age had begun.</p>
+<p>By 1998 a total of 37 <a href="../Mathematicians/Mersenne.html">Mersenne</a>
+ primes have been found. The largest is <i>M</i><sub>3021377</sub> which
+has 909526 decimal digits.</p>
+<p><a href="../Mathematicians/Euler.html">Euler</a>'s work had a great impact
+on number theory in general and on primes in particular. <br>
+He extended <a href="../Mathematicians/Fermat.html">Fermat</a>'s Little Theorem
+and introduced the <i>Euler <img src="../Symbolgifs/phi.gif" alt="phi">-function</i>
+. As mentioned above he factorised the 5th <a href="../Mathematicians/Fermat.html">
+Fermat</a> Number 2<sup>32</sup> + 1, he found 60 pairs of the amicable numbers
+referred to above, and he stated (but was unable to prove) what became known
+as the Law of Quadratic Reciprocity.<br>
+He was the first to realise that number theory could be studied using the
+tools of analysis and in so-doing founded the subject of Analytic Number
+Theory. He was able to show that not only is the so-called Harmonic series
+ <img src="../Symbolgifs/Sigma.gif" alt="Sigma"> (1/n) divergent, but the
+series </p>
+<blockquote>1/2 + 1/3 + 1/5 + 1/7 + 1/11 + ...</blockquote>
+formed by summing the reciprocals of the prime numbers, is also divergent.
+The sum to <i>n</i> terms of the Harmonic series grows roughly like log(<i>
+n</i>), while the latter series diverges even more slowly like log(log(<i>
+n</i>)). This means, for example, that summing the reciprocals of all the
+primes that have been listed, even by the most powerful computers, only gives
+a sum of about 4, but the series still diverges to <img src="../Symbolgifs/infinity.gif" alt="infinity">
+.
+  <p><a name="45">At first sight the primes seem to be distributed among
+the integers in rather a haphazard way. For example in the 100 numbers immediately
+before 10 000 000 there are 9 primes, while in the 100 numbers after there
+are only 2 primes. However, on a large scale, the way in which the primes
+are distributed is very regular. </a><a href="../Mathematicians/Legendre.html">
+Legendre</a> and <a href="../Mathematicians/Gauss.html">Gauss</a> both did
+extensive calculations of the density of primes. <a href="../Mathematicians/Gauss.html">
+Gauss</a> (who was a prodigious calculator) told a friend that whenever he
+had a spare 15 minutes he would spend it in counting the primes in a 'chiliad'
+(a range of 1000 numbers). By the end of his life it is estimated that he
+had counted all the primes up to about 3 million. Both <a href="../Mathematicians/Legendre.html">
+Legendre</a> and <a href="../Mathematicians/Gauss.html">Gauss</a> came to
+the conclusion that for large <i>n</i> the density of primes near <i>n</i>
+ is about 1/log(<i>n</i>). <a href="../Mathematicians/Legendre.html">Legendre</a>
+ gave an estimate for <img src="../Symbolgifs/pi.gif" alt="pi">(<i>n</i>)
+the number of primes <img src="../Symbolgifs/lte.gif" alt="lte"> n of </p>
+  <blockquote><img src="../Symbolgifs/pi.gif" alt="pi">(<i>n</i>) = <i>n</i>
+/(log(<i>n</i>) - 1.08366)</blockquote>
+while <a href="../Mathematicians/Gauss.html">Gauss</a>'s estimate is in terms
+of the <i>logarithmic integral </i>
+    <blockquote><img src="../Symbolgifs/pi.gif" alt="pi">(<i>n</i>) = <img src="../Symbolgifs/integral.gif" alt="integral">
+ (1/log(<i>t</i>) <i>dt</i> where the range of integration is 2 to <i>n</i>
+.</blockquote>
+You can see the <a href="../Diagrams/LegendreEst.gif" target="_blank">Legendre
+estimate</a> and the <a href="../Diagrams/GaussEst.gif" target="_blank">Gauss
+estimate</a> and can <a href="../Diagrams/LegGaussEst.gif" target="_blank">
+compare them</a>.
+      <p><a name="55">The statement that the density of primes is 1/log(<i>
+n</i>) is known as the <i>Prime Number Theorem</i>. Attempts to prove it
+continued throughout the 19th Century with notable progress being made by
+      </a><a href="../Mathematicians/Chebyshev.html">Chebyshev</a> and <a href="../Mathematicians/Riemann.html">
+Riemann</a> who was able to relate the problem to something called the <i>
+Riemann Hypothesis</i>: a still unproved result about the zeros in the Complex
+plane of something called the <a href="../Mathematicians/Riemann.html">Riemann</a>
+ zeta-function. The result was eventually proved (using powerful methods
+in Complex analysis) by <a href="../Mathematicians/Hadamard.html">Hadamard</a>
+ and de la <a href="../Mathematicians/Vallee_Poussin.html">Vall&eacute;e
+Poussin</a> in 1896.</p>
+      <p>There are still many open questions (some of them dating back hundreds
+of years) relating to prime numbers.</p>
+      <p><b>Some unsolved problems</b></p>
+      <ol>
+        <li>The <i>Twin Primes Conjecture</i> that there are infinitely many
+pairs of primes only 2 apart.
+          <p></p>
+        </li>
+        <li><a name="62"><i>Goldbach's Conjecture</i> (made in a letter by
+C </a><a href="../Mathematicians/Goldbach.html">Goldbach</a> to <a href="../Mathematicians/Euler.html">
+Euler</a> in 1742) that every even integer greater than 2 can be written
+as the sum of two primes.
+          <p></p>
+        </li>
+        <li>Are there infinitely many primes of the form <i>n</i><sup>2</sup>
+ + 1 ?<br>
+          <a name="65">(</a><a href="../Mathematicians/Dirichlet.html">Dirichlet</a>
+ proved that every arithmetic progression : {<i>a</i> + <i>bn</i> | <i>n</i>
+ <img src="../Symbolgifs/belongs.gif" alt="belongs"> <b>N</b>} with <i>a</i>
+, <i>b</i> coprime contains infinitely many primes.)
+          <p></p>
+        </li>
+        <li>Is there always a prime between <i>n</i><sup>2</sup> and (<i>
+n</i> + 1)<sup>2</sup> ?<br>
+          <a name="68">(The fact that there is always a prime between <i>
+n</i> and 2<i>n</i> was called </a><a href="../Mathematicians/Bertrand.html">
+Bertrand</a>'s conjecture and was proved by <a href="../Mathematicians/Chebyshev.html">
+Chebyshev</a>.)
+          <p></p>
+        </li>
+        <li>Are there infinitely many prime <a href="../Mathematicians/Fermat.html">
+Fermat</a> numbers? Indeed, are there <i>any</i> prime <a href="../Mathematicians/Fermat.html">
+Fermat</a> numbers after the fourth one?
+          <p></p>
+        </li>
+        <li>Are there infinitely long arithmetic progressions of consecutive
+primes? e.g. 251, 257, 263, 269 has length 4. The <a href="http://felix.unife.it/Root/d-Mathematics/d-Number-theory/t-7-primes-in-progression">
+largest example known</a> has length 7.
+          <p></p>
+        </li>
+        <li>Are there infinitely many sets of 3 consecutive primes in arithmetic
+progression. (True if we omit the word consecutive.)
+          <p></p>
+        </li>
+        <li><i>n</i><sup>2</sup> - <i>n</i> + 41 is prime for 0 <img src="../Symbolgifs/lte.gif" alt="lte">
+ <i>n</i> <img src="../Symbolgifs/lte.gif" alt="lte"> 40. Are there infinitely
+many primes of this form? The same question applies to <i>n</i><sup>2</sup>
+ - 79 <i>n</i> + 1601 which is prime for 0 <img src="../Symbolgifs/lte.gif" alt="lte">
+ <i>n</i> <img src="../Symbolgifs/lte.gif" alt="lte"> 79.
+          <p></p>
+        </li>
+        <li>Are there infinitely many primes of the form <i>n</i># + 1? (where
+          <i>n</i># is the product of all primes <img src="../Symbolgifs/lte.gif" alt="lte">
+ <i>n</i>.)
+          <p></p>
+        </li>
+        <li>Are there infinitely many primes of the form <i>n</i># - 1?
+          <p></p>
+        </li>
+        <li>Are there infinitely many primes of the form <i>n</i>! + 1?
+          <p></p>
+        </li>
+        <li>Are there infinitely many primes of the form <i>n</i>! - 1?
+          <p></p>
+        </li>
+        <li>If <i>p</i> is a prime, is 2<sup><i>p</i></sup> - 1 always square
+free? i.e. not divisible by the square of a prime.
+          <p><a name="88"></a></p>
+        </li>
+        <li><a name="88">Does the </a><a href="../Mathematicians/Fibonacci.html">
+Fibonacci</a> sequence contain an infinite number of primes?</li>
+      </ol>
+      <p>Here are the <b>latest prime records</b> that we know.</p>
+      <p>The largest known prime (found by GIMPS(Great Internet Mersenne
+Prime Search) on 27th January 1998) is the 37th <a href="../Mathematicians/Mersenne.html">
+Mersenne</a> prime: <i>M</i><sub>3021377</sub> which has 909526 decimal digits.
+See the <a href="http://www.mersenne.org/3021377.htm">Official announcement</a>
+.</p>
+      <p>The largest known twin primes are 242206083 <img src="../Symbolgifs/cross.gif" alt="cross">
+ 2<sup>38880</sup> <img src="../Symbolgifs/plusminus.gif" alt="plusminus">
+ 1. They have 11713 digits and were announced by Indlekofer and Ja'rai in
+November, 1995.</p>
+      <p>The largest known factorial prime (prime of the form n! <img src="../Symbolgifs/plusminus.gif" alt="plusminus">
+ 1) is 3610! - 1. It is a number of 11277 digits and was announced by Caldwell
+in 1993.</p>
+      <p>The largest known primorial prime (prime of the form <i>n</i># <img src="../Symbolgifs/plusminus.gif" alt="plusminus">
+ 1 where <i>n</i># is the product of all primes <img src="../Symbolgifs/lte.gif" alt="lte">
+ <i>n</i>) is 24029# + 1. It is a number of 10387 digits and was announced
+by Caldwell in 1993.</p>
+      <p></p>
+      <p><font color="purple"><b>Article by:</b> <i>J J O'Connor</i> and
+      <i>E F Robertson</i></font></p>
+      <hr><strong><a href="References/Prime_numbers.html" target="_blank">
+References</a> (21 books/articles)</strong>
+      <p><font color="magenta"><strong>Other Web sites:</strong></font></p>
+      <p>You can find other prime records at <a href="http://daisy.uwaterloo.ca:80/~alopez-o/math-faq/mathtext/node10.html#SECTION004200000000000000000">
+Waterloo, Canada</a>.<br>
+You can find out about primes at <a href="http://www.utm.edu/research/primes">
+University of Tennessee, USA</a><br>
+There is some information about the so-called Bertelsen's number and mistakes
+in calculating pi(n) at <a href="http://www.seanet.com/~ksbrown/kmath049.htm">
+Seattle, USA </a> and also about <a href="http://www.seanet.com/~ksbrown/kmath195.htm">
+Fermat primes</a><br>
+Some information about <a href="http://xraysgi.ims.uconn.edu:8080/amicable.html">
+Perfect numbers etc</a><br>
+      </p>
+      <p></p>
+      <hr>
+      <center>
+      <table border="0" cellpadding="4" cellspacing="0" bgcolor="#ccccff" width="380">
+        <tbody>
+          <tr>
+            <td><a href="../Indexes/HistoryTopics.html">History Topics Index</a><br>
+            </td>
+            <td align="Right"><a href="../Indexes/Number_Theory.html">Number
+theory index</a></td>
+          </tr>
+          <tr>
+            <td><a href="../index.html">Main index</a>   </td>
+            <td align="Right"><a href="../BiogIndex.html">Biographies Index</a>
+            <br>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="../Curves/Curves.html">Famous curves index</a></td>
+            <td align="Right"><a href="../Societies/index.html">Societies,
+honours, etc</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="../BirthplaceMaps/MapIndex.html">Birthplace Maps</a>
+            </td>
+            <td align="Right"><a href="../Timelines/index.html">Time lines</a>
+            <br>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="../Day_files/Now.html">Mathematicians of the day</a>
+   </td>
+            <td align="Right"><a href="../Day_files/Year.html">Anniversaries
+for the year</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="../Search/historysearch.cgi">Search Form</a>   </td>
+            <td align="Right"><a href="../Quotations/index.html">Quotations
+index</a><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr></center>
+JOC/EFR December 1996
+      <p><font color="red" size="-1">The URL of this page is:<br>
+      <font color="blue">http://www-history.mcs.st-andrews.ac.uk/history/HistTopics/Prime_numbers.html
+      </font></font></p>
+      </body>
+      </html>

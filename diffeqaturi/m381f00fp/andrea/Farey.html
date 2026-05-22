@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML Strict Level 3//EN">
+<html>
+<head>
+  <title>Farey Series</title>
+       
+  <meta name="Author" content="Alexander Bogomolny">
+   
+  <meta name="Title" content="Farey Series, Euclid&apos;s Algorithm">
+   
+  <meta name="Description" content="Euclid&apos;s Algorithm, Farey Series">
+   
+  <meta name="KeyWords" content="Mathematics, puzzle, modulo arithmetic, congruence, equivalence relations, residue, remainder, Euclid&apos;s Algorithm, Fundamental Theorem of Arithmetic, Farey Series, STern-Brocot tree">
+</head>
+<body text="#000000" bgcolor="#c0dcc0" link="#4444aa" vlink="#8844aa" alink="#008080">
+<!-- This is the first common SSI file that starts
+     the basic three column table: bar - content - announcements
+     The file must appear in 4 incarnations depending on the depth
+     of directories of files into which this one will be included.
+
+     The file must be included immediately after <body>.
+-->
+<!-- no frame upgrade -->
+<table width="100%">
+<!-- advertisement --><tbody>
+    <tr>
+      <td colspan="3"><!--DoubleClick Top Ad BEGIN-->
+      <center>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+            <script language="JavaScript">
+
+<!--
+DateNow = new Date();
+ord = DateNow.getTime();
+document.write('<NOLAYER>');
+document.write('<IFRAME SRC="http://ad2.doubleclick.net/adi/sonar.cut-the-knot/ros;sz=468x60;ord=' + ord + '?" width="468" height="60" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no">');
+document.write('<A HREF="http://ad2.doubleclick.net/jump/sonar.cut-the-knot/ros;sz=468x60;ord=' + ord + '?" target="_top"><IMG SRC="http://ad2.doubleclick.net/ad/sonar.cut-the-knot/ros;sz=468x60;ord=' + ord + '?" width="468" height="60" border="0"></A>');
+document.write('</IFRAME>');
+document.write('</NOLAYER>');
+document.write('<ILAYER id="ad1" visibility="hide" width="468" height="60"></ILAYER>');
+
+//-->
+</script>
+            <noscript><A HREF="http://ad2.doubleclick.net/jump/sonar.cut-the-knot/ros;sz=468x60;num=123456?">
+<IMG SRC="http://ad2.doubleclick.net/ad/sonar.cut-the-knot/ros;sz=468x60;num=123456?"
+width="468" height="60"<NLB>border="0"></A></noscript>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+            <table>
+              <tbody>
+                <tr>
+                  <td bgcolor="#ff0000"><font face="verdana, arial" size="3" color="#ffff00">
+Please do not whack this site. The whacked applets will not work. We shall
+be charged for the increased traffic nonetheless.</font></td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+<!--DoubleClick Top Ad END-->
+      <center><img src="../tbow_sh.gif" border="0" height="18" width="240"></center>
+<!-- end of advertisement --></td>
+    </tr>
+<!-- left navigation column --><tr>
+      <td width="140" valign="Top" background="../leftSep.gif">
+      <table width="100%" background="">
+        <tbody>
+          <tr>
+            <td align="Left"><font face="Times New Roman" size="-1"><a href="http://www.cut-the-knot.com/cgi-bin/dcforum/dcboard.cgi" onmouseover="self.status=&apos;A place to post questions and answers&apos;;return true" target="_top">
+CTK Exchange</a><br>
+            <a href="../front.html" onmouseover="self.status=&apos;Topics with short descriptions&apos;;return true" target="_top">
+Front Page</a><br>
+            <a href="../shortcut.html" onmouseover="self.status=&apos;Mathematics in the service of movie making&apos;;return true" target="_top">
+Movie shortcuts</a><br>
+            <a href="../wanted.html" onmouseover="self.status=&apos;Personal info&apos;;return true" target="_top">
+Personal info</a><br>
+            <a href="../awards.html" onmouseover="self.status=&apos;Awards and Acknowledgements&apos;;return true" target="_top">
+Awards</a><br>
+            <a href="../ReciprocalMain.html" onmouseover="self.status=&apos;Reciprocal links&apos;;return true" target="_top">
+Reciprocal links</a><br>
+            <a href="../Privacy.html" onmouseover="self.status=&apos;Your Privacy is paramount&apos;;return true" target="_top">
+Privacy Policy</a><br>
+            </font>
+            <p><font face="Times New Roman" size="-1"><a href="../Curriculum/index.html" onmouseover="self.status=&apos;Try these interactive activities&apos;;return true" target="_top">
+Interactive Activities</a><br>
+            </font></p>
+            <p><font face="Times New Roman" size="-1"><a href="../ctk/index.html" onmouseover="self.status=&apos;A monthly column for MAAOnline&apos;;return true" target="_top">
+Cut The Knot!</a><br>
+            <a href="../Mset99/index.html">MSET99 Talk</a><br>
+            <a href="../games.html" onmouseover="self.status=&apos;Mathematics in disguise&apos;;return true" target="_top">
+Games &amp; Puzzles</a><br>
+            <a href="../algebra.html" onmouseover="self.status=&apos;Topics from Arithmetic and Algebra&apos;;return true" target="_top">
+Arithmetic/Algebra</a><br>
+<!--
+<a href="../algebra.html" onMouseOver="self.status='Topics Algebra';return true" target=_top>
+Algebra</a><br>
+-->
+            <a href="../geometry.html" onmouseover="self.status=&apos;Selected topics from Geometry and Topology&apos;;return true" target="_top">
+Geometry</a><br>
+            <a href="../probability.html" onmouseover="self.status=&apos;A few choice topics from Probability&apos;;return true" target="_top">
+Probability</a><br>
+            <a href="../pythagoras/tricky.html" onmouseover="self.status=&apos;Eye Opener in more than one sense&apos;;return true" target="_top">
+Eye Opener</a><br>
+            <a href="../pythagoras/ellipse.html" onmouseover="self.status=&apos;Simulation of analog gadgets&apos;;return true" target="_top">
+Analog Gadgets</a><br>
+            <a href="../Generalization/epairs.html" onmouseover="self.status=&apos;Examples of generalization  in a variety of forms&apos;;return true" target="_top">
+Inventor's Paradox</a><br>
+            <a href="../do_you_know/index.html" onmouseover="self.status=&apos;There are so many surprising things&apos;;return true" target="_top">
+Did you know?...</a><br>
+            <a href="../proofs/index.html" onmouseover="self.status=&apos;Simple and interesting proofs&apos;;return true" target="_top">
+Proofs</a><br>
+            <a href="../language/index.html" onmouseover="self.status=&apos;Mathematics as a language&apos;;return true" target="_top">
+Math as Language</a><br>
+            <a href="../impossible/index.html" onmouseover="self.status=&apos;Some things are absolutely impossible&apos;;return true" target="_top">
+Things Impossible</a><br>
+            <a href="../logo.html" onmouseover="self.status=&apos;My logo: cut this knot&apos;;return true">
+My Logo</a><br>
+            <a href="../math_intro.html" onmouseover="self.status=&apos;See whether you agree or disagree with what they think of math&apos;;return true" target="_top">
+Math Poll</a><br>
+            <a href="../collection.html" onmouseover="self.status=&apos;In all fairness: there are other good sites&apos;;return true" target="_top">
+Other Math sites</a><br>
+            <a href="/cgi-bin/dcforum/dcboard.cgi?az=list&amp;forum=DCForumID5&amp;conf=DCConfID1" onmouseover="self.status=&apos;Feel free to tell me what do you think&apos;;return true" target="_top">
+Guest book</a><br>
+            <a href="../sites.html" onmouseover="self.status=&apos;Some news sites&apos;;return true" target="_top">
+News sites</a><br>
+            </font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+<!-- end of left navigation column --><!-- the content part --><td><!-- top tool bar =======-->
+      <center>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td><a href="../manifesto/index.html" onmouseover="self.status=&apos;Manifesto: what CTK is about&apos;;return true" target="_top"><img src="../bar_m.gif" width="64" height="19" alt="Manifesto: what CTK is about" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="../SoftwareStore/store.html" onmouseover="self.status=&apos;Mathematics Education Software Store&apos;;return true" target="_top"><img src="../bar_cart.gif" width="35" height="19" alt="Let your children enjoy mathematics" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="http://forum.swarthmore.edu/ctk_search.html" onmouseover="self.status=&apos;Search CTK, Math Forum or the Web&apos;;return true" target="_top"><img src="../bar_search.gif" width="48" height="19" alt="Search CTK, Math Forum or the Web" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="../books/index.html" onmouseover="self.status=&apos;Math Bookstore on the Web&apos;;return true" target="_top"><img src="../bar_books.gif" width="63" height="19" alt="Buying a book is a commitment to learning" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="../content.html" onmouseover="self.status=&apos;Table of the CTK contents&apos;;return true" target="_top"><img src="../bar_toc.gif" width="36" height="19" alt="Table of content" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="../SoftwareStore/SiteOnCD-ROM.html" onmouseover="self.status=&apos;The whole site on CD-ROM for offline learning&apos;;return true" target="_top"><img src="../bar_cd.gif" width="62" height="19" alt="The whole site on CD-ROM" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="../glossary/atop.html" onmouseover="self.status=&apos;Things you can find on CTK&apos;;return true" target="_top"><img src="../bar_gloss.gif" width="57" height="19" alt="Things you can find on CTK" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="../changes.html" onmouseover="self.status=&apos;Chronology of updates&apos;;return true" target="_top"><img src="../bar_upda.gif" width="83" height="19" alt="Chronology of updates" border="0" hspace="0" vspace="0"></a>
+            </td>
+            <td><a href="mailto:alexb@cut-the-knot.com" onmouseover="self.status=&apos;Email&apos;;return true" target="_top"><img src="../bar_mail.gif" width="37" height="19" alt="Email to Cut The Knot" border="0" hspace="0" vspace="0"></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+<!--=======-->
+      <p align="Center"><img src="../tbow_sh.gif" border="0" height="18" width="240"></p>
+      <center>
+      <table width="79%">
+        <tbody>
+          <tr>
+            <td>
+            <center>
+            <h1>Farey Series</h1>
+            </center>
+ 
+            <p>The <em>Farey series</em> <b>F<sub>N</sub></b> is the set
+of all fractions in <a href="Stern.html#low">lowest terms</a> between 0 and
+1 whose denominators do not exceed N, arranged in order of magnitude. For
+example, <b>F<sub>6</sub></b> is</p>
+            <center><img src="farey6.gif" width="160" height="28"></center>
+            <a name="stupid"></a>
+            <p><a name="stupid">N is known as the <em>order</em> of the series.
+Farey was a British geologist who in 1816 published the statement to the
+effect that in the Farey series the middle of any three successive terms
+is the </a><a href="../proofs/fords.html#mediant">mediant</a> of the other
+two. The proof has been eventually supplied by Cauchy. The series nonetheless
+bears the name of Farey.</p>
+            <p>To see why the statement is correct, start with <b>F<sub>1</sub></b>
+ which is 0/1, 1/1. In order to get <b>F<sub>2</sub></b>, insert the mediant
+into <b>F<sub>1</sub></b>: 0/1, 1/2, 1/1.For <b>F<sub>3</sub></b> we add
+two mediants: 0/1,1/3,1/2,2/3,1/1. To get <b>F<sub>4</sub></b> we also add
+only 2 fractions: 0/1,1/4,1/3,1/2,2/3,3/4,1/1. Next, add 4 fractions to get
+            <b>F<sub>5</sub></b>: 0/1,1/5,1/4,1/3,2/5,1/2,3/5,2/3,3/4,4/5,1/1.
+As we already saw, it takes additional 2 fractions to get <b>F<sub>6</sub></b>
+. The general rule is this: to move from <b>F<sub>N-1</sub></b> to <b>F<sub>
+N</sub></b> add all possible mediants (that come out to be in the lowest
+terms) with N in the denominator. Since forming a mediant may only increase
+the denominator we are led to think that following this rule we indeed will
+get the whole of <b>F<sub>N</sub></b>. To complete the proof recollect that
+the <a href="Stern.html">Stern-Brocot</a> tree contains all positive fractions.
+So in the process of constructing Farey series no fraction will be missed
+either.</p>
+            <p>When N is prime, the rule adds N-1 fractions. In general,
+            <a href="Euler.html"><img src="../gifs/fi.gif" width="12" height="13" border="0">
+(N)</a> fractions are added. For all reducible fractions m/N will have appeared
+in one of the earlier series. Check this with <b>F<sub>7</sub></b></p>
+            <center><img src="farey7.gif" width="245" height="28"></center>
+            <a name="properties"></a>
+            <p><a name="properties">The Farey series furnishes another proof
+of an </a><a href="Euclid.html#important">important corollary</a> of Euclid's
+algorithm: for integers m and n with gcd(m,n)&nbsp;=&nbsp;1 and m<img src="../gifs/le.gif" width="14" height="13">
+n, there exist positive integers a and b such that ma&nbsp;-&nbsp;nb&nbsp;=&nbsp;1.
+The proof again depends on the properties of the <a href="Stern.html">Stern-Brocot</a>
+ tree. For any two consecutive fractions m<sub>1</sub>/n<sub>1</sub> and
+m<sub>2</sub>/n<sub>2</sub> in the Farey series,m<sub>2</sub>n<sub>1</sub>
+&nbsp;-&nbsp;m<sub>1</sub>n<sub>2</sub>&nbsp;=&nbsp;1. So, depending on which
+of m or n is larger, locate either m/n or n/m in a Farey series and select
+(as a/b) either the preceding or the following fraction.</p>
+            <p>An absolutely marvelous <a href="../proofs/fords.html">geometric
+interpretation</a> of the Farey series has been invented by Lester R. Ford.</p>
+            <h2>References</h2>
+            <ol>
+              <li>J.H.Conway and R.K.Guy, <em>The Book of Numbers</em>, Springer-Verlag,
+NY, 1996.</li>
+              <li>R.Graham, D.Knuth, O.Potashnik, <em>Concrete Mathematics</em>
+, 2nd edition, Addison-Wesley, 1994.</li>
+            </ol>
+            <center><img src="../tbow_sh.gif" border="0" height="18" width="240"></center>
+            <ul>
+              <li><a href="Modulo.html">Modular Arithmetic</a>
+                <ul>
+                  <li><a href="sim_diff.html">Differences and Similarities</a>
+                  </li>
+                  <li><a href="solutions.html">Solutions to some problems</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="chinese.html">Chinese Remainder Theorem</a></li>
+              <li><a href="Euclid.html">Euclid's Algorithm</a>	
+                <ul>
+	
+                  <li><a href="EuclidAlg.html">Euclid's Game</a>	</li>
+                  <li><a href="binary.html">Binary Euclid's Algorithm	</a></li>
+                  <li><a href="gcd_fta.html">gcd and the Fundamental Theorem
+of Arithmetic</a>	</li>
+                  <li><a href="extension.html">Extension of Euclid's Algorithm</a>
+	</li>
+                  <li><a href="Stern.html">Stern-Brocot Tree</a> 
+                    <ul>
+		
+                      <li><a href="SB_props.html">Fine features</a>		</li>
+                      <li><a href="encoding.html">Binary Encoding</a>  </li>
+                      <li><a href="chaos_game.html">Binary Encoding, a Second
+Interpretation</a> 	</li>
+                      <li><a href="ContinuedFractions.html">Continued Fractions
+on the Stern-Brocot Tree</a>  </li>
+                      <li><a href="b-tree.html">Fractions on a Binary Tree</a>
+ </li>
+                    </ul>
+ 	</li>
+                  <li><font color="#884400">Farey series</font>  
+                    <ul>
+  
+                      <li><a href="FareyHistory.html">Farey series, a story</a>
+  </li>
+                    </ul>
+	</li>
+                </ul>
+              </li>
+              <li><a href="../ctk/Pick.html">Pick's Theorem</a>	
+                <ul>
+	
+                  <li><a href="../ctk/Pick_proof.html">Pick's Theorem, A
+Proof</a>	</li>
+                  <li><a href="../ctk/Farey.html">Farey Series</a>	</li>
+                  <li><a href="../ctk/PickToFarey.html">Pick's Theorem Applies
+to the Farey Series</a>	</li>
+                  <li><a href="../ctk/SB_tree.html">Stern-Brocot Tree</a>
+ </li>
+                </ul>
+              </li>
+              <li><a href="Fermat.html">Fermat's Little Theorem</a></li>
+              <li><a href="Wilson.html">Wilson's Theorem</a></li>
+              <li><a href="Euler.html">Euler's Function</a></li>
+              <li><a href="divisibility.html">Divisibility Criteria</a>
+                <ul>
+                  <li><a href="FurtherDivisibility.html">Further examles
+of divisibility criteria</a></li>
+                </ul>
+              </li>
+              <li><a href="examples.html">Examples</a></li>
+              <li><a href="equi.html">Equivalence relations</a></li>
+              <li><a href="McWarter.html">A real life story</a></li>
+            </ul>
+            <center><img src="../tbow_sh.gif" border="0" height="18" width="240"></center>
+            <p align="Right"><a href="http://www.cut-the-knot.com/cgi-bin/dcforum/dcboard.cgi"><img src="../mail2.gif" width="40" height="40"></a>
+            <a href="../front.html"><img src="../home2.gif" width="40" height="40"></a>
+            <a href="../content.html"><img src="../gifs/content.gif" width="40" height="39"></a>
+            <a href="../SoftwareStore/store.html"><img src="../SoftwareStore/cart.gif" width="40" height="40"></a>
+            <a href="../algebra.html"><img src="../algebra.gif" border="2" height="39" width="39"></a>
+            </p>
+            <p align="Left"><font size="-1">Copyright &copy; 1996-2000 <a href="mailto:alexb@cut-the-knot.com">
+Alexander Bogomolny</a></font></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </center>
+      <p></p>
+      <table>
+        <tbody>
+          <tr>
+            <td bgcolor="#00aaaa">1532876</td>
+          </tr>
+        </tbody>
+      </table>
+      <p></p>
+<!-- This is the second common SSI file that ends
+     the basic three column table: bar - content - announcements
+     The file must appear in 4 incarnations depending on the depth
+     of directories of files into which this one will be included.
+
+     The file must be included immediately before </body>.
+-->
+      </td>
+<!-- end of the content part --><td align="Left" valign="Top" width="120" bgcolor="#c0dcc0" background="../rightSep.gif">
+      <a href="../MediaKit/MKUniq.html" onmouseover="self.status=&apos;Media Kit&apos;;return true" target="_top"><font size="2"><b>
+&nbsp;Advertise</b></font></a><br>
+      <br>
+      <a href="http://cut-the-knot.links2go.com" onmouseover="self.status=&apos;Directory of Math Resources&apos;;return true" target="newwin"><img src="../gifs/Links2Go.gif" width="127" height="23"></a>
+      <br>
+<!--
+<table background=""><tr><td align="center">
+<a href="http://www.mathtype.com/ecommerce/ordersystem.asp?reseller_id=55016"><img src="../gifs/ads/MathType.gif" width=108 height=93></a><br>
+Buy It Now!
+</td></tr></table>
+-->
+      <a href="http://forum.swarthmore.edu" onmouseover="self.status=&apos;The Math Forum&apos;;return true" target="_top"><img src="../HostedMF.gif" width="118" height="44"></a>
+      <br>
+      <br>
+      <form method="Get" action="http://www.amazon.com/exec/obidos/external-search/">
+        <table border="1" cellpadding="5" cellspacing="0" bgcolor="#c0cdc0">
+          <tbody>
+            <tr>
+              <td valign="Top" align="Center">      <a href="http://www.amazon.com/exec/obidos/redirect-home/ctksoftwareinc" onmouseover="self.status=&apos;Buy books at amazon.com&apos;;return true" target="_top">
+     <img src="../gifs/order_now_amazon.gif" width="80" height="40" align="Left" vspace="2" border="0"></a>
+              </td>
+            </tr>
+            <tr>
+              <td>      <input type="text" name="keyword" size="10" value=" "><br>
+     <input type="hidden" name="tag" value="ctksoftwareinc">     <input type="submit" value="Search">
+ </td>
+            </tr>
+ 
+          </tbody>
+        </table>
+ </form>
+      <form action="http://search.britannica.com/bcom/search/results/1,5843,,00.html" target="Britannica.com" method="Get">
+        <table border="1" cellspacing="0" cellpadding="5">
+          <tbody>
+            <tr bgcolor="#336699">
+              <td valign="Top"><a href="http://search.britannica.com" onmouseover="self.status=&apos;Search britannica.com&apos;;return true" target="_top"><img src="../gifs/SearchBritannica.jpg" border="0" width="116" height="32"></a>
+              </td>
+            </tr>
+            <tr bgcolor="#336699">
+              <td><input type="text" name="p_query0" size="10" align="Center"><br>
+              <input type="submit" name="submit" value="Find"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <center><a href="http://click.linksynergy.com/fs-bin/stat?id=rQ*Yq9OJU/Q&amp;offerid=20338.10000020&amp;subid=0&amp;type=4" onmouseover="self.status=&apos;ZanyBrainy&apos;;return true" target="_top"><img border="0" alt="ZanyBrainy.com" width="88" height="31" src="../gifs/ZanyBrainy.gif"></a>
+      </center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--DoubleClick TOP and BOTTOM part 2 BEGIN-->
+<script language="JavaScript">
+<!--
+document.write('<LAYER src="http://ad2.doubleclick.net/adl/sonar.cut-the-knot/ros;sz=468x60;ord=' + ord + '?" width="468" height="60" visibility="hide" onload="moveToAbsolute(ad1.pageX, ad1.pageY); visibility=\'show\';"clip="468,60"></LAYER>');
+//-->
+</script><!--DoubleClick TOP and BOTTOM part 2 END--><!-- end of no frame upgrade -->
+</body>
+</html>

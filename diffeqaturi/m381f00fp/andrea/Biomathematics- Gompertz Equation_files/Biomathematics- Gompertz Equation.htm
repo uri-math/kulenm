@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0060)http://www.math.uic.edu/~tier/M494/Tumor/Notes/gompertz.html -->
+<!-- Created by HTMX version 3.2a --><HTML><HEAD><TITLE>Biomathematics- Gompertz Equation</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY>
+<CENTER>
+<H1>Gompertz Equation </H1></CENTER>
+<P>The Gompertz growth law has been shown to provide a good fit for the growth 
+data of numerous tumors. Let <IMG alt="$  V(t)  $ " 
+src="Biomathematics- Gompertz Equation_files/gompertz_1.gif" align=absMiddle> 
+measure the size of the tumor (e.g. volume, number, etc.). The Gompertz growth 
+law is described by the following system of differential equations: 
+<P><IMG alt="\[  \frac{dV}{dx} = r(t)V(t), \;\; V(0)=V_0  \] " 
+src="Biomathematics- Gompertz Equation_files/gompertz_2.gif" align=absMiddle> 
+<P><IMG alt="\[  \frac{dr}{dx} = \alpha r(t), \;\; r(0)=\beta  \] " 
+src="Biomathematics- Gompertz Equation_files/gompertz_3.gif" align=absMiddle> 
+<P>Here 
+<UL>
+  <LI><IMG alt="$  r(t) =  $ " 
+  src="Biomathematics- Gompertz Equation_files/gompertz_4.gif" align=absMiddle> 
+  tumor growth rate 
+  <P></P>
+  <LI><IMG alt="$  \alpha =  $ " 
+  src="Biomathematics- Gompertz Equation_files/gompertz_5.gif" align=absMiddle> 
+  retardation constant 
+  <P></P>
+  <LI><IMG alt="$  \beta =  $ " 
+  src="Biomathematics- Gompertz Equation_files/gompertz_6.gif" align=absMiddle> 
+  initial growth or regression rate. </LI></UL>The sign of <IMG alt="$  \beta  $ " 
+src="Biomathematics- Gompertz Equation_files/gompertz_7.gif" align=absMiddle> 
+determines where the tumor grows or regresses. The solution is given by <IMG 
+alt="\[  V(t)=V_0 e^{\displaystyle \frac{\beta}{\alpha} &#10;(1-e^{-\alpha t})} \] " 
+src="Biomathematics- Gompertz Equation_files/gompertz_8.gif" align=absMiddle> 
+<P>where the constants are determined by the data. 
+<P>In the serial treatment model discussed in class, we assume that the 
+post-treatment tumor has the same growth characteristics as the original tumor. 
+Specifically, we assume that the ultimate tumor size remains the unchanged which 
+we denote as: 
+<P><IMG alt="\[   \theta = V_0 e^{\beta/\alpha}  \] " 
+src="Biomathematics- Gompertz Equation_files/gompertz_9.gif" align=absMiddle> 
+<P>The Gompertz growth model can be written in the following form: 
+<P><IMG 
+alt="\[  \frac{dV}{dt} = - \alpha V \ln \left(\frac{V}{\theta}\right).  \] " 
+src="Biomathematics- Gompertz Equation_files/gompertz_10.gif" align=absMiddle> 
+<P>To determine the tumor regression from just before one treatment to just 
+before the next, we integrate the first order differential equation as follows 
+(see figure in the exponential case) 
+<P><IMG 
+alt="\[  \int_{FV_n}^{V_{n+1}} \frac{dV}{\ln \left(\frac{V}{\theta}\right)}= &#10;\int_0^T \alpha dt  \] " 
+src="Biomathematics- Gompertz Equation_files/gompertz_11.gif" align=absMiddle> 
+<P>This leads to the difference equation 
+<P><IMG 
+alt="\[   \ln \left(\frac{V_{n+1}}{\theta}\right) = &#10;\ln \left(\frac{F \ V_n}{\theta}\right)e^{-\alpha T}  \] " 
+src="Biomathematics- Gompertz Equation_files/gompertz_12.gif" align=absMiddle> 
+<HR>
+
+<P>
+<HR>
+
+<ADDRESS><A 
+href="mailto:tier@math.uic.edu">mailto:tier@math.uic.edu</A></ADDRESS></BODY></HTML>

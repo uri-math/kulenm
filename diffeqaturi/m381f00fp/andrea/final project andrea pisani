@@ -1,0 +1,653 @@
+<html>
+<head>
+  <title>Prime numbers</title>
+</head>
+<body bgcolor="#cccccc" link="#0000ee" vlink="#993399" alink="#0000ee">
+<div align="Center">
+<div align="Left">
+<div align="Center">
+<div align="Center"><big><big><big> </big></big></big><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106"><br>
+<br>
+<div align="Left">
+<div align="Left"><big><big><big><b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <font color="#000099">
+DIFFERENCE EQUATIONS &amp; RECURSIVE RELATIONS</font></b></big></big></big><big><big><big>
+&nbsp; </big></big></big><big><big><big><b> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; <font color="#000099">(1801-1825)</font></b></big></big></big><font color="#993399"><big><big><big><br>
+</big></big></big></font></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>Difference Equations and Recursive Relations in this period have been
+studied by several mathematicians.&nbsp; Some of these mathematicians include:<br>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a>, <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a>, <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Parseval.html"></a><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a>,&nbsp; <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gauss.html">
+Gauss</a>, <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gompertz.html">
+Gompertz</a>, and <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Legendre.html">
+Legendre</a>.&nbsp; <br>
+<i>
+<hr></i>
+<div align="Center"><big><big><b><font color="#333333"><u>Babbage and the
+Difference Engine</u></font><br>
+<img src="line/treasure/images/babb.jpg" alt=" "><br>
+</b></big></big>
+<div align="Left">
+<p><font face="Times New Roman"><font size="+0"> &nbsp;&nbsp; Ordinary arithmetic
+calculating machines, in Babbage's day, could only carry out individual calculations.
+They were useful only in the computation of single sums involving addition,
+subtraction, multiplication or division.&nbsp; Charles </font></font><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a><font face="Times New Roman"><font size="+0"> worked on a calculating
+machine that could be adapted specially to perform the Methodof Differences.&nbsp;
+<font face="Times New Roman"><font size="+0">The Method of Differences is
+away of integrating "differences".&nbsp; <font face="Times New Roman"><font face="Times New Roman">
+ &nbsp; &nbsp; A"difference", written </font><font face="Symbol">D</font><font face="Times New Roman">
+f(x), is simply the difference between the values of a function taken attwodifferent
+values of its variable, x.&nbsp; For example: </font><font face="Symbol">
+D</font><font size="+0">f(x)= f(x<sub>1</sub>)-f(x<sub>2</sub>). A "differential"
+is much the same thing except that the difference between the two valuesofx
+used, x<sub>1</sub>and x<sub>2</sub>, is reduced [gradually by a limiting
+process] by an infinitesimal amount, df(x). A "differential" is thus an infinitesimal
+"difference". Conversely, a "difference" can be seen as akind of finite"differential",
+one which uses an interval of a finite sizeinstead of an infinitesimal. <br>
+ &nbsp;&nbsp;<br>
+ &nbsp;&nbsp; &nbsp; The Method of Differences is a practical numerical technique.
+It can be used to calculate exactly the numerical values of any mathematical
+function that can be expressed as a simple polynomial .&nbsp; </font></font></font></font></font></font>
+ Perceiving the simplicity and facility of the Method of Differences andthe
+arithmeticoperation required to execute it, <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a> realised that its principles could be very easily embodied in
+simplemechanical components.&nbsp; These insights led him, in 1821, to design
+anddevelop a DifferenceEngine. <font face="Times New Roman"><font size="+0">
+ &nbsp; This differenceengine </font></font>only required mechanisms foradditionrepeated
+manytimes over to perform the tasks Babbage hoped for<font face="Times New Roman"><font size="+0">
+.&nbsp; A clearer understanding of the mathematics of the Method of Differences
+is essential ifone is to understand </font></font><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a><font face="Times New Roman"><font size="+0">'s vision, and gain
+a better pictureof themechanics of his creation, its operations, capabilities,
+limitations,andthe manner in which it was expected to achieve its object.<br>
+ &nbsp;&nbsp; <br>
+ &nbsp;&nbsp; Methods or algorithms for evaluatingfunctions or solving equations
+by recursion,&nbsp; ( the repetitive substitutionof the approximate solution
+of an equation back into itself to obtain a betterapproximation),&nbsp; had
+been devised as early as the late 17th century.&nbsp; Nevertheless, the Method
+of Differencesdid not become a clearly identifiable, branch of numericalmathematics
+until some time after Brook <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Taylor.html">
+Taylor</a> enunciated the famous theorem which bearshis name (</font></font><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Taylor.html">
+Taylor</a><font face="Times New Roman"><font size="+0">'s Theorem)</font></font>
+ during the 18thcentury<font face="Times New Roman"><font size="+0">.&nbsp;
+</font></font><font face="Times New Roman"><font size="+0"> By </font></font><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a><font face="Times New Roman"><font size="+0">'stime, however,the
+Methodof Differences had been in use for a long whileand with much success
+forthe manual calculation of mathematical and othertypes of numerical tables.It
+was a well-tried and firmly established techniqueof Numerical Analysis,and
+its theory was well understood. What made it anideal principle for theautomatic,
+mechanical computation of such tables wasthat, in its use, thesame sequence
+of simple arithmetical operations is repeatedover and overagain. Therefore,
+a machine designed to imitate it only neededthose mechanismsfor repeating
+these same operations. </font></font></p>
+<p></p>
+<p></p>
+<p></p>
+<p><font face="Times New Roman"><font size="+0"> &nbsp;&nbsp; What makesthe
+Method of Differencesa practical proposition for the interpolation ofthenumerical
+values of functionsis a theorem which states that the nth differenceof apolynomial
+of degreen is a constant, and that all its differences ofa higherorder are
+zero andcan therefore be ignored. As a result, when oneis dealingwith the
+evaluationof polynomials, one need only work with a finiteset ofdifferences.&nbsp;
+One starts with the assumptionthat one is tabulatingapolynomial functionof
+the nth degree.&nbsp; Consequentlyone may also assumethat its nth difference
+is always a constant and havingbeen given or havingascertained starting values
+for the function itself andits n levels of differencesone may calculate from
+these, by adding them togetherin the correct orderrepeatedly, a full table
+of values for the function atthe fixed and specifiedinterval,a process comparable
+to Integration. </font></font></p>
+<font face="Times New Roman"><font size="+0"> &nbsp;&nbsp; It will be found
+that this procedurecan be used, in general, to generate in sequence, a full
+table of values forany function, for a given, fixed interval of values for
+x. In principle allone needs is the starting values of the function and its
+1st to nth differences,and the assumption that the nth difference is a constant.
+Once these are specifiedthen a complete table of values for any functionand
+all its differences canbe produced by iteration. If one is tabulatinga polynomial
+function of the nth degree, then this will be found to be anexact process,
+otherwise it willbe found that it produces a seriesof reasonablysatisfactory
+approximations.</font></font><br>
+<br>
+ &nbsp; &nbsp;<br>
+<img src="file:///A|/diff-engine-small.gif" alt=" " width="150" height="231" align="Left"><br>
+ &nbsp; &nbsp; &nbsp; The Difference Engine was only partially completed
+when<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a> conceived the idea of another, more sophisticated machine &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; calledan Analytical Engine. Interestingly
+enough, more than one hundred and fiftyyears after its conception, one of
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a>'s earlier &nbsp;&nbsp; &nbsp; &nbsp; Difference Engines was eventually
+constructed fromoriginaldrawings by a team at London's Science Museum. The
+device &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; performedits
+firstsequence of calculations in the early 1990's and returned resultsto31
+digitsof accuracy, which is far more accurate &nbsp; &nbsp; than the standard
+pocketcalculator.However, each calculation requires the user to turn a crank
+hundreds,sometimesthousands of &nbsp; &nbsp; &nbsp; &nbsp; times.&nbsp; <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a> worked on his Analytical Engine from around 1830 until he died,
+but sadly it was never completed. It is often said &nbsp; &nbsp; &nbsp; &nbsp;
+that <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Babbage.html">
+Babbage</a> was a hundred years ahead of his time and that the technology
+of the day was inadequate for the task. <br>
+ &nbsp;&nbsp; <br>
+ &nbsp;&nbsp; <br>
+ &nbsp;&nbsp; <br>
+</div>
+<br>
+<br>
+<big><big><b><i>
+<hr></i></b></big></big><br>
+<div align="Center"><b><big><big>Bessel Functions</big></big></b></div>
+ <br>
+ Friedrich Wilhelm &nbsp; <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a> was a German astronomer and mathematician,best known for making
+the first accurate measurement of the distance to astar.&nbsp; He established
+the uniform system for computing star positions that is still in use.&nbsp;
+In the investigation of problems connected with planetary perturbation, he
+introduced into mathematics the &nbsp; <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a> functions as the solutionsof certain differential equations. The
+functions are of great importancein determining the distribution and flow
+of heat or electricity through acircular cylinder and in the solution ofproblems
+concerning wave theory,elasticity, and hydrodynamics.<br>
+<br>
+<div align="Left">
+<div align="Center">&nbsp; <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a>'s differential equation is as follows:<br>
+</div>
+<br>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="37%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top">                                                
+      <div align="Center"><b>&nbsp; (d<sup>2</sup>u)/(dz<sup>2</sup>) + (1)/(z)
+* (du)/(dz) + (1 - (s<sup>2</sup>/z<sup>2</sup>))u=0.</b> &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; <b>(1)</b><br>
+      </div>
+      </td>
+    </tr>
+                
+  </tbody>
+</table>
+<div align="Left"><br>
+The <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a> function can be defined as a particular solutionof <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a>'s differential equation (1), with the exponent alpha =+s and with
+the leading coefficient a<sub>0</sub>=[2<sup>s</sup>G(s+1)]<sup>-1</sup>.
+&nbsp; Here, G is used to denote the gamma function (See <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gauss.html">
+Gauss</a> below for informationon the gamma function).&nbsp; Using the properties
+of the gammafunction,weget <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a>'s function to be:<br>
+<br>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="37%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top">                                                
+      <div align="Center"><b>J<sub>s</sub>(z) = </b> <b>Sigma ((-1)<sup>j</sup>
+)/(G(j+1)G(j+s+1))*(z/2)<sup>2j+s</sup>. &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+(2)</b></div>
+      </td>
+    </tr>
+                
+  </tbody>
+</table>
+<br>
+<div align="Left">The sum of this series is a solution to (1) for any real
+s except if s is a negative integer.&nbsp; If s is a negative integer, the
+series is not defined.&nbsp; This is because G(s) is infinite for negative
+integers s.&nbsp; For a given value of s, not an integer, the functions J<sub>
+s</sub>(z) and J<sub>-s</sub>(z) give a pair of linearly independent solutions
+of (1).&nbsp; Thus, all solutions of (1) are AJ<sub>s</sub>(z)+BJ<sub>-s</sub>
+(z), for arbitrary constants A and B.&nbsp; It is important to note, however,
+that&nbsp; J<sub>-s</sub>(z) is infinite at z=0.<br>
+There are also identities that relate the <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bessel.html">
+Bessel</a> functions for differentvaluesof s.&nbsp; They are as follows:<br>
+<br>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="50%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top">                                                
+      <div align="Left"><b> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; J<sub>s+/-1</sub>(z)=(s/z)J<sub>s</sub>
+(z)-/+J'(z). &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (3)</b><br>
+      </div>
+      </td>
+    </tr>
+    <tr valign="Top">
+      <td valign="Top"><b> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; J<sub>s-1</sub>(z) + J<sub>s+1</sub>(z)
+=(2s/z)J<sub>s</sub>(z).</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>(4)</b><br>
+      </td>
+    </tr>
+                
+  </tbody>
+</table>
+<br>
+<div align="Left">The first pair of these recursion relations (3) follows
+from the series expansion (2), while (4) follows from (3). &nbsp;&nbsp; &nbsp;
+&nbsp; &nbsp; <br>
+<br>
+</div>
+</div>
+</div>
+</div>
+<br>
+<i>
+<hr></i><br>
+</div>
+</div>
+<br>
+</div>
+</div>
+<div align="Center"><font face="Times New Roman, Times, serif" color="#000000"><big><big><b>
+Farey Series</b></big></big></font><br>
+<br>
+</div>
+ &nbsp; &nbsp; The <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a> series<b> F<small>N </small></b>is the set of all fractionsbetween
+0 and 1 written in lowest terms.&nbsp; The denominators of thesefractions
+donot exceed N ( where N is the order of the series) and they arearranged
+inorder of magintude. In 1816, <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a> published a statement in whichhe declaredthatthe middle of anythree
+successive terms in the <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a> seriesis the mediantofthe other two.&nbsp; It was <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Cauchy.html">
+Cauchy</a> who eventually supplied the proof of this statement.&nbsp; <br>
+A proof of this statement is as follows:<br>
+<br>
+<div align="Center">
+<div align="Left"> &nbsp; &nbsp; Start with <b>F<sub>1 </sub></b>which is
+0/1, 1/1.&nbsp; In order toget <b>F<sub>2</sub></b>, insert the mediant into
+<b>F<sub>1</sub></b>: 0/1,1/2, 1/1.&nbsp; <br>
+</div>
+<div align="Left"> For <b>F<sub>3</sub></b> we add two mediants: 0/1,1/3,1/2,2/3,1/1.
+To get<b> F<sub>4</sub></b> we also add only 2 fractions: 0/1,1/4,1/3,1/2,2/3,3/4,1/1.&nbsp;
+Next, add 4 fractions to get <b>F<sub>5</sub></b>:0/1,1/5,1/4,1/3,2/5,1/2,3/5,2/3,3/4,4/5,1/1.
+The general rule is this: to move from <b>F<sub>N-1</sub></b> to <b>F<sub>
+N</sub></b> add all possible mediants (that come out to be in the lowestterms)with
+N in the denominator. Since forming a mediant may only increasethe denominator
+weare led to think that following this rule we indeed willget the whole of<b>
+F<sub>N</sub></b>. To complete the proof we refer to the<a href="http://www.cut-the-knot.com/blue/Stern.html">
+</a><a href="http://www.cut-the-knot.com/blue/Stern.html">Stern-Brocot</a>
+ &nbsp; tree which contains all positive fractions.So in the process of constructing
+a <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a> series no fraction will be missed.<br>
+</div>
+<br>
+<img src="file:///A|/fareytr.jpg" alt=" " width="285" height="500"><br>
+</div>
+<p>When N is prime, the rule adds N-1 fractions. In general, <a href="Euler.html"><img src="../gifs/fi.gif" width="12" height="13" border="0"></a><a href="Euler.html"><img src="../gifs/fi.gif" width="12" height="13" border="0"></a><a href="http://www.cut-the-knot.com/blue/Euler.html">
+(N)</a><a href="http://www.cut-the-knot.com/blue/Euler.html"></a> fractions
+are added. For all reducible fractionsm/N will have appeared in one of the
+earlier series. </p>
+<center><img src="farey7.gif" width="245" height="28"></center>
+<p><a href="Euclid.html#important"></a>The <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a> series is important in theproof of a corollary of <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Euclid.html">
+Euclid</a>'s algorithm.&nbsp; The algorithm is as follows:<br>
+For integers m and n with gcd(m,n) = 1 and m<img src="../gifs/le.gif" width="14" height="13">
+n, there exist positive integers a and b such that ma - nb = 1. The proof&nbsp;
+relies on the properties of the <a href="http://www.cut-the-knot.com/blue/Stern.html">
+Stern-Brocot</a><a href="http://www.cut-the-knot.com/blue/Stern.html"></a>
+ &nbsp; &nbsp; tree. For any two consecutive fractions m<sub>1</sub>/n<sub>
+1</sub> &nbsp; and m<sub>2</sub>/n<sub>2</sub> in the <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a> series, m<sub>2</sub>n<sub>1</sub>- m<sub>1</sub>n<sub>2</sub>=
+1. So, depending on whether m or n is larger, locate either m/n or n/m ina
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Farey.html">
+Farey</a> series and select (asa/b) eitherthe precedingor the following fraction.
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; </p>
+<p><i>
+<hr></i><br>
+</p>
+<div align="Center">
+<div align="Center"><big><big><b>Gauss and the Gamma Function</b></big></big><br>
+<br>
+ The gamma function is useful more for its relationship to other functions
+than as a solution by itself of some problem. It arises in simplifying the
+evaluation of some infinite or improper integrals and in the solution ofdifferential
+and difference equations arising in probability theory, statistics,mathematical
+physics, and engineering mathematics.<br>
+<br>
+<div align="Left">The logarithm can be defined by and integral.&nbsp; The
+gamma function can also be defined by an integral, but in a different way.&nbsp;
+It is:<br>
+<div align="Center"><b><br>
+</b>
+<table cellpadding="2" cellspacing="2" border="1" width="25%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top">                                                 
+                             
+      <div align="Center"><b>G(x)= <img src="integral.gif" alt="integral">
+ s<big><sup><small>x-1</small></sup></big> e<big><sup><small>-s</small></sup></big></b><b>
+ds &nbsp; for 0&lt;x&lt;<img src="infinity.gif" alt="infinity">.</b><br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<b><br>
+</b><br>
+<br>
+<div align="Left">The integral converges because the exponential makes it
+small as s-&gt; <img src="infinity.gif" alt="infinity">.&nbsp; As s-&gt;0,
+the factor s^<small>x-1<big> is integrable because x&gt;0. <br>
+ The gamma function is a generalization of the factorial.&nbsp; In fact,</big></small>
+it has the following properties:<br>
+<div align="Center">
+<div align="Center"><br>
+<table cellpadding="2" cellspacing="2" border="1" width="25%" align="Center" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td align="Center"><b>G(x+1)=xG(x).</b><br>
+ </td>
+    </tr>
+    <tr valign="Top">
+      <td valign="Top" align="Center">&nbsp; <b>G(n+1)=n!&nbsp; ,&nbsp; if
+n is a positiveinteger.</b><br>
+      </td>
+    </tr>
+    <tr valign="Top">
+      <td valign="Top" align="Center"><b> &nbsp; &nbsp;&nbsp; G(1/2)=sqrt<img src="pi.gif" alt="pi"></b><br>
+                                                                        
+          
+      <div align="Center"><br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<br>
+<div align="Left"><br>
+Another useful identity with respect to the gamma function is:<br>
+<table cellpadding="2" cellspacing="2" border="1" width="34%" align="Center" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" align="Center"><br>
+      <b>G(x)= <big>(</big>2<small><sup>x-1</sup>)<big>/(sqrt</big></small></b><img alt="pi" src="pi.gif">
+) <b>G(x/2)G(x+1/2).</b></td>
+    </tr>
+                            
+  </tbody>
+</table>
+<br>
+<div align="Center">
+<div align="Center"><br>
+<br>
+<div align="Left">This can be used to give another derivation of the gamma
+function on the "half-integers."<br>
+<br>
+The formula for the surface area of the sphere of radius R in <i>n</i> dimensions
+is:<br>
+<br>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="25%">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" bgcolor="#ccccff" align="Center"><b>A<sub>n</sub>=(
+      </b><b>2<img src="pi.gif" alt="pi"><sup>n/2 &nbsp; </sup></b><b>R<sup>
+n-1</sup>)/</b><b>G (n/2).</b><br>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<b><br>
+<br>
+</b><br>
+</div>
+</div>
+</div>
+<div align="Left"><i></i>
+<hr><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div align="Center">
+<p><big><big><b>Gompertz Equation</b></big></big></p>
+</div>
+<p>Benjamin Gompertz&nbsp; applied the calculus to actuarialquestions.&nbsp;
+He is best remembered for Gompertz's Law of Mortality in which he showedthat
+the mortality rate increases in a geometric progression.Hence, whendeathrates
+are plotted on a logarithmic scale, a straight lineknown as theGompertzfunction
+is obtained. It is the most informative actuarialfunctionfor investigating
+the ageing process. The slope of the Gompertzfunction lineindicates the rate
+of actuarial ageing.&nbsp;</p>
+The <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gompertz.html">
+Gompertz</a> growth law has been shown to provide a good fit for the growth
+data of numerous tumors.&nbsp; It can be described by the following system
+of differential equations:<br>
+<br>
+Let V(t) measure the size of the tumor (e.g. volume, number, etc.)<br>
+<div align="Center"><br>
+<small><big><big><small><small><big><big><b> </b></big></big></small></small></big></big></small><br>
+<small><big><big><small><small><big><big></big></big></small></small></big></big></small>
+<table cellpadding="2" cellspacing="2" border="1" width="25%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" colspan="2" bgcolor="#ccccff">                   
+                                                      
+      <div align="Center"><b>dV/dx = r(t)V(t), V(0) =V</b><b>0</b><b> &nbsp;</b><br>
+      <br>
+      </div>
+      <br>
+      </td>
+    </tr>
+    <tr valign="Top">
+      <td valign="Top" colspan="2">                                     
+                                       
+      <div align="Center"><br>
+      <small><big><big><small><small><big><big>dr/dx = alpha r(t), r(0) =
+beta</big></big></small></small></big></big></small><br>
+      </div>
+      <br>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<br>
+<br>
+</div>
+Here&nbsp; r(t)= tumor growth,<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; alpha= retardation constant,<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; beta= initial growth or regression rate.<br>
+<br>
+The sign of beta determines where the tumor grows or regresses.&nbsp; The
+solution is given by:<b><br>
+<br>
+<br>
+</b>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="25%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" colspan="1">                                     
+                                       
+      <div align="Center"><b><br>
+      </b>                                                              
+                  
+      <div align="Center"><b>V(t) = V<small>0 <big>e</big></small></b>.</div>
+      <br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+&nbsp; <br>
+</div>
+<br>
+<br>
+<i>
+<hr></i>
+<div align="Center"><big><big><b>Legendre Functions</b></big></big>
+<div align="Left"><br>
+In problems of spherical symmetry, one encounters <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Legendre.html">
+Legendre</a>'sdifferential equation:<br>
+<br>
+<div align="Center">
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="25%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" colspan="1">                                     
+                                       
+      <div align="Center"><b>[(1- z<sup>2</sup>)u']'+<i>y</i>u=0.</b><br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<br>
+Here <i>y</i>= <i>l</i>(<i>l</i>+1) for some integer <i>l</i> &gt;=0.<br>
+<div align="Left"><br>
+This equation is easily solved by the power series:
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="17%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" colspan="1">                                     
+                                       
+      <div align="Center"><br>
+      <b>u(z) =<img src="../Symbolgifs/Sigma.gif" alt="Sigma"> a<sub>k</sub>
+z<sup>k</sup></b>.<br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+</div>
+<div align="Center"><b><sup><br>
+<br>
+</sup></b>
+<div align="Left">When we substitute the power series into<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Legendre.html">
+Legendre</a>'s differentialequation, we get:<br>
+<br>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="34%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" colspan="1">                                     
+                                       
+      <div align="Center"><b><img src="../Symbolgifs/Sigma.gif" alt="Sigma">
+ k(k-1)a<sub>k</sub>z<sup>k-2</sup>-</b><b><img src="../Symbolgifs/Sigma.gif" alt="Sigma"></b>
+ <b>(k<sup>2</sup>+k-<i>y</i>)a<sub>k</sub>z<sup>k</sup>=0.</b><br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<br>
+<br>
+<div align="Left">We next replace k-2 by k in the first sum.&nbsp; The coefficients
+of the like powers of z must match, so that:<br>
+<br>
+ &nbsp;  &nbsp; &nbsp; <br>
+ 
+<table cellpadding="2" cellspacing="2" border="1" width="25%" align="Center" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top" rowspan="1" colspan="1" align="Center">          
+                                                             
+      <div align="Center"><b>a<sub>k+2</sub>=a<sub>k</sub> (k(k+1)-<i>y</i>
+)/((k+2)(k+1))</b>, (k=0,1,2....)<br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<br>
+</div>
+</div>
+It follows that the <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Legendre.html">
+Legendre</a> polynomials are:<br>
+<br>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="37%" align="Center" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top">                                                 
+                             
+      <div align="Center"><b>P<i><sub>l</sub></i>(z) = 1/2<sub><i>l</i></sub><i>
+ </i></b><b><img src="../Symbolgifs/Sigma.gif" alt="Sigma"> ((-1)<sup>j</sup>
+)/(j!)* ((2<i>l</i>-2j)!)/((<i>l</i>-2j)!(<i>l</i>-j)!)*z<i><sup>l</sup></i><sup>
+-2j</sup><i>.</i></b><br>
+      <br>
+(m=<i>l</i>/2 if <i>l</i> is even, and m=(<i>l</i>-1)/2 if <i>l</i> is odd.<br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+</div>
+The P<sub><i>l</i></sub>(z) satisfy the recursive relation:<br>
+</div>
+<div align="Left"><i><sub> </sub></i><br>
+<br>
+<div align="Center">
+<table cellpadding="2" cellspacing="2" border="1" width="25%" bgcolor="#ccccff">
+  <tbody>
+    <tr valign="Top">
+      <td valign="Top">                                                 
+                             
+      <div align="Center"><b>(<i>l</i>+1)P<sub><i>l+</i>1</sub>(z)-(2<i>l</i>
++1)zP<sub><i>l</i></sub>(z)+<i>l</i>P<sub><i>l-</i>1</sub>(z)=0.</b><br>
+      </div>
+      </td>
+    </tr>
+                            
+  </tbody>
+</table>
+<br>
+</div>
+</div>
+<div align="Left"><br>
+<sup> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</sup></div>
+<b>&nbsp; </b></div>
+</div>
+</div>
+<div align="Left"><br>
+</div>
+<img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><img src="file:///A|/A2.jpg" alt=" " width="85" height="106" align="Center"><br>
+</div>
+</div>
+<i></i>
+<hr><br>
+</div>
+<br>
+<br>
+<p><font color="red" size="-1"><font color="blue"> &nbsp; &nbsp; &nbsp; </font></font></p>
+                                                                  <map name="A2"></map>
+                  
+</body>
+</html>

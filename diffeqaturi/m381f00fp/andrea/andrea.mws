@@ -1,0 +1,23 @@
+{VERSION 3 0 "IBM INTEL NT" "3.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 0 
+0 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 0 
+0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "Gamma(x)=int(s^(x-1)
+*e^(-s),s=0..infinity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/-%&GammaG6
+#%\"xG-%$intG6$*&)%\"sG,&F'\"\"\"!\"\"F/F/)%\"eG,$F-F0F//F-;\"\"!%)inf
+inityG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "sqrt(pi);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#*$-%%sqrtG6#%#piG\"\"\"" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "Sum((-1)^j,j=0..infinity);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$SumG6$)!\"\"%\"jG/F(;\"\"!%)infinit
+yG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "Sum((-1)^j,j=0..m);" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$SumG6$)!\"\"%\"jG/F(;\"\"!%\"mG" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "Sum(a[k],k=0..infinity);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$SumG6$&%\"aG6#%\"kG/F);\"\"!%)i
+nfinityG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "Sum((-1)^j,j=0.
+.infinity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$SumG6$)!\"\"%\"jG/F(
+;\"\"!%)infinityG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{MARK "6 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 }
