@@ -1,0 +1,508 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Krzysztof Mailloux">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Untitled</title>
+</head>
+<body>
+
+<center><font color="#FF0000"><font face="Times New Roman,Times"><font size=+2>Equation
+</font><font size=+1>x<sub>n+1</sub>
+= </font></font><font size=+1><font face="Arial,Helvetica">(</font><font face="Symbol">b</font><font face="Times New Roman,Times">x<sub>n</sub>+</font><font face="Symbol">g</font><font face="Times New Roman,Times">x<sub>n-1</sub>)/(Bx<sub>n</sub>+Cx<sub>n-1</sub>).</font></font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">In this page
+we will look at the equation:</font></font>
+<center>
+<p><font color="#3333FF"><font face="Times New Roman,Times">x<sub>n+1</sub>
+= </font><font face="Arial,Helvetica">(</font><font face="Symbol">b</font><font face="Times New Roman,Times">x<sub>n</sub>+</font><font face="Symbol">g</font><font face="Times New Roman,Times">x<sub>n-1</sub>)/(Bx<sub>n</sub>+Cx<sub>n-1</sub>).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(1)</font></font></center>
+
+<p>Let
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3333FF"><font face="Times New Roman,Times">x<sub>n</sub>
+= </font><font face="Symbol">g</font><font face="Times New Roman,Times">y<sub>n</sub>/C,
+p =</font><font face="Arial,Helvetica"> </font><font face="Symbol">b</font><font face="Arial,Helvetica">/</font><font face="Symbol">g</font><font face="Times New Roman,Times">,
+and&nbsp; q = B/C.</font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">This change
+of variables reduces Eq. (1) to</font></font>
+<br>&nbsp;
+<br>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">y<sub>n+1</sub>
+= (py<sub>n</sub>+ y<sub>n-1</sub>)/(qy<sub>n</sub>+ y<sub>n-1</sub>).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(2)</font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">To avoid the
+degenerate case, we will also assume that</font></font>
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF"><font face="Times New Roman,Times">p </font><font face="Symbol">&sup1;
+</font><font face="Times New Roman,Times">q.</font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">The only equilibrium
+point of Eq. (2) is</font></font>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">&yuml; = (p+1)(q+1)</font></font></center>
+
+<p><font face="Times New Roman,Times"><font color="#000000">and the linearized
+equation of Eq. (2) about &yuml; is</font></font>
+<br>&nbsp;
+<br>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3366FF">z</font><sub><font color="#3333FF">n+1</font></sub><font color="#3366FF">-(p-q)z</font><sub><font color="#3333FF">n</font></sub><font color="#3366FF">/((p+1)(q+1))+(p-q)z</font><sub><font color="#3333FF">n-1</font></sub><font color="#3366FF">/((p+1)(q+1))
+= 0,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n = 0, 1, ...</font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">By applying
+the Linearized Stability Theorem, we obtain the following result:</font></font>
+<p><b><font face="Times New Roman,Times"><font color="#000000">Theorem
+1:</font></font></b>
+<p><font face="Times New Roman,Times"><font color="#000000">&nbsp;&nbsp;&nbsp;
+(a) Assume that</font></font>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">p>q.</font></font></center>
+
+<p><font face="Times New Roman,Times"><font color="#000000">Then the positive
+equilibrium of Eq. (2) is locally asymptotically stable.</font></font>
+<br><font face="Times New Roman,Times"><font color="#000000">&nbsp;&nbsp;&nbsp;
+(b) Assume that</font></font>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">p&lt;q.</font></font></center>
+
+<p><font face="Times New Roman,Times"><font color="#000000">Then the positive
+equilibrium of Eq. (2) is locally asymptotically stable when</font></font>
+<br>&nbsp;
+<br>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+q&lt;pq+1+3p&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(3)</font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">and is unstable
+(and in fact a saddle point equilibrium) when</font></font>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+q>pq+1+3p.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(4)</font></font></center>
+
+<p><b><font size=+1>Existence of a Two Cycle</font></b>
+<p><font face="Times New Roman,Times"><font color="#000000">&nbsp;&nbsp;&nbsp;
+It follows from that when p&lt;q, Eq( 2)&nbsp; has no prime period two
+solutions.&nbsp; On the other hand when</font></font>
+<br>&nbsp;
+<br>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">p&lt;q.</font></font></center>
+
+<p><br>
+<p><font face="Times New Roman,Times"><font color="#000000">and</font></font>
+<br>&nbsp;
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">q>pq+1+3p,</font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">Eq. (2) possesses
+a unique period two solution:</font></font>
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3333FF"><font face="Times New Roman,Times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+..., </font><font face="Symbol">f, y, f, y,...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(5)</font></font></center>
+
+<p><br>
+<br>
+<p><font color="#000000"><font face="Times New Roman,Times">where the values
+of </font><font face="Symbol">f</font><font face="Times New Roman,Times">
+and </font><font face="Symbol">y</font><font face="Times New Roman,Times">
+are the (positve and distinct) solutions of the quadratic equation</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><font face="Times New Roman,Times"><font color="#3366FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+t<sup>2</sup>-(1-p)t+p(1-p)/(q-1) = 0.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(6)</font></font></center>
+
+<p><br>
+<p><font face="Times New Roman,Times"><font color="#000000">In order to
+investigate the stability nature of this prime period two solution, we
+set</font></font>
+<br>&nbsp;
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">u<sub>n </sub>=
+y<sub>n-1</sub> and v<sub>n </sub>= y<sub>n</sub>&nbsp; for n = 0, 1,...</font></font></center>
+
+<p><br>
+<p><font face="Times New Roman,Times"><font color="#000000">and write Eq.
+(2) in the equivalent form:</font></font>
+<br>&nbsp;
+<center>
+<p><font face="Times New Roman,Times"><font color="#3333FF">u<sub>n+1 </sub>=
+v<sub>n</sub></font></font>
+<br><font face="Times New Roman,Times"><font color="#3333FF">v<sub>n+1
+</sub>=
+(pv<sub>n</sub>+u<sub>n</sub>)/(qv<sub>n</sub>+u<sub>n</sub>), n = 0, 1,....</font></font></center>
+
+<p><br>
+<p><font color="#000000"><font face="Times New Roman,Times">Let <i>T </i>be
+the function on (0,</font><font face="Symbol">&yen;)&acute;(0</font><font face="Times New Roman,Times">,</font><font face="Symbol">&yen;)
+</font><font face="Times New Roman,Times">defined
+by:</font></font>
+<br>&nbsp;
+<center>
+<p><img SRC="4421.gif" height=88 width=168><font face="Times New Roman,Times"><font color="#3333FF">.</font></font></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">Then</font></font>
+<br>&nbsp;
+<br>
+<center>
+<p><img SRC="4422.gif" height=62 width=55></center>
+
+<p><br>
+<br>
+<p><font face="Times New Roman,Times"><font color="#000000">is a fixed
+point of <i>T</i><sup>2</sup>, the second iterate of <i>T</i>.&nbsp; One
+can see that</font></font>
+<br>&nbsp;
+<center>
+<p><img SRC="4423.gif" height=88 width=219></center>
+
+<p>&nbsp; where
+<center>
+<img SRC="4424.gif" height=95 width=325></center>
+
+<p><br>
+<br>
+<p>The prime period two solution (5) is asymptotically stable if the eigenvalues
+of the Jacobian matrix J<sub>T</sub><sup>2</sup>, evaluated at&nbsp;<img SRC="4425.gif" height=62 width=53>
+lie inside the unit disk. One can see that
+<br>&nbsp;
+<br>
+<center>
+<p><img SRC="4426.gif" height=152 width=415></center>
+
+<p><br>
+<p>Set
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">P = (p-q)/((q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)<sup>2</sup>)
+and Q = (p-q)/((q</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)<sup>2</sup>)</font></center>
+
+<p><br>
+<br>
+<p>Then
+<br>&nbsp;
+<br>&nbsp;
+<p>and its characteristic equation is
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3333FF"><font face="Symbol">l<sup>2</sup>+(</font><font face="Times New Roman,Times">P</font><font face="Symbol">y+</font><font face="Times New Roman,Times">Q</font><font face="Symbol">f-</font><font face="Times New Roman,Times">PQ</font><font face="Symbol">fy)l+</font><font face="Times New Roman,Times">PQ</font><font face="Symbol">fy
+= 0</font></font></center>
+
+<p><br>
+<br>
+<p>By applying the Linearized Stability Theorem , it follows that both
+eigenvalues of J<sub>T</sub><sup>2</sup>, evaluated at&nbsp;<img SRC="4425.gif" height=62 width=53>
+<br>lie inside the unit disk if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">|</font><font color="#3333FF"><font face="Times New Roman,Times">P</font><font face="Symbol">y+</font><font face="Times New Roman,Times">Q</font><font face="Symbol">f-</font><font face="Times New Roman,Times">PQ</font><font face="Symbol">fy</font></font><font color="#3366FF">|&lt;1+PQ</font><font face="Symbol"><font color="#3333FF">fy</font></font><font color="#3366FF">&lt;2</font></center>
+
+<p><br>
+<br>
+<p>or equivalently if and only if the following three inequalities hold:
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3333FF"><font face="Times New Roman,Times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P</font><font face="Symbol">y+</font><font face="Times New Roman,Times">Q</font><font face="Symbol">f+1>0</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(7)</font>
+<br><font color="#3333FF"><font face="Times New Roman,Times">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+P</font><font face="Symbol">y+</font><font face="Times New Roman,Times">Q</font><font face="Symbol">f&lt;</font>1+2PQ<font face="Symbol">fy</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+(8)</font></center>
+
+<p>and
+<center><font color="#3366FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PQ</font><font face="Symbol"><font color="#3333FF">fy&lt;1</font></font><font color="#3366FF">.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(9)</font></center>
+
+<p>Observe that
+<br>&nbsp;
+<br>
+<center>
+<p><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">
+> 0, </font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">
+> 0, P &lt; 0 and Q &lt; 0</font></center>
+
+<p><br>
+<br>
+<p>and so Inequality (6) is always true.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Next we will establish Inequality (7). We
+will use the fact that
+<br>&nbsp;
+<br>
+<center>
+<p><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">
+= 1-p, </font><font face="Symbol"><font color="#3333FF">fy</font></font><font color="#3366FF">
+= p(1-p)/(q-1)</font>
+<br><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">
+= (p</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)/(q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)
+and </font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">
+= (p</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)/(q</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)</font></center>
+
+<p><br>
+<br>
+<p>Inequality (7) is equivalent to
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">0 &lt; (p-q)</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">/((q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)<sup>2</sup>)+(p-q)</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">/((q</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)<sup>2</sup>)+1</font></center>
+
+<p><br>
+<br>
+<p>which is true if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">(q-p)[(q</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)<sup>2</sup></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+(q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)<sup>2</sup></font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">]
+&lt; (q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)<sup>2</sup>(q</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)<sup>2</sup></font></center>
+
+<p><br>
+<br>
+<p>if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3333FF">(q-p)[(q<font face="Symbol">f</font>+<font face="Symbol">y</font>)(p<font face="Symbol">f</font>+<font face="Symbol">y</font>)+(q<font face="Symbol">y</font>+<font face="Symbol">f</font>)(p<font face="Symbol">y</font>+<font face="Symbol">f</font>)]
+&lt; [(q<font face="Symbol">f</font>+<font face="Symbol">y</font>)(q<font face="Symbol">y</font>+<font face="Symbol">f</font>)]<sup>2</sup>.&nbsp;&nbsp;&nbsp;&nbsp;
+(10)</font></center>
+
+<p><br>
+<br>
+<p>Now observe that the left-hand side of (10) is
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">&nbsp;I = (q-p)[(qp+1)(</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF"><sup>2</sup>+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF"><sup>2</sup>)+2(p+q)</font><font face="Symbol"><font color="#3333FF">fy</font></font><font color="#3366FF">]</font>
+<br><font color="#3366FF">= (q-p)[(qp+1)(</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF"><sup>2</sup>+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF"><sup>2</sup>)-2(qp+1-p-q)</font><font face="Symbol"><font color="#3333FF">fy</font></font><font color="#3366FF">]</font>
+<br><font color="#3366FF">= (q-p)[(qp+1)(1-p)<sup>2</sup>-2p(1-p)(p-1)(q-1)/(q-1)]</font>
+<br><font color="#3366FF">(q-p)(1-p)<sup>2</sup>(qp+1+2p)</font></center>
+
+<p><br>
+<br>
+<p>The right-hand side of (10) is
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">II = [(q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)(q</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)]<sup>2</sup></font>
+<br><font color="#3366FF">= [(q<sup>2</sup>+1)</font><font face="Symbol"><font color="#3333FF">fy</font></font><font color="#3366FF">+q(</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF"><sup>2</sup>+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF"><sup>2</sup>)]<sup>2</sup></font>
+<br><font color="#3366FF">= [q(</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)<sup>2</sup>+(q-1)<sup>2</sup></font><font face="Symbol"><font color="#3333FF">fy</font></font><font color="#3366FF">]<sup>2</sup></font>
+<br><font color="#3366FF">= [q(1-p)<sup>2</sup>+(q-1)p(1-p)]<sup>2</sup></font>
+<br><font color="#3366FF">= (1-p)<sup>2</sup>(q-p)<sup>2</sup>.</font></center>
+
+<p><br>
+<br>
+<p>Hence Inequality (7) is true if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">q>1 +p</font></center>
+
+<p><br>
+<br>
+<p>which is clearly true.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Finally, Inequality (9) is equivalent to
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">(p-q)<sup>2</sup></font><font face="Symbol"><font color="#3333FF">fy</font></font><font color="#3366FF">
+&lt; (q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">)<sup>2</sup>(q</font><font face="Symbol"><font color="#3333FF">f</font></font><font color="#3366FF">+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)<sup>2</sup></font></center>
+
+<p><br>
+<br>
+<p>which is true if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">(q-p)<font face="Symbol">&Ouml;</font>(<font face="Symbol">f</font></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)
+&lt; (q</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">+<font face="Symbol">f</font>)(q<font face="Symbol">f</font>+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)</font></center>
+
+<p><br>
+<br>
+<p>if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">(q-p)<font face="Symbol">&Ouml;</font>(<font face="Symbol">f</font></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)
+&lt; (q<sup>2</sup>+1)</font><font face="Symbol"><font color="#3333FF">y</font><font color="#3366FF">f</font></font><font color="#3366FF">+q(<font face="Symbol">f</font><sup>2</sup>+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF"><sup>2</sup>)</font></center>
+
+<p><br>
+<br>
+<p>if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">(q-p)<font face="Symbol">&Ouml;</font>(<font face="Symbol">f</font></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)
+&lt; (q<sup>2</sup>+1)</font><font face="Symbol"><font color="#3333FF">y</font><font color="#3366FF">f</font></font><font color="#3366FF">+q[<font face="Symbol">f</font><sup>2</sup>+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF"><sup>2</sup>-2<font face="Symbol">f</font></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">]</font></center>
+
+<p><br>
+<br>
+<p>&nbsp;if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">(q-p)<font face="Symbol">&Ouml;</font>(<font face="Symbol">f</font></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)
+&lt; (q<sup>2</sup>+1)</font><font face="Symbol"><font color="#3333FF">y</font><font color="#3366FF">f</font></font><font color="#3366FF">+q(<font face="Symbol">f</font>+</font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)<sup>2</sup></font></center>
+
+<p><br>
+<br>
+<p>if and only if
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">(q - p)<font face="Symbol">&Ouml;</font>(<font face="Symbol">f</font></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)
+&lt; (q - l)<sup>2</sup>p(1-p)/(q-1) +q(l-p)<sup>2</sup></font></center>
+
+<p><br>
+<p>if and only if
+<br>&nbsp;
+<center>
+<p><font color="#3366FF">(q-p)<font face="Symbol">&Ouml;</font>(<font face="Symbol">f</font></font><font face="Symbol"><font color="#3333FF">y</font></font><font color="#3366FF">)
+&lt; (l-p)(q-p)</font></center>
+
+<p><br>
+<p>if and only if
+<br>&nbsp;
+<center>
+<p><font color="#3333FF">p(1-p) &lt;(1-p)</font><sup><font color="#3366FF">2</font></sup></center>
+
+<p><br>
+<br>
+<p>if and only if q > pq + 1, which is clearly true.
+<br>&nbsp;&nbsp;&nbsp;&nbsp; In summary, the following result is true about
+the local stability of the prime period two solution (4) of Eq(2).
+<p><b>Theorem 2:</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp; Assume that Condition (3) holds. Then Eq.
+(2) posseses the prime period two solution
+<center>
+<p><font color="#3333FF"><font face="Times New Roman,Times">..., </font><font face="Symbol">f,
+y, f, y,...</font></font></center>
+where phi; and psi; are the two positive and distinct roots of the quadratic
+Eq(6). Furthermore this prime period two solution is locally asymptotically
+stable.
+<p><b><font size=+1>Semicycle Analysis</font></b>
+<p>In this section, we present a semicycle analysis of the solutions of
+Eq(2).
+<p><b>Theorem 3:</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Let {y<sub>n</sub>} be a nontrivial
+positive solution of Eq (2). Then the following statements are true:
+<br>&nbsp;&nbsp;&nbsp; (a) Assume p > q. Then {y<sub>n</sub>} oscillates
+about the equilibrium &yuml; with semicycles of length two or three, except
+possibly for the first semicycle which may have length one. The extreme
+in each semicycle occurs in the first term if the semicycle has 2 terms
+and in the second term if the semicycle has 3 terms.
+<br>&nbsp;&nbsp;&nbsp; (b) Assume p &lt; q. Then either {y<sub>n</sub>}
+oscillates about the equilibrium &yuml; with semicycles of length one,
+after the first semicycle, or {y<sub>n</sub>} converges monotonically to
+&yuml;.
+<p><b><font size=+1>Global Stability Analysis when p &lt; q</font></b>
+<p>The main result in this section is the following
+<p><b>Theorem 4:</b>
+<br>&nbsp;&nbsp;&nbsp; Assume that
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">p&lt;q</font></center>
+
+<p><br>
+<br>
+<p>and (3) holds. Then the positive equilibrium &yuml; of Eq. (2) is globally
+asymptotically stable.
+<p>The method employed in the proof of Theorem 1.4.5 can also be used to
+establish that certain solutions of Eq (1) converge to the two cycle (5)
+when instead of (3), (4) holds.
+<p><b>Theorem 5</b>&nbsp;&nbsp; Assume that (4) holds. Let <font face="Symbol"><font color="#000000">f,
+y, f, y,...,</font></font> with <font face="Symbol"><font color="#000000">f</font></font>
+&lt; <font face="Symbol"><font color="#000000">y</font></font>, denote
+the two cycle of Eq (2). Assume that for some solution {y<sub>n</sub>}<sup><font face="Symbol">&yen;</font></sup><sub><font face="Times New Roman,Times">n</font><font face="Symbol">=-1</font></sub>
+of Eq (2) and for some index N <font face="Symbol">&sup3;</font> -1,
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">y<sub>N </sub><font face="Symbol">&sup3; y </font><font face="Times New Roman,Times">and
+</font>y<sub>N+1
+</sub><font face="Symbol">&pound;
+y</font>. (11)</font></center>
+
+<p>Then this solution converges to the two cycle <font color="#3333FF"><font face="Times New Roman,Times">...,
+</font><font face="Symbol">f,
+y, f, y,...</font></font><font face="Symbol"><font color="#000000">.</font></font>
+<p>Next we want to find more cases where the conclusion of the last theorem
+holds. We consider first the case where eventually consecutive terms <font color="#000000">y<sub>i</sub>,
+y<sub>i+1</sub></font> lie between m and M.
+<p><b>Theorem 6:</b>
+<br>&nbsp;Assume that
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#3366FF">p &lt; q,</font></center>
+
+<p><br>
+<br>
+<p>and that Eq. (1) possesses the two cycle Solution (5). Then every oscillatory
+Solution of Eq. (1) converges to this two cycle.
+<br>&nbsp;
+<p><b><font size=+1>Global Stability Analysis when p> q</font></b>
+<p>Here we have the following result.
+<p><b>Theorem 7:</b>
+<br>&nbsp;Assume that <font color="#3333FF">p>q</font> and <font color="#3366FF">p &lt; pq +1+ 3q.</font>
+<br>
+<p>Then the positive equilibrium &yuml; of Eq. (2) is globally asymptotically
+stable.
+<br>&nbsp;
+<p><b><font size=+1>Bibliography:</font></b>
+<br>
+<br>
+<b>&nbsp;1.&nbsp;</b> M. R. S. Kulenovic,&nbsp; G. Ladas and W.S. Sizer,
+On the Recursive Sequence x<sub>n+1</sub> = (<font face="Symbol">a</font>&nbsp;
+x<sub>n</sub> + <font face="Symbol">b</font> x<sub>n-1&nbsp;</sub> )/(<font face="Symbol">g</font>
+x<sub>n</sub> +&nbsp; <font face="Symbol">d </font>x<sub>n-1</sub>) , <i>Math.
+Sci. Res. Hot-Line&nbsp;</i> 2(1998), no.5, 1-16.
+<p><b>2.&nbsp;</b> M. R. S. Kulenovic and&nbsp; G. Ladas,<b> </b>Dynamics
+of Second Order Rational Difference Equation, (to appear).
+<br>&nbsp;
+<p><a href="http://hypatia.math.uri.edu/~kulenm/diffeqaturi/dehomepage.html"">Click here to go to Home Page for Difference
+Equations at URI</a>
+<p><a href="http://www.ele.uri.edu/~dobratzp/de.html">Click here to simulate
+the solutions of this equation for different choices of parameters and
+initial points</a>
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>

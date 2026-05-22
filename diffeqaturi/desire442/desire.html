@@ -1,0 +1,134 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>desire</title>
+</head>
+<body>
+
+<blockquote>
+<center><font color="#CC66CC"><font size=+3>Logistic Difference Equation</font></font>
+<hr WIDTH="100%"></center>
+</blockquote>
+<font face="Courier New,Courier">&nbsp;&nbsp;<font size=+1> </font></font><font size=+1>The
+non-linear difference equation</font>
+<br>&nbsp;
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote><font color="#3366FF"><font size=+2>x<sub>n+1</sub> = a x<sub>n</sub>
+(1 -&nbsp; x<sub>n </sub>)</font></font></blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<font face="Courier New,Courier">&nbsp;</font><font size=+1>is called logistic
+difference equation where a > 0 and 0 &lt;= X &lt;= 1.</font>
+<center>
+<p><font size=+1>Clearly it will have a positive equilibrium point if and
+only if the equation aX(1-X) = X</font></center>
+<font size=+1>&nbsp;has a positive solution.</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp; Therefore we have two equilibrium points:
+X = 0 and X =(a-1)/a</font>
+<p><font size=+1>Let us study the stability of each equilibrium point using
+the function g(X) = a*X(1-X).</font>
+<p><b><font face="Courier New,Courier">Case 1:</font></b>
+<br><b><font face="Courier New,Courier">X = 0</font></b>
+<br><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size=+1>g'(X) = a(1 - X) - a*X = a - 2a*X</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+g'(X = 0) = a</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+X = 0 is a sink if 0 &lt; a &lt; 1</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+X = 0 is a source if a > 1</font>
+<p><b><font face="Courier New,Courier">Case 2:</font></b>
+<br><b><font face="Courier New,Courier">X =(a-1)/a</font></b>
+<br><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size=+1>g'(X = (a - 1)/a) = a - 2a*(a-1)/a = a - 2a + 2 =
+2 - a</font>
+<p><font size=+1>Let find now the interval in which this equilibrium point
+is a sink by solving |g'(X)| &lt; 1:</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-1 &lt; g'(X = (a - 1)/a) &lt; 1&nbsp; i.e.&nbsp;&nbsp; a &lt; 3 and a
+> 1</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Therefore&nbsp;&nbsp; X = (a - 1)/a is a sink if 1 &lt; a &lt; 3</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+X = (a - 1)/a is a source if a > 3</font>
+<p><font size=+1>Next picture shows the convergence of a solution...</font>
+<center>
+<p><img SRC="desire21.gif" height=288 width=388></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<p><font size=+1>Let now find the periodic solution of period 2 by solving
+the equation&nbsp; g(g(X)) = X</font>
+<br><font size=+1>where g(X)= a*X(1-X).</font>
+<p><font size=+1>We will have two solutions if a > 3 ; X<sub><font color="#000000">1</font></sub>
+and X<sub><font color="#000000">2</font></sub>.</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+X<sub><font color="#000000">1</font></sub> = [(a + 1) - ((a + 1)(a - 3))<sup><font color="#000000">1/2</font></sup>]/2a
+and X<sub><font color="#000000">2</font></sub> = [(a + 1) + ((a + 1)(a
+- 3))<sup><font color="#000000">1/2</font></sup>]/2a</font>
+<p><font size=+1>Since X > 0; X<sub><font color="#000000">1</font></sub>
+> 0 and X<sub><font color="#000000">2</font></sub> > 0; g(X<sub><font color="#000000">1</font></sub>)
+= X<sub><font color="#000000">2</font></sub> and g(X<sub><font color="#000000">2</font></sub>)
+= X<sub><font color="#000000">1</font></sub>, the stability of</font>
+<br><font size=+1>these two solutions will be determined by:</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+d = g'(X<sub><font color="#000000">1</font></sub>)*g'(X<sub><font color="#000000">2</font></sub>)</font>
+<p><font size=+1>We are going to have a sink if -1 &lt; d &lt; 1&nbsp;
+i.e.&nbsp; -1 &lt; -a^2 +2a +4 &lt; 1</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a > 3 and a &lt; 1 + (6)^(1/2)</font>
+<p><font size=+1>In conclusion the periodic solution is</font>
+<br><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a sink if 3 &lt; a &lt; 1 +[6]<sup><font color="#000000">1/2</font></sup></font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+and a source if a > 1 +[6]^(1/2)</font>
+<p><font size=+1>when a = 1 + [6]^(1/2) we have g'(X) = a-2a*X g''(X) =
+-2a and g'''(X) = 0</font>
+<p><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+g'(X<sub><font color="#000000">1</font></sub>) = -1+[2]^(1/2) X1 is a sink</font>
+<p><font face="Courier New,Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font size=+1>
+g'(X<sub><font color="#000000">2</font></sub>) = -1-[2]^(1/2) X2 is a source</font>
+<center>
+<p><img SRC="desire11.gif" height=288 width=388></center>
+<font size=+1>green graph: y = g(X)</font>
+<br><font size=+1>red graph: y = g(g(X)) - second iterate</font>
+<br><font size=+1>blue graph: y = g(g(g(X))) - third iterate</font>
+<p><font size=+1>Interesting links for use further studying the Logistic
+Equation:</font>
+<p><a href="http://www2.austin.cc.tx.us/powens/logistic/logistic.htm#populations">Logistic
+Model</a> (outstanding general introduction)
+<br><a href="http://moon.uokhsc.edu/dthompso/pk/ldeq.htm">The Logistic
+Difference Equation</a>
+<br><a href="http://mathstat.math.carleton.ca/~amingare/chaosday/node1.html">The
+Logistic Equation and its associated map</a>
+<br><a href="http://www.psy.herts.ac.uk/pub/D.R.Mandel/chaoscom.html">Commentary
+on Chaos Theory, Sensitive Dependence, and the Logistic Equation</a> (article)
+<br><a href="http://titan.ecs.fullerton.edu/~mathews/N310/projects/p4.htm">The
+Logistic Equation</a> (as a population model)
+<br><a href="http://www.stolaf.edu/people/mckelvey/envision.dir/logistic.html">Logistic
+Population Model</a> (more detailed description)
+<br><a href="http://www.blacksci.co.uk/products/ecolmods/3111.htm">Discrete
+Logistic Equation</a> (as a biological model)
+<br><a href="http://www.iew.unizh.ch/home/klaus/logistic/detlog.html">Deterministic
+Logistic Map</a>
+<br><a href="http://math.bu.edu/DYSYS/applets/index.html">Java Applets&nbsp;
+</a>(phase plane analysis and bifurcation diagrams)
+<br>&nbsp;
+<p><font size=+1><a href="desireanim1.gif">Click here for an animated period
+doubling route to chaos</a>:</font>
+<br>&nbsp;
+<br>&nbsp;
+<p><font size=+1>Now let study the <a href="desire3.html">global stability</a>
+of the logistic equation.</font>
+</body>
+</html>

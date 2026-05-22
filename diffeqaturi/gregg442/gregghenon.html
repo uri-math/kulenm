@@ -1,0 +1,128 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Gregg Arpin">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win98; I) [Netscape]">
+   <title>HENON - details and description</title>
+</head>
+<body>
+
+<center><b><font color="#FF6666"><font size=+3>HENON'S EQUATION</font></font></b>
+<p><b><font color="#3366FF"><font size=+3>x</font><sub><font size=+2>n+1</font></sub><font size=+3>=
+1 - ax</font><font size=+2><sub>n</sub><sup>2</sup> </font><font size=+3>+
+bx</font><font size=+2><sub>n</sub>,</font></font></b>
+<br><b><font size=+2><font color="#000000">(</font><font color="#3333FF">a</font><font color="#000000">
+and </font><font color="#3333FF">b</font><font color="#000000"> are parameters)</font></font></b>
+<p><b><font color="#000000"><font size=+2>BACKGROUND</font></font></b></center>
+<p><br>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Michel Henon,
+an astronomer at the observatory in Nice, France, was born in Paris in
+1931.&nbsp; Curious about the degradation of celestial orbits, he began
+to model the orbits of stars around the centers of their galaxies.</font></font>
+<br><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Henon considered
+gravitational centers as a three dimensional object (as opposed to a point
+in space) and carefully studied the orbits of the stars.&nbsp; To simplify
+the task of trying to track a three dimensional orbit, he considered, instead,
+the intersection of a plane with these orbits.&nbsp; Initially, the intersection
+points appeared to be completely random in their location, moving from
+one edge of the plane to the next.&nbsp; However, after a few dozen points
+were plotted, a closed, egg-shaped curve began to appear.&nbsp; This mapping
+was, apparently, the cross section of a torus (i.e., a doughnut).</font></font>
+<br><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Henon (along
+with one of his graduate students) continued to study this mapping and
+continued plotting the points for a system with increased energy levels.&nbsp;
+Once the newer mappings were made, though, the continuous curve began fading
+and random points began to appear proportionally to the energy.&nbsp; Over
+the years, Henon tried many ways to predict the upcoming points of his
+high-energy graph until finally, he decided to abandon classical methods
+and use difference equations.</font></font>
+<br><font size=+1><font color="#000000">&nbsp;&nbsp;&nbsp; Applying a formula
+to force the data into the shape of a crescent moon, Henon found some interesting
+results.&nbsp; The formula was fairly simple.&nbsp; Take the old </font><font color="#800080">y</font><font color="#000000">
+and multiply it by 0.3 (</font><font color="#0000FF">b</font><font color="#000000">).&nbsp;
+Then subtract 1.4 (</font><font color="#0000FF">a</font><font color="#000000">)
+times the old </font><font color="#CC33CC">x</font><font color="#000000">
+squared.&nbsp; Finally add one to the whole equation.&nbsp;&nbsp; This
+yields this system:</font></font>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</font></font><b><font color="#CC66CC"><font size=+2>x</font><sub><font size=+1>new</font></sub><font size=+2>=
+y - 1.4x<sup>2</sup> + 1</font></font></b>
+<br><b><font color="#CC66CC"><font size=+3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font size=+2>
+y</font><sub><font size=+1>new</font></sub><font size=+2>= 0.3x</font></font></b></center>
+<p><br>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; The result was
+the following picture:</font></font>
+<br>&nbsp;
+<center>
+<p><img SRC="henon.gif" BORDER=0 height=210 width=309 align=CENTER></center>
+
+<p><br>
+<br>
+<br>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Although, at
+first, it seems like an ordinary curve, closer inspection reveals distinct
+curves, one thicker than the other.&nbsp; If we magnify the picture, we
+see that each of these curves is also made up of two similar curves.&nbsp;
+This happens for every possible magnification of the curve.</font></font>
+<br>&nbsp;
+<center>
+<p><b><font color="#000000"><font size=+2>EQUILIBRIA</font></font></b></center>
+<p><br>
+<p><font color="#000000"><font size=+1><b>&nbsp;&nbsp;&nbsp; </b>Henon's
+equation has two equlibrium or fixed points for each x and y.&nbsp; (An
+equilibrium point is a point where x<sub> </sub></font><sub>n+1</sub><font size=+1>
+=&nbsp; x<sub> </sub></font><sub>n</sub> )&nbsp; <font size=+1>These are
+as follows:</font></font>
+<br>&nbsp;
+<center>
+<p><img SRC="equili1.gif" height=92 width=254>
+<p><img SRC="equili2.gif" height=92 width=254>
+<br><img SRC="equili4.gif" height=1 width=1>
+<p><img SRC="equili3.gif" height=54 width=233><img SRC="equili4.gif" height=1 width=1>
+<br>&nbsp;
+<p><img SRC="equili5.gif" height=54 width=233>
+<br>&nbsp;
+<p><b><font size=+1>LINKS</font></b></center>
+<p><br>
+<p>&nbsp;<a href="http://mathpost.la.asu.edu/~daniel/henon_bifurcation.html">The
+Henon Map</a> (as a difference equation)
+<br>&nbsp;<a href="http://titania.math.ukans.edu/~mkennedy/pictures.html">Henon
+Mappings</a>
+<br>&nbsp;<a href="http://mathpost.la.asu.edu/~daniel/henon_bifurcation.html">Bifurcation
+Diagram for the Henon Map</a>
+<br>&nbsp;
+<p>&nbsp;&nbsp;&nbsp; There numerous webpages available with some interesting
+information and pictures concerning Henon's equation. Here are a couple
+of the nicer ones that we came across:
+<br>&nbsp;
+<center>
+<p>&nbsp;<a href="http://www.geom.umn.edu/graphics/pix/General_Interest/Fractals/Henon">CLICK
+HERE FOR SOME FANCY LOOKING FRACTAL PICTURES</a>
+<br>&nbsp;
+<p><a href="http://www.ele.uri.edu/~dobratzp/de.html">CLICK HERE TO EXPERIMENT
+WITH THE PARAMETERS A AND B</a>
+<br>&nbsp;
+<br>&nbsp;
+<p><a href="http://www.exploratorium.edu/complexity/lexicon/henon.html">CLICK
+HERE TO FIND SOME INFORMATION ABOUT HENON AND AN</a>
+<br><a href="http://www.exploratorium.edu/complexity/lexicon/henon.html">EXHIBIT
+REGARDING HIS WORK</a>
+<br>&nbsp;
+<p><img SRC="crucified.gif" height=100 width=100></center>
+<p><br>
+<br>
+<p><a href="http://hypatia.math.uri.edu/~kulenm/diffeqaturi/dehomepage.html">Click
+here to go to Home Page for Difference Equations at URI</a>
+<br>&nbsp;
+<div align=right><font size=-1>GREGG ARPIN</font>
+<br><font size=-1>UNIVERSITY OF RHODE ISLAND</font>
+<br><font size=-1>greggarpin@hotmail.com</font></div>
+
+</body>
+</html>
