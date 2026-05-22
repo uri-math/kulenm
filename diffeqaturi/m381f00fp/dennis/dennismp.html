@@ -1,0 +1,612 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (WinNT; U) [Netscape]">
+   <meta name="Author" content="Dennis D. Duquette">
+   <meta name="Description" content="The development of difference equations and recursive relations in the 17th century.Contributions from Pascal, Newton, Jacob Bernoulli and de Moivre.">
+   <meta name="KeyWords" content="difference equations, recursive relations, Pascal, Pascal's Triangle, Newton, general binomial formula, Newton's approximation method, Bernoulli's numbers, arithmetic progression">
+   <title>Difference Equations, 1600 to 1700</title>
+</head>
+<body>
+
+<center>
+<h1>
+<a NAME="top"></a><font color="#006600">Difference Equations and Recursive
+Relations</font></h1></center>
+
+<center>
+<h3>
+<font color="#3333FF">1600 to 1700 A.D.</font></h3></center>
+
+<center>
+<h2>
+<font color="#000000"><font size=+0><a href="#Bernoulli">Jacob Bernoulli</a></font><sup><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Bernoulli_Jacob.html">1</a></sup></font><font color="#3333FF">,
+</font><font color="#000000"><font size=+0><a href="#deMoivre">Abraham
+de Moivre</a></font><sup><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/De_Moivre.html">2</a></sup></font><font color="#3333FF">,
+</font><font color="#000000"><font size=+0><a href="#Newton">Sir
+Isaac Newton</a></font><sup><a href="http://www.maths.tcd.ie/pub/HistMath/People/Newton/RouseBall/RB_Newton.html">3</a></sup></font><font color="#3333FF"><font size=+0>and</font>
+</font><font color="#000000"><font size=+0><a href="#Pascal">Blaise Pascal</a></font><sup><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Pascal.html">4</a></sup></font></h2></center>
+
+<center>
+<hr></center>
+
+<center><table CELLSPACING=0 CELLPADDING=4 BGCOLOR="#CCCCFF" >
+<tr>
+<td><a href="http://www.math.uri.edu/">Difference Equations index</a></td>
+</tr>
+</table></center>
+
+<hr>
+<br>&nbsp;
+<p><a NAME="Bernoulli"></a><b><font color="#3333FF">Jacob Bernoulli's</font></b>
+"Bernoulli numbers" can be expressed with a recursive relation. Since the
+Bernoulli numbers are useful in determining the MacLaurin expansion of
+ae<sup>ax</sup>/(e<sup>a</sup> - 1), one can show that the Bernoulli numbers
+have the property that <b><font face="Symbol"><font size=+2>S</font></font></b><sup>n</sup><sub>k=0</sub>
+[(a<sup>n+1</sup><sub>k</sub>)(B<sub>k</sub>)] = 0, where B<sub>k</sub>
+is the k<sup>th</sup> Bernoulli number and a<sup>n+1</sup><sub>k</sub>
+is the binomial coefficient described <a href="#binomial coefficient definition">below</a>.
+From this relation it is clear that (a<sup>n+1</sup><sub>n</sub>)(B<sub>n</sub>)
++ <b><font face="Symbol"><font size=+2>S</font></font></b><sup>n-1</sup><sub>k=0</sub>
+[(a<sup>n+1</sup><sub>k</sub>)(B<sub>k</sub>)] = 0. Simple algebra with
+the identity a<sup>n+1</sup><sub>n</sub> = n + 1 shows that B<sub>n</sub>
+= -(n + 1)<sup>-1</sup> * <b><font face="Symbol"><font size=+2>S</font></font></b><sup>n-1</sup><sub>k=0</sub>
+[(a<sup>n+1</sup><sub>k</sub>)(B<sub>k</sub>)]. Therefore, if one starts
+with B<sub>0</sub> = 1, B<sub>n</sub> for n > 0 is a linear combination
+of all preceding Bernoulli numbers.
+<p>One can show that B<sub>1</sub> = -1/2 is the only Bernoulli number
+with an odd subscript. Also, there is a list of some of the nonzero Bernoulli
+numbers on the web, but there is considerable disagreement in the indexing
+sets used to describe the series of Bernoulli numbers. The site with the
+list of Bernoulli numbers starts with B<sub>2</sub> but labels it B<sub>1</sub>.
+Subsequent Bernoulli numbers are B<sub>2n</sub> according to the indexing
+definition in the list <a href="http://www.sosmath.com/tables/bernoulli/bernoulli.html">here</a>
+(about halfway down the page).
+<br><a href="#top">(Back to top)</a>
+<center>
+<p><b><font color="#006600"><font size=+2>Bernoull's&nbsp;&nbsp; Method</font></font></b></center>
+
+<p><br>
+<br>
+<br>
+<p>In order to find a root of a polynomial equation&nbsp;
+<div ALIGN=right><table WIDTH="100%" >
+<tr VALIGN=CENTER>
+<td ALIGN=CENTER NOWRAP><img SRC="bimg864.gif" BORDER=0 height=27 width=210></td>
+
+<td ALIGN=RIGHT WIDTH="10">(1)</td>
+</tr>
+</table></div>
+consider the difference equation
+<center><img SRC="bimg865.gif" BORDER=0 height=28 width=294></center>
+
+<p><br>
+<br>
+<br>
+<p>which is known to have solution&nbsp;
+<div ALIGN=right><table WIDTH="100%" >
+<tr VALIGN=CENTER>
+<td ALIGN=CENTER NOWRAP><img SRC="bimg866.gif" BORDER=0 height=28 width=277></td>
+
+<td ALIGN=RIGHT WIDTH="10">(2)</td>
+</tr>
+</table></div>
+where&nbsp;<img SRC="bimg867.gif" BORDER=0 height=28 width=23 align=CENTER>,<img SRC="bimg868.gif" BORDER=0 height=28 width=23 align=CENTER>,
+..., are arbitrary functions of <i>t</i> with period 1, and&nbsp;<img SRC="bimg870.gif" BORDER=0 height=28 width=20 align=CENTER>,
+...,&nbsp;<img SRC="bimg871.gif" BORDER=0 height=28 width=22 align=CENTER>
+are roots of (1). In order to find the absolutely greatest root (1), take
+any arbitrary values for&nbsp;<img SRC="bimg872.gif" BORDER=0 height=31 width=33 align=CENTER>,<img SRC="bimg873.gif" BORDER=0 height=31 width=33 align=CENTER>,
+...,&nbsp;<img SRC="bimg874.gif" BORDER=0 height=31 width=62 align=CENTER>.
+By repeated application of (2), calculate in succession the values <i>y</i>(<i>n</i>),<img SRC="bimg876.gif" BORDER=0 height=31 width=62 align=CENTER>,<img SRC="bimg877.gif" BORDER=0 height=31 width=62 align=CENTER>,
+.... Then the ratio of two successive members of this sequence tends in
+general to a limit, which is the absolutely greatest root of (1).
+<p><b><i><font color="#006600">See also&nbsp; </font><font color="#000000"><a href="http://mathworld.wolfram.com/BernoulliNumber.html">Bernoulli
+Number</a></font></i></b>
+<br>&nbsp;
+<br>&nbsp;
+<p><a NAME="deMoivre"></a><font size=+1><b><font color="#3333FF">Abraham
+de Moivre<sup><a href="http://www.math.duke.edu/education/ccp/materials/linalg/linfilters/linfilters3.html">*</a></sup></font></b>&nbsp;
+</font>had some arithmetic progression.
+<p>&nbsp;&nbsp;&nbsp; <b><font color="#009900">Arithmetic progression</font></b>
+<center>
+<p><font color="#3333FF">&nbsp;An arithmetic progression is a sequence&nbsp;<img SRC="aimg2531.gif" BORDER=0 height=31 width=36 align=CENTER>,
+</font><font color="#000000"><i>k</i>
+= 1, 2, ...</font><font color="#3333FF">, in which each number increases
+by the same amount (the common difference)over the previous one.</font></center>
+<font color="#3333FF">&nbsp;&nbsp; That is</font>
+<center><img SRC="aimg2534.gif" BORDER=0 height=28 width=344></center>
+
+<p><font color="#3333FF">&nbsp;</font><font color="#660000"> </font><font color="#3333FF">As
+for example</font><font color="#660000">:</font><b><font color="#000000">5,
+8, 11, 14, 17, ...</font></b>
+<p><b><font color="#009900">&nbsp; </font></b>For a more&nbsp; discussion
+of <i>Arithmetic progression&nbsp;</i> and <i>Arithmetic sequence</i>&nbsp;
+visit&nbsp;&nbsp; <a href="http://mathworld.wolfram.com/ArithmeticSeries.html">mathworld.wolfram.com</a>
+<br>&nbsp;
+<br>&nbsp;
+<br><a href="#top">(Back to top)</a>
+<br>&nbsp;
+<br>&nbsp;
+<p><a NAME="Newton"></a><b><font color="#3333FF">Sir Isaac Newton</font></b>
+contributed the general binomial formula and a method to approximate the
+zeroes of a once differentiable function.
+<br>In 1676 he described some examples of expansions of (a+ab)<sup>x</sup>
+(where x is negative or fractional) in letters to the secretary of the
+Royal Society to be translated into Latin and forwarded to Leibniz. Newton's
+formula for the general binomial formula was given as (a+b)<sup>m/n </sup>=
+a<sup>m/n</sup> + (<font face="Symbol">a</font>b)[m/n] + (<font face="Symbol">b</font>b)[(m-n)/(2n)]
++ (<font face="Symbol">g</font>b)[(m-2n)/(3n)] + (<font face="Symbol">d</font>b)[(m-3n)/(4n)]
++ ... In this expression, each greek letter stands for the entire preceeding
+term in the expansion (that is, a<sup>m/n</sup> = <font face="Symbol">a</font>,
+(<font face="Symbol">a</font>b)[m/n] = <font face="Symbol">b</font>, and
+so on). Thus, every expansion of a binomial to a fractional or negative
+integer power is the sum of an infinite series. Here the terms of the infinite
+series have a recursive relationship from one to the next.
+<p>Newton's method for approximating the real roots of a differentiable
+function uses the tangent line approximation. Consider a differentiable
+function f(x). Using the tangent line approximation, for a small <font face="Symbol">D</font>x,
+f(x+<font face="Symbol">D</font>x) <font face="Symbol">@</font> f(x) +
+f<sup> '</sup>(x)<font face="Symbol">D</font>x. If we have an x<sub>n</sub>
+close to some real r such that f(r) = 0, then x<sub>n+1</sub> = x<sub>n</sub>
+- f(x<sub>n</sub>) / f <sup>'</sup>(x<sub>n</sub>) is an even better approximation
+of r. In fact, {x<sub>n</sub>} converges to r roughly as the square of
+n. Unfortunately, Newton's method works only when |x<sub>0</sub> - r| is
+small. If |x<sub>0</sub> - r| is too large, then {x<sub>n</sub>} actually
+diverges (in this discussion the terms 'sufficiently small' and 'too big'
+depend heavily on g(x) itself).
+<center>
+<p><img SRC="NewtonMethod.gif" height=180 width=448></center>
+<b><font color="#006600">Visit also</font></b> <a href="http://mathworld.wolfram.com/FiniteDifference.html">Finite
+Difference</a>
+<p><a href="#top">(Back to top)</a>
+<br>&nbsp;
+<p><a NAME="Pascal"></a><a href="http://scienceworld.wolfram.com/biography/Pascal.html"><b><font color="#3333FF">Blaise
+Pascal</font></b><font color="#000000"> </font></a><font color="#000000">did
+considerable work with the binomial coefficients, which are frequently
+arranged in a format known as Pascal's Triangle.</font> A binomial coefficient&nbsp;<a NAME="binomial coefficient definition"></a><b><font color="#000000">a<sup>n</sup><sub>k
+</sub>is
+the coefficient of the a<sup>k</sup>b<sup>n-k</sup> term in the expansion
+of (a+b)<sup>n</sup></font></b> (where n is a nonnegative integer and k
+is a nonnegative integer less than or equal to n). Pascal was not the first
+to arrange the binomial coefficients in the triangle below, nor was he
+the first to notice that the table could be infinitely extended using the
+recursive relation a<sup>n</sup><sub>k
+</sub>= a<sup>n-1</sup><sub>k-1
+</sub>+
+a<sup>n-1</sup><sub>k</sub>, which was the first partial difference equation
+ever discovered. What he did was the most detailed study of the relationships
+between the binomial coefficients. He prove nineteen properties of the
+binomial coefficients, for instance. Among these were the symmetry of the
+triangle (that is, a<sup>n</sup><sub>k </sub>= a<sup>n</sup><sub>n-k</sub>)
+and a<sup>n</sup><sub>k
+</sub>= <b><font face="Symbol"><font size=+2>S</font></font></b><sup>n</sup><sub>i=k</sub>
+a<sup>i-1</sup><sub>k-1</sub>. He also first published the direct formula
+for a<sup>n</sup><sub>k</sub>, which is given by&nbsp;<img SRC="NChooseK.jpg" height=35 width=116 align=ABSCENTER>in
+modern notation.
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER=3 CELLSPACING=3 CELLPADDING=3 WIDTH="100%" >
+<caption>
+<center>
+<h3>
+<font color="#3333FF">Pascal's Triangle up to n = 10</font></h3></center>
+</caption>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>1</div>
+</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>2</div>
+</td>
+
+<td>
+<div align=right>3</div>
+</td>
+
+<td>
+<div align=right>4</div>
+</td>
+
+<td>
+<div align=right>5</div>
+</td>
+
+<td>
+<div align=right>6</div>
+</td>
+
+<td>
+<div align=right>7</div>
+</td>
+
+<td>
+<div align=right>8</div>
+</td>
+
+<td>
+<div align=right>9</div>
+</td>
+
+<td>
+<div align=right>10</div>
+</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>3</div>
+</td>
+
+<td>
+<div align=right>6</div>
+</td>
+
+<td>
+<div align=right>10</div>
+</td>
+
+<td>
+<div align=right>15</div>
+</td>
+
+<td>
+<div align=right>21</div>
+</td>
+
+<td>
+<div align=right>28</div>
+</td>
+
+<td>
+<div align=right>36</div>
+</td>
+
+<td>
+<div align=right>45</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>4</div>
+</td>
+
+<td>
+<div align=right>10</div>
+</td>
+
+<td>
+<div align=right>20</div>
+</td>
+
+<td>
+<div align=right>35</div>
+</td>
+
+<td>
+<div align=right>56</div>
+</td>
+
+<td>
+<div align=right>84</div>
+</td>
+
+<td>
+<div align=right>120</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>5</div>
+</td>
+
+<td>
+<div align=right>15</div>
+</td>
+
+<td>
+<div align=right>35</div>
+</td>
+
+<td>
+<div align=right>70</div>
+</td>
+
+<td>
+<div align=right>126</div>
+</td>
+
+<td>
+<div align=right>210</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>6</div>
+</td>
+
+<td>
+<div align=right>21</div>
+</td>
+
+<td>
+<div align=right>56</div>
+</td>
+
+<td>
+<div align=right>126</div>
+</td>
+
+<td>
+<div align=right>252</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>7</div>
+</td>
+
+<td>
+<div align=right>28</div>
+</td>
+
+<td>
+<div align=right>84</div>
+</td>
+
+<td>
+<div align=right>210</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>8</div>
+</td>
+
+<td>
+<div align=right>36</div>
+</td>
+
+<td>
+<div align=right>120</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>9</div>
+</td>
+
+<td>
+<div align=right>45</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>
+<div align=right>10</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>
+<div align=right>1</div>
+</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<p><a href="#top">(Back to top)</a>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p>
+<hr></center>
+
+<center><table CELLSPACING=0 CELLPADDING=4 BGCOLOR="#CCCCFF" >
+<tr>
+<td><a href="http://www.math.uri.edu/">Difference Equations index</a></td>
+</tr>
+</table></center>
+
+<hr>
+<br>Author: Dennis D. Duquette
+<br>Email: <a href="mailto:dduq0619@postoffice.uri.edu">dduq0619@postoffice.uri.edu</a>
+<br><i>last updated 13 December 2000.</i>
+</body>
+</html>

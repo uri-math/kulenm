@@ -1,0 +1,310 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (Win95; U) [Netscape]">
+   <meta name="Author" content="Julie Lynn Roberts">
+   <meta name="Description" content="A web page designed for my MTH381 class at the University ofRhode Island under the supervision under Dr. Kulenovic.">
+   <title>Difference Equations &amp; Recursive Relations</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<center><b><font color="#006600"><font size=+3>Difference Equations</font></font></b>
+<br><b><font color="#006600"><font size=+3>and</font></font></b>
+<br><b><font color="#006600"><font size=+3>Recursive Relations</font></font></b>
+<p><b><font color="#3333FF"><font size=+1>Pythagoras, Archimedes, and Euclid</font></font></b>
+<br><b><font color="#3333FF">600 - 0 B.C.</font></b>
+<p>
+<hr></center>
+
+<p><br>
+<center><table CELLSPACING=0 CELLPADDING=4 WIDTH="52%" BGCOLOR="#CCCCFF" >
+<tr>
+<td>
+<center><font color="#000000"><a href="http://hypatia.math.uri.edu/~kulenm/diffeqaturi/m381f00fp/m381f00mp.htm">Difference
+Equations</a></font>
+<br><font color="#000000"><a href="http://hypatia.math.uri.edu/~kulenm/diffeqaturi/m381f00fp/m381f00mp.htm">Index</a></font></center>
+</td>
+
+<td ALIGN=RIGHT>
+<center><a href="http://www.math.uri.edu">URI Mathematics</a>
+<br><a href="http://www.math.uri.edu">Department</a></center>
+</td>
+</tr>
+</table></center>
+
+<p>
+<hr>Difference equations and recursive relations and their properties were
+first studied extensively by the ancient Greek mathematicians such as <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Pythagoras.html">Pythagoras</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Archimedes.html">Archimedes</a>,
+and <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Euclid.html">Euclid</a>.
+<center>
+<p><b><font color="#FF6666"><font size=+2><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Pythagoras.html">Pythagoras</a></font></font></b>
+<p><b><font color="#000000">"What you take to be 4 is 10, a perfect triangle
+and our oath."</font></b>
+<p><b><u><font color="#009900">Triangular Numbers</font></u></b></center>
+
+<p>One of Pythagoras's major contributions to this topic was his idea of
+triangular numbers.&nbsp; Triangular numbers are formed by the equation
+where t<sub>n</sub> is the n<sup>th</sup> triangular number:
+<center>&nbsp;t<sub>n</sub> = t<sub>n-1</sub> + n
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= t<sub>n-2</sub> + (n-1) + n
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= t<sub>1</sub> + 2 + 3 + ... + (n-1) + n
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= 1 + 2 + 3 + ... + (n-1) + n</center>
+
+<p>This formula tells us we can calculate triangular numbers by adding
+up consecutive numbers.&nbsp; For example, the ninth triangular number
+is equal to:
+<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+t<sub>9</sub> = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9
+<br>t<sub>9</sub> = 45</center>
+There is a useful shortcut that can be used to find a large triangular
+number.&nbsp; If you want to find the 1000 triangular number, you could
+add up all the numbers from 1 to 1000.&nbsp; Or you could use this simpler
+method:
+<center>t<sub>n</sub>= (n<sup>2</sup> +n) &divide; 2</center>
+So the 1000<sup>th</sup> triangular number is:
+<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+t<sub>1000</sub> = (1000<sup>2</sup> + 1000) &divide; 2
+<br>t<sub>1000</sub> = 500500</center>
+
+<p>Pythagoras's triangular numbers got that name because that is what you
+can visualize them as.&nbsp; Each one, when arranged started at t<sub>1</sub>
+= 1, the first triangular number, will form a equilateral triangle.&nbsp;
+The first four triangular numbers would look like the following:
+<center>
+<p><img SRC="cans.gif" height=104 width=212></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<p>For a more&nbsp; discussion of Triangular numbers&nbsp; visit <a href="http://mathworld.wolfram.com/TriangularNumber.html">mathworld.wolfram.com</a>
+<center>
+<p><b><font color="#FF6666"><font size=+2><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Archimedes.html">Archimedes</a></font></font></b>
+<p><b><font color="#000000">"Give me a place to stand, and I will move
+the Earth."</font></b>
+<p><b><u><font color="#009900">Method of Exhaustion</font></u></b></center>
+
+<p><font color="#000000">A major contribution from Archimedes is his method
+of exhaustion.&nbsp;&nbsp; Archimedes discovered a method of calculating
+Pi that was used until nineteen centuries later. This method was to inscribe
+inside and outside a circle a polygon of many sides. The perimeter of the
+inside polygon would be smaller then <font face="Symbol"><font size=+1>p</font></font>
+and the outside would be larger then <font face="Symbol"><font size=+1>p</font></font>.&nbsp;
+His method would look like this: for regular polygons inscribed in a circle
+of radius 1, using S<i><sub>i</sub></i> where <i>i</i> are the number of
+sides Archimedes used:</font>
+<center><font color="#000000">S<sub>6</sub> = 1</font></center>
+<font color="#000000">to conclude that:</font>
+<center><font color="#000000">&nbsp;S<sub>12</sub> = <font face="Symbol">&Ouml;(2
+- &Ouml;3)</font></font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S<sub>24</sub> = <font face="Symbol">&Ouml;(2 - &Ouml;(2 + &Ouml;3))</font></font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S<sub>48</sub> = <font face="Symbol">&Ouml;(2 - &Ouml;(2 + &Ouml;(2 + &Ouml;3)))</font></font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S<sub>96</sub> = <font face="Symbol">&Ouml;(2 - &Ouml;(2 + &Ouml;(2 +&Ouml;(2
++ &Ouml;3))))</font></font></center>
+<font color="#000000">From these figures, Archimedes obtained a numerical
+value for <font face="Symbol"><font size=+1>p</font></font>.&nbsp; He gave
+the value to be:</font>
+<center>
+<p><font color="#000000"><font face="Symbol"><font size=+1>p</font></font>
+~ 48S<sub>96</sub> ~ 3.14103 ~ 22/7</font></center>
+<font color="#000000">For a visual representation of the circle with the
+inscribed polygon and the computation of <font face="Symbol"><font size=+1>p</font></font>
+check out the <a href="http://www.math.utah.edu/~alfeld/Archimedes/Archimedes.html">University
+of Utah's math page</a>.</font>
+<p><b><i><font color="#000099">See also</font></i></b> <a href="http://mathworld.wolfram.com/ArchimedesAlgorithm.html">Archimedes
+Algoritam</a> and&nbsp; <a href="http://mathworld.wolfram.com/ArchimedesRecurrenceFormula.html">Archimedes
+Recurrence Formula</a>
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<center>
+<p><b><font color="#FF6666"><font size=+2><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Euclid.html">Euclid</a></font></font></b>
+<p><b><font color="#000000">"There is no royal road to geometry."</font></b>
+<p><b><u><font color="#009900">Euclid's Algorithm &amp; Continued Fractions</font></u></b></center>
+
+<p>The Euclidean algorithm is an example of a P-problem whose time complexity
+is bounded by a quadratic function of the length of the input values (<a href="http://mathworld.wolfram.com/EuclideanAlgorithm.html">Bach
+and Shallit</a>). Let<img SRC="eimg2301.gif" BORDER=0 height=29 width=75 align=CENTER>,
+then find a number <i>u</i> which divides both <i>a</i> and <i>b</i> (so
+that <i>a = su</i> and <i>b = tu</i>), then <i>u</i> also divides <i>r</i>
+since&nbsp;
+<div ALIGN=right><table WIDTH="100%" >
+<tr VALIGN=CENTER>
+<td ALIGN=CENTER NOWRAP><img SRC="eimg2304.gif" BORDER=0 height=28 width=238></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+</table></div>
+Similarly, find a number <i>v</i> which divides <i>b</i> and <i>r</i> (so
+that&nbsp;<img SRC="eimg2305.gif" BORDER=0 height=16 width=52 align=BOTTOM>
+and&nbsp;<img SRC="eimg2306.gif" BORDER=0 height=16 width=51 align=BOTTOM>),
+then <i>v</i> divides <i>a</i> since&nbsp;
+<div ALIGN=right><table WIDTH="100%" >
+<tr VALIGN=CENTER>
+<td ALIGN=CENTER NOWRAP><img SRC="eimg2307.gif" BORDER=0 height=28 width=253></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+</table></div>
+Therefore, every common divisor of <i>a</i> and <i>b</i> is a common divisor
+of <i>b</i> and <i>r</i>, so the procedure can be iterated as follows.
+<center><table CELLPADDING=0 WIDTH="100%" >
+<tr VALIGN=CENTER>
+<td ALIGN=RIGHT NOWRAP><img SRC="eimg2308.gif" BORDER=0 height=44 width=202 align=CENTER></td>
+
+<td ALIGN=CENTER NOWRAP><img SRC="eimg5.gif" BORDER=0 height=28 width=16 align=CENTER></td>
+
+<td ALIGN=LEFT NOWRAP><img SRC="eimg2309.gif" BORDER=0 height=29 width=53 align=CENTER></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+
+<tr VALIGN=CENTER>
+<td ALIGN=RIGHT NOWRAP><img SRC="eimg2310.gif" BORDER=0 height=54 width=215 align=CENTER></td>
+
+<td ALIGN=CENTER NOWRAP><img SRC="eimg5.gif" BORDER=0 height=28 width=16 align=CENTER></td>
+
+<td ALIGN=LEFT NOWRAP><img SRC="eimg2311.gif" BORDER=0 height=29 width=59 align=CENTER></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+
+<tr VALIGN=CENTER>
+<td ALIGN=RIGHT NOWRAP><img SRC="eimg2312.gif" BORDER=0 height=54 width=223 align=CENTER></td>
+
+<td ALIGN=CENTER NOWRAP><img SRC="eimg5.gif" BORDER=0 height=28 width=16 align=CENTER></td>
+
+<td ALIGN=LEFT NOWRAP><img SRC="eimg2313.gif" BORDER=0 height=28 width=67 align=CENTER></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+
+<tr VALIGN=CENTER>
+<td ALIGN=RIGHT NOWRAP><img SRC="eimg2314.gif" BORDER=0 height=54 width=223 align=CENTER></td>
+
+<td ALIGN=CENTER NOWRAP><img SRC="eimg5.gif" BORDER=0 height=28 width=16 align=CENTER></td>
+
+<td ALIGN=LEFT NOWRAP><img SRC="eimg2315.gif" BORDER=0 height=28 width=67 align=CENTER></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...</td>
+
+<td></td>
+
+<td></td>
+
+<td></td>
+</tr>
+
+<tr VALIGN=CENTER>
+<td ALIGN=RIGHT NOWRAP><img SRC="eimg2316.gif" BORDER=0 height=54 width=283 align=CENTER></td>
+
+<td ALIGN=CENTER NOWRAP><img SRC="eimg5.gif" BORDER=0 height=28 width=16 align=CENTER></td>
+
+<td ALIGN=LEFT NOWRAP><img SRC="eimg2317.gif" BORDER=0 height=28 width=102 align=CENTER></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+
+<tr VALIGN=CENTER>
+<td ALIGN=RIGHT NOWRAP><img SRC="eimg2318.gif" BORDER=0 height=54 width=291 align=CENTER></td>
+
+<td ALIGN=CENTER NOWRAP><img SRC="eimg5.gif" BORDER=0 height=28 width=16 align=CENTER></td>
+
+<td ALIGN=LEFT NOWRAP><img SRC="eimg2319.gif" BORDER=0 height=31 width=81 align=CENTER></td>
+
+<td ALIGN=RIGHT WIDTH="10"></td>
+</tr>
+</table></center>
+
+<p>For integers, the algorithm terminates when&nbsp;<img SRC="eimg2320.gif" BORDER=0 height=28 width=36 align=CENTER>
+divides&nbsp;<img SRC="eimg2321.gif" BORDER=0 height=28 width=36 align=CENTER>
+exactly, at which point<img SRC="eimg2322.gif" BORDER=0 height=28 width=20 align=CENTER>
+corresponds to the greatest common divisor of <i>a</i> and <i>b</i>,&nbsp;<img SRC="eimg2323.gif" BORDER=0 height=31 width=112 align=CENTER>.
+For real numbers, the algorithm yields ei
+<br>The origin of continued fractions is traditionally placed at the time
+of the creation of Euclid's Algorithm.&nbsp; Euclid's Algorithm, however,
+is used to find the greatest common denominator (gcd) of two numbers. However,
+by algebraically manipulating the algorithm, one can derive the simple
+continued fraction of the rational p/q as opposed to the gcd of p and q.
+A continued fraction is a fraction of the form:
+<center>
+<p>a<sub>0</sub> +&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b</u><sub>1</sub><u><font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a<sub>1</sub>
++&nbsp;<u>&nbsp;&nbsp;&nbsp; b</u><sub>2</sub><u>&nbsp;&nbsp;&nbsp; <font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a<sub>2</sub> + ...</center>
+
+<p>A continued fraction that has a definite end is a rational number.&nbsp;
+An example of this would be:
+<br>Suppose you wish to find the greatest common divisor of 123 and 456.
+You might proceed as follows:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><font color="#333333">(1)&nbsp;</font></b>
+Divide 456 by 123 to get:
+<center>
+<p>3 +&nbsp;<u> 87 <font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 123</center>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>
+(2)</b>&nbsp; Now divide the new remainder 87 into the previous divisor
+123.
+<center>
+<p>3 +&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; <font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp; 1 +&nbsp;<u> 36</u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 87</center>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>
+(3)</b> Dividing these numbers and finding the remainder is Euclid's Algorithm,
+continue until it ends and it looks like:
+<center>
+<p>3 +&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp; 1 +&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 +&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2 +&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; <font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2 +&nbsp;<u> 1 <font color="#FFFFFF">.</font></u>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2</center>
+
+<p>Using Euclid's algorithm is very useful for not only finding the <b><i><font color="#000000">gcd</font></i></b>
+of two numbers, but also for determining <a href="http://mathworld.wolfram.com/ContinuedFraction.html">continued
+fractions</a>.
+<br>A continued fraction that goes on in a recursive manner is called an
+irrational number.&nbsp; A good example of this would be:
+<center>
+<p><img SRC="continuedfractions.gif" height=220 width=306></center>
+
+<p>To write this in standard notation use the whole numbers and write them
+in brackets:
+<center>
+<p>[2; 2; 2; 2; 2; <sup>. . .</sup>]</center>
+
+<p>To find an approximated value for an irrational continued fraction,
+choose a part in the fraction and choose to end it there.&nbsp; Then calculate
+the fraction and that number is your approximation for that continued fraction
+and irrational number.
+<p>For a more in-depth discussion of continued fractions and it's uses
+visit <a href="http://cut-the-knot.com/do_you_know/fraction.html">Cut-The-Knot.com</a>.
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>
