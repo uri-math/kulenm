@@ -1,0 +1,19 @@
+{VERSION 3 0 "IBM INTEL NT" "3.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 0 
+0 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 0 
+0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "y(x)=y[0]+int(f(t,y(
+t)),t=x[0]..x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/-%\"yG6#%\"xG,&&F%
+6#\"\"!\"\"\"-%$intG6$-%\"fG6$%\"tG-F%6#F3/F3;&F'F*F'F," }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "y[2](x)=y[0]+int(f(t,y[1](t)),t=x[0
+]..x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/-&%\"yG6#\"\"#6#%\"xG,&&F&6
+#\"\"!\"\"\"-%$intG6$-%\"fG6$%\"tG-&F&6#F/6#F6/F6;&F*F-F*F/" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "y[n+1](x)=y[0]+int(f(t,y[n](
+t)),t=x[0]..x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/-&%\"yG6#,&%\"nG\"
+\"\"F*F*6#%\"xG,&&F&6#\"\"!F*-%$intG6$-%\"fG6$%\"tG-&F&6#F)6#F7/F7;&F,
+F/F,F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "3 0 0
+" 0 }{VIEWOPTS 1 1 0 1 1 1803 }

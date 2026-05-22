@@ -1,0 +1,465 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="ProgId" content="Word.Document">
+   <meta name="Generator" content="Microsoft Word 9">
+   <meta name="Originator" content="Microsoft Word 9">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (WinNT; U) [Netscape]">
+   <title>Prime numbers</title>
+<link rel=File-List href="./megan_files/filelist.xml">
+<link rel=Edit-Time-Data href="./megan_files/editdata.mso">
+<!--[if !mso]>
+
+<style>
+
+v\:* {behavior:url(#default#VML);}
+
+o\:* {behavior:url(#default#VML);}
+
+w\:* {behavior:url(#default#VML);}
+
+.shape {behavior:url(#default#VML);}
+
+</style>
+
+<![endif]-->
+<style>
+
+<!--
+
+ /* Style Definitions */
+
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+
+	{mso-style-parent:"";
+
+	margin:0in;
+
+	margin-bottom:.0001pt;
+
+	mso-pagination:widow-orphan;
+
+	font-size:12.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+a:link, span.MsoHyperlink
+
+	{color:blue;
+
+	text-decoration:underline;
+
+	text-underline:single;}
+
+a:visited, span.MsoHyperlinkFollowed
+
+	{color:blue;
+
+	text-decoration:underline;
+
+	text-underline:single;}
+
+p
+
+	{margin-right:0in;
+
+	mso-margin-top-alt:auto;
+
+	mso-margin-bottom-alt:auto;
+
+	margin-left:0in;
+
+	mso-pagination:widow-orphan;
+
+	font-size:12.0pt;
+
+	font-family:"Times New Roman";
+
+	mso-fareast-font-family:"Times New Roman";}
+
+@page Section1
+
+	{size:8.5in 11.0in;
+
+	margin:1.0in 1.25in 1.0in 1.25in;
+
+	mso-header-margin:.5in;
+
+	mso-footer-margin:.5in;
+
+	mso-paper-source:0;}
+
+div.Section1
+
+	{page:Section1;}
+
+-->
+
+</style>
+<!--[if gte mso 9]><xml>
+
+ <o:shapedefaults v:ext="edit" spidmax="1027"/>
+
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+
+ <o:shapelayout v:ext="edit">
+
+  <o:idmap v:ext="edit" data="1"/>
+
+ </o:shapelayout></xml><![endif]-->
+<!--[if gte mso 9]><xml>
+
+ <u1:shapedefaults u2:ext="edit" spidmax="1027"/>
+
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+
+ <u3:shapelayout u4:ext="edit">
+
+  <u3:idmap u4:ext="edit" data="1"/>
+
+ </u3:shapelayout>
+
+</xml><![endif]-->
+</head>
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#0000FF" lang="EN-US" style="tab-interval:.5in">
+
+<div class=Section1>
+<center>
+<h1 style="text-align:center">
+<span style='color:red'><font color="#006600">Difference Equations</font></span></h1></center>
+
+<center>
+<h1 style="text-align:center">
+<span style='color:red'><font color="#006600">and</font></span></h1></center>
+
+<center>
+<h1 style="text-align:center">
+<span style='color:red'><font color="#006600">Recursive Relations</font></span></h1></center>
+
+<center><span 
+
+style='color:red'><font color="#3333FF">0-400</font></span></center>
+
+<div class="MsoNormal" style="text-align:center">
+<center>
+<hr size=2 width="100%" align=center></center>
+</div>
+
+<center><table BORDER=0 CELLSPACING=0 CELLPADDING=0 BGCOLOR="#CCCCFF" style="mso-cellspacing:
+
+ 0in;background:#CCCCFF;mso-padding-alt:3.0pt 3.0pt 3.0pt 3.0pt" >
+<tr>
+<td style="padding:3.0pt 3.0pt 3.0pt 3.0pt">
+<div class="MsoNormal"><a href="http://mathworld.wolfram.com/search/?words=number+theory&config=scienceworld_wolfram_com&restrict=http%3A%2F%2Fmathworld.wolfram.com">Number
+theory index</a></div>
+</td>
+
+<td style="padding:3.0pt 3.0pt 3.0pt 3.0pt">
+<div align=right><a href="http://www-groups.dcs.st-and.ac.uk/~history/Indexes/HistoryTopics.html">History
+Topics Index</a></div>
+</td>
+</tr>
+</table></center>
+
+<div class="MsoNormal" style="text-align:center">
+<center>
+<hr size=2 width="100%" align=center></center>
+</div>
+
+<p><br>Major contributors to the theory of difference equations and recursive
+relations during this time period between 0 and 400 were <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Heron.html">Heron</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Theon_of_Smyrna.html">Theon</a>
+of Smyrna and <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Diophantus.html">Diophantus</a>.
+<p><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Heron.html">Heron</a>
+is known for Heron's formula for finding the approximate value of the radical
+of a positive number <i>a</i>, given by:
+<br><o:p></o:p>
+<center><table BORDER CELLPADDING=0 COLS=1 WIDTH="25%" style="width:25.0%;mso-cellspacing:
+
+ 1.5pt" >
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<center><span 
+
+  style='color:#FF6600'><b><font color="#3333FF">x<sub>n+1</sub>
+= ( x<sub>n</sub> + a/x<sub>n</sub> )/2</font></b></span></center>
+</td>
+</tr>
+</table></center>
+This formula is a special case of Newton's formula:&nbsp;<o:p></o:p>
+<center><table BORDER=0 CELLPADDING=0 COLS=1 WIDTH="26%" style="width:26.08%;mso-cellspacing:
+
+ 1.5pt;mso-padding-alt:0in 0in 0in 0in" >
+<tr>
+<td WIDTH="97%" style="width:97.98%;padding:.75pt .75pt .75pt .75pt">
+<center><span 
+
+  style='color:#FF6600'><b><font color="#3333FF">x<sub>n+1</sub>
+= x<sub>n</sub> - f(x<sub>n</sub>)/f'(x<sub>n</sub>)</font></b></span></center>
+</td>
+</tr>
+</table></center>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Theon_of_Smyrna.html">Theon
+</a>of
+Smyrna is also known for finding the approximate value of the radical of
+a positive number <i>a</i>, but his finding was based on the use of a linear
+system and radical numbers. His greatest accomplishment was his procedure
+for obtaining closer and closer approximations of radical 2.
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Theon_of_Smyrna.html">Theon</a>'s
+procedure working with radical 2 involved two sequences of numbers, the
+<i>side
+numbers</i> and the <i>diagonal numbers</i>.
+<p>We start with two numbers, one is the first side and is denoted by x<sub>1,
+</sub>and
+the other is the first diagonal and is indicated by y<sub>1.
+</sub>The
+second side (x<sub>2</sub>) and the second diagonal (y<sub>2</sub>) are
+formed from the first side and diagonal, then the third side (x<sub>3</sub>)
+and the third diagonal (y<sub>3</sub>) are obtained from the second, and
+so on, according to the following formulas:
+<br><o:p></o:p>
+<center><table BORDER=0 CELLSPACING=5 CELLPADDING=0 COLS=2 WIDTH="45%" style="width:45.0%;
+
+ mso-cellspacing:3.7pt;mso-padding-alt:0in 0in 0in 0in" >
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<div class="MsoNormal"><span style='color:blue'><font color="#3333FF">x<sub>2</sub>
+= x<sub>1</sub> + y<sub>1&nbsp;</sub></font><o:p></o:p></span></div>
+</td>
+
+<td style="padding:.75pt .75pt .75pt .75pt">
+<div class="MsoNormal"><span style='color:blue'><font color="#3333FF">y<sub>2</sub>
+= 2x<sub>1</sub> + y<sub>1</sub></font><o:p></o:p></span></div>
+</td>
+</tr>
+
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<div class="MsoNormal"><span style='color:blue'><font color="#3333FF">x<sub>3</sub>
+= x<sub>2</sub> + y<sub>2</sub></font><o:p></o:p></span></div>
+</td>
+
+<td style="padding:.75pt .75pt .75pt .75pt">
+<div class="MsoNormal"><span style='color:blue'><font color="#3333FF">y<sub>3</sub>
+= 2x<sub>2</sub> + y<sub>2&nbsp;</sub></font><o:p></o:p></span></div>
+</td>
+</tr>
+
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<div class="MsoNormal"><span style='color:blue'><font color="#3333FF">......</font><o:p></o:p></span></div>
+</td>
+
+<td style="padding:.75pt .75pt .75pt .75pt">
+<div class="MsoNormal"><span style='color:blue'><font color="#3333FF">.....</font>..<o:p></o:p></span></div>
+</td>
+</tr>
+</table></center>
+In general, x<sub>n </sub>and y<sub>n</sub> are obtained from the previous
+pair of side and diagonal numbers by the formula:
+<br><o:p></o:p>
+<center><table BORDER=0 CELLPADDING=0 COLS=1 WIDTH="37%" style="width:37.0%;mso-cellspacing:
+
+ 1.5pt;mso-padding-alt:0in 0in 0in 0in" >
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<center><span 
+
+  style='color:#3333FF'><b><font color="#3333FF">x<sub>n</sub>
+= x<sub>n-1</sub> + y<sub>n-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</sub>y<sub>n</sub> = 2x<sub>n-1</sub> + y<sub>n-1</sub></font></b></span></center>
+</td>
+</tr>
+</table></center>
+The names <i>side numbers</i> and <i>diagonal numbers</i> give a clue that
+the quotients, y<sub>1</sub> / x<sub>1</sub> of the associated pairs of
+these numbers comes to approximate the ratio of the diagonal of a square
+to its side:
+<center>
+<p><span style='color:#3333FF'><font color="#3333FF">y<sub>1</sub> / x<sub>1</sub>
+= 1,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y<sub>2</sub>
+/ x<sub>2</sub> = 3/2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+y<sub>3</sub> / x<sub>3</sub> = 7/5,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+y<sub>4</sub> / x<sub>4</sub> = 17/12,&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.....</span></center>
+
+<p>This follows the relation below:
+<center>
+<p><span style='color:#3333FF'><font color="#3333FF">y<sub>n </sub><sup>2
+</sup>=
+2x<sub>n </sub><sup>2&nbsp;</sup> + (-1)<sub> </sub><sup>n&nbsp;</sup>&nbsp;
+= 2x<sub>n </sub><sup>2&nbsp;<img SRC="plusminus.gif" BORDER=0 id="_x0000_i1044" height=11 width=7 align=ABSCENTER></sup>
+1</font></span></center>
+
+<p>If this relation is true, then it implies that:
+<center>
+<p><span style='color:#3333FF'><font color="#3333FF">(y<sub>n</sub>/ x<sub>n</sub>)<sup>2</sup>
+=&nbsp; 2 + (-1)<sub> </sub><sup>n&nbsp;</sup> (1 / x<sub>n</sub>)<sup>2&nbsp;</sup>
+= 2&nbsp;<img SRC="plusminus.gif" BORDER=0 id="_x0000_i1045" height=11 width=7>
+(1 / x<sub>n</sub>)<sup>2</sup></font></span></center>
+
+<p>This equation is known as <i>invariant </i>and is an extremely useful
+formula in the work pertaining to recursive relations.
+<p>Since the value of (1 / x<sub>n</sub>)<sup>2 </sup>can be made as small
+as we would like just by taking <i>n</i> large enough, it seems that the
+following ratio:
+<center>
+<p><img SRC="meganformula1.gif" BORDER=0 id="_x0000_i1046" height=66 width=154></center>
+
+<p>tends to remain near some fixed number for large <i>n.</i>
+<p>This procedure for radical 2 can be applied to any positive integer
+<i>a</i>.
+The general formula now becomes:
+<br><o:p></o:p>
+<center><table BORDER CELLPADDING=0 COLS=1 WIDTH="32%" style="width:32.0%;mso-cellspacing:
+
+ 1.5pt" >
+<tr>
+<td style="padding:.75pt .75pt .75pt .75pt">
+<center><span 
+
+  style='color:#006600'></span><span style='color:#3333FF'><b><font color="#3333FF">x<sub>n</sub>
+= x<sub>n-1</sub> + y<sub>n-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </sub>y<sub>n</sub>
+= ax<sub>n-1</sub> + y<sub>n-</sub></font><sub>1</sub></b></span></center>
+</td>
+</tr>
+</table></center>
+We see that:
+<center>
+<p><span style='color:#3333FF'><font color="#3333FF">y<sub>n </sub><sup>2</sup>
+= (ax<sub>n-1</sub>+ y<sub>n-1 </sub>)<sub> </sub><sup>2&nbsp;&nbsp; </sup>=
+a<sup>2</sup>x<sub>n-1
+</sub><sup>2</sup> + 2ax<sub>n-1&nbsp;</sub> y<sub>n-1
+</sub>+
+y<sub>n-1 </sub><sup>2</sup></font></span>
+<br><span style='color:#3333FF'><font color="#3333FF">ax<sub>n </sub><sup>2
+</sup>=
+a(x<sub>n-1
+</sub>+ y<sub>n-1</sub>)<sup>2&nbsp; </sup>= ax<sub>n-1
+</sub><sup>2
+</sup>+
+2ax<sub>n-1
+</sub>y<sub>n-1
+</sub>+ ay<sub>n-1 </sub><sup>2</sup></font></span></center>
+
+<p>By subtracting <font color="#3366FF">ax<sub>n </sub><sup>2</sup></font>from
+<font color="#3366FF">y<sub>n
+</sub><sup>2&nbsp;</sup></font><sup>&nbsp;</sup>
+we get :
+<center>
+<p><span style='color:blue'><font color="#3333FF">y<sub>n </sub><sup>2</sup>-
+ax<sub>n </sub><sup>2
+</sup>= (a<sup>2</sup>-a) x<sub>n-1 </sub><sup>2</sup>
++ (1-a) y<sub>n-1
+</sub><sup>2</sup></font>
+<br><font color="#3333FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= (1-a) (y<sub>n-1 </sub><sup>2 </sup>-ax<sub>n-1 </sub><sup>2 </sup>)</font><o:p></o:p></span></center>
+
+<p>What was achieved in the previous equation is that <font color="#3366FF">y<sub>n
+</sub><sup>2</sup>-
+ax<sub>n </sub><sup>2&nbsp;</sup></font><sup> </sup>has been represented
+by an expression of the same form. Next we will replace <i>n</i> with <i>n</i>-1
+and we will end up with a chain of equalities as follows:
+<center>
+<p><span style='color:blue'><font color="#3333FF">y<sub>n </sub><sup>2</sup>-
+ax<sub>n </sub><sup>2
+</sup>=&nbsp; (1-a) (y<sub>n-1 </sub><sup>2 </sup>-
+ax<sub>n-1 </sub><sup>2
+</sup>)</font>
+<br><font color="#3333FF"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</sup>=&nbsp; (1-a)<sup>2</sup> (y<sub>n-2 </sub><sup>2 </sup>- ax<sub>n-2
+</sub><sup>2
+</sup>)</font>
+<br><font color="#3333FF"><sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+</sup>=&nbsp; (1-a)<sup>3</sup> (y<sub>n-3
+</sub><sup>2 </sup>- ax<sub>n-3
+</sub><sup>2
+</sup>)</font>
+<br>………..&nbsp;<o:p></o:p></span>
+<p><span style='color:blue'><font color="#3333FF">y<sub>n </sub><sup>2</sup>-
+ax<sub>n </sub><sup>2
+</sup>=&nbsp; (1-a)<sup>n-1</sup> (y<sub>1 </sub><sup>2
+</sup>-
+ax<sub>1
+</sub><sup>2
+</sup>)</font><o:p></o:p></span></center>
+
+<p>Therefore we get:
+<center>
+<p><span style='color:blue'><font color="#3333FF">(y<sub>n </sub>/ x<sub>n
+</sub>)<sup>2</sup>
+= a + [(1-a)<sup>n-1</sup> (y<sub>1 </sub><sup>2
+</sup>- ax<sub>1 </sub><sup>2
+</sup>)]
+/ x<sub>n </sub><sup>2&nbsp;&nbsp;&nbsp;&nbsp; </sup>n>2</font><o:p></o:p></span></center>
+
+<p>One example of this can be shown through the discussion of radical 3.
+If we allow<font color="#3366FF"> x<sub>1</sub>= 1</font> and <font color="#3366FF">y<sub>1</sub>=
+2</font> to be the initial side and diagonal numbers, then we arrive at
+the solution:
+<center>
+<p><span style='color:blue'><font color="#3333FF">(y<sub>n </sub>/ x<sub>n
+</sub>)<sup>2</sup>
+= 3 + ((-2)<sup>n-1</sup> ) / x<sub>n </sub><sup>2&nbsp;</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+n>2</font><o:p></o:p></span></center>
+
+<p><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Diophantus.html">Diophantus</a>
+was responsible for using <a href="http://mathworld.wolfram.com/DiophantusProperty.html">recursive</a>
+relations to solve the Diophantine equations.<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Diophantus.html">
+Diophantus</a> was not the first person to solve indeterminate problems
+of second degree. These problems were a common type of mathematical recreation
+long before his time. Aryabhata and <a href="http://mathworld.wolfram.com/BrahmaguptaPolynomial.html">Brahmagupta</a>
+were two people who heavily contributed to the study of indeterminate equations,
+which was <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Diophantus.html">Diophantus</a>'s
+favorite subject. Aryabhata and Brahmagupta repeated many of <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Diophantus.html">Diophantus</a>'s
+problems however their approach was different. Today, in honor of <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Diophantus.html">Diophantus</a>,
+any equation with one of more unknowns that is to be solved for integral
+values of the unknowns is called a Diophantine equation.
+<p><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Diophantus.html">Diophantus</a>
+proved that the linear diophantine equation ax + by = c has a solution
+if and only if d/c, where d = gcd (a,b).&nbsp; He knew that there were
+integers r and s for which a = dr and b = ds. If a solution of ax + by
+= c did exist, so that ax<sub>0</sub> + by<sub>0</sub> = c fo a suitable
+x<sub>0 </sub>and y<sub>0</sub>, then:
+<center>
+<p><span style='color:#993366'><font color="#3333FF">c =&nbsp; ax<sub>0</sub>
++ by<sub>0</sub> = dr x<sub>0</sub> + dsy<sub>0</sub> = d(rx<sub>0</sub>
++ sy<sub>0</sub></font>)</span></center>
+
+<p>which simply states that d/c. Conversely, we assume that d/c, say c
+= dt. Now, integers x<sub>0</sub> and y<sub>0</sub> can be found satisfying
+dax<sub>0</sub> + by<sub>0</sub> . When this relation is multiplied by
+t, we get:
+<center>
+<p><span style='color:#993366'><font color="#3333FF">c = dt = (ax<sub>0</sub>
++ by<sub>0</sub> )t = a(tx<sub>0</sub> ) + b(ty<sub>0</sub> )</font></span></center>
+
+<p>Therefore, this diopantine equation ax + by = c has x = tx<sub>0</sub>
+and y = ty<sub>0</sub> as a particular solution.
+<p>There is a theorem that takes this a step further and states that if
+x<sub>0</sub>, y<sub>0</sub> is any particular solution of this equation,
+then all other solutions are given by:
+<center>
+<p><span style='color:#993366'><font color="#3333FF">x = x<sub>0</sub>
++ (b/d)t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+y = y<sub>0</sub> - (a/d)t</font></span></center>
+
+<p>for some integer t.
+<br><b><i><font color="#000099">See also</font></i></b>&nbsp;&nbsp; <a href="http://mathworld.wolfram.com/MonkeyandCoconutProblem.html">Monkey&nbsp;
+and&nbsp; Coconut&nbsp; Problem</a>&nbsp; and&nbsp; <a href="http://mathworld.wolfram.com/DiophantineEquation.html">DiophantineEquation</a>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;</div>
+
+</body>
+</html>

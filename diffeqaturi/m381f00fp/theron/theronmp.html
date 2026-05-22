@@ -1,0 +1,295 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (WinNT; U) [Netscape]">
+   <title>Prime numbers</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<center>
+<h1>
+<font color="#006600">Difference Equations</font></h1></center>
+
+<center>
+<h1>
+<font color="#006600">and</font></h1></center>
+
+<center>
+<h1>
+<font color="#006600">Recursive Relations</font></h1></center>
+
+<center><b><font color="#3333FF">1901-1925</font></b>
+<br>
+<hr></center>
+
+<center><table BORDER=0 CELLSPACING=0 CELLPADDING=4 BGCOLOR="#CCCCFF" >
+<tr>
+<td><a href="http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Number_Theory.html">Number
+theory index</a></td>
+
+<td ALIGN=RIGHT><a href="http://www-groups.dcs.st-and.ac.uk/~history/Indexes/HistoryTopics.html">History
+Topics Index</a></td>
+</tr>
+</table></center>
+
+<hr>
+
+<p class="MsoNormal">It is from these recursive equations that some mathematical
+wonders are created. We begin with plane filling curves or fractals, which
+are curves that fill planes without any holes. The first such <a href="http://mathworld.wolfram.com/Peano-GosperCurve.html">curve</a>
+was discovered by Guiseppe <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Peano.html">Peano</a>
+in 1890. Other mathematicians who used difference equations in their work
+with plane filling curves include David <font color="#3366FF"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Hilbert.html">Hilbert</a></font>
+(1862-1943), and Niels Fabian <u><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Koch.html">Von
+Koch</a></u> (1870-1924). The relevant work all three will be discussed
+in the following. As will the work of Emile<u> <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Picard.html">Picard</a></u>
+(1856-1941) and Martin <u><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Kutta.html">Kutta</a></u>(1867-1944),
+both of whom used recursive equations in solutions to differential equations.
+<p>There are curves that fill a plane without holes. The first such curve
+was discovered by Guiseppe <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Peano.html">Peano</a>
+in 1890 and the <a href="http://mathworld.wolfram.com/HilbertCurve.html">second</a>&nbsp;
+by D.<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Hilbert.html">Hilbert</a>
+(1862-1943). Calling them Peano Monster Curves, B. Mandelbrot&nbsp; collected
+a series of quotations in support of this terminology.
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<center>
+<p><font color="#006600"><font size=+3>Fractal Curves and Dimension</font></font></center>
+
+<p><br>
+<br>
+
+<p class="MsoNormal">Fractals burst into the open in early 1970s. Their
+breathtaking beauty captivated many a layman and a professional alike.
+Striking fractal images can often be
+<div class="MsoNormal">obtained with very elementary means. However, the
+definition of fractals is far from being trivial and depends on a formal
+definition of dimension.</div>
+
+<div class="MsoNormal">It takes a few chapters of an Advanced Analysis
+book to rigorously define a notion of dimension. The important thing is
+that the notion is not unique and even more</div>
+
+<div class="MsoNormal">importantly, for a given set, various definitions
+may lead to different numerical results. When the results differ the set
+is called fractal. Or in the words of B. <u><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Mandelbrot.html">Mandelbrot</a></u>,
+the father of fractals:
+<br>`` A fractal is by definition a set for which the <a href="http://mathworld.wolfram.com/CapacityDimension.html">Hausdorff-Besicovitch
+dimension </a>strictly exceeds the <a href="http://mathworld.wolfram.com/LebesgueCoveringDimension.html">topological
+dimension</a>."
+<br><b><i><font color="#006600">Visit</font></i></b>&nbsp;<a href="http://mathworld.wolfram.com/MandelbrotSet.html">
+Mandelbrot set</a>
+
+<p class="MsoNormal">The topological dimension of a smooth curve is, as
+one would expect, one and that of a sphere is two which may seem very intuitive.
+However, the <a href="http://mathworld.wolfram.com/DimensionInvarianceTheorem.html">formal
+definition</a>
+<div class="MsoNormal">was only given in 1913 by the Dutch mathematician
+<u><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Brouwer.html">L.
+Brouwer</a> </u>(1881-1966)).</div>
+
+<div class="MsoNormal">A (solid) cube has the topological dimension of
+three because in any decomposition of the cube into smaller bricks there
+always are points that belong to at least four</div>
+
+<div class="MsoNormal">(3+1) bricks.</div>
+
+<div class="MsoNormal">The Brouwer dimension is obviously an integer. The
+Hausdorff-Besicovitch dimension, on the other hand, may be a non integer.
+Formal definition of this quantity</div>
+
+<div class="MsoNormal">requires a good deal of the <a href="http://mathworld.wolfram.com/MeasureTheory.html">Measure
+Theory</a>. But fortunately for a class of sets Hausdorff-Besicovitch dimension
+can be easily evaluated. These sets are known as</div>
+
+<div class="MsoNormal">the self-similar fractals and, because of that ease,
+the property of self-similarity is often considered to be germane to fractals
+in general. The applet below illustrates</div>
+
+<div class="MsoNormal">the idea of self-similarity.</div>
+</div>
+
+<div class="MsoNormal">Initially there is an equilateral triangle in the
+middle of a straight line segment. This combination of four segments form
+a pattern which serves as a description of an</div>
+
+<div class="MsoNormal">algorithm to be used later on. The secret meaning
+of the pattern is this:</div>
+
+<div class="MsoNormal">Start with a straight line segment. Proceed in stages.
+On every stage traverse the curve obtained previously. Every time you encounter
+a straight line segment, replace it with the four-segment pattern as was
+first done with the original line segment. As with the <a href="http://mathworld.wolfram.com/HilbertCurve.html">Hilbert
+curve</a>, which is similar in construction, it's possible to formally
+prove that thus obtained curves converge to a limit curve. This limiting
+curve is <a href="http://mathworld.wolfram.com/Self-Similarity.html">self-similar</a>
+because it consists of four smaller copies of itself which, in turn, also
+and naturally consist of four smaller copies of themselves and so on.</div>
+
+<div class="MsoNormal">To see how the algorithm works try the following
+<a href="http://www.dcs.napier.ac.uk/~andrew/hilbert.html">applet</a>
+(click on hilber.scr top of the page) or try this <a href="hilbert.avi">movie</a>.</div>
+
+<div class="MsoNormal">To understand the notion of the similarity dimension,
+first observe that, if the initial line segment was 1 unit in length, then
+the second stage curve that consists of four</div>
+
+<div class="MsoNormal">segments each one third of the initial line, is
+4/3 units in length. On the third stage the length becomes (4/3)2 and on
+the fourth it's (4/3)3 and so on. Since 4/3>1 the</div>
+
+<div class="MsoNormal">farther you go the longer the curve results. Finally,
+the limiting curve will have infinite length. Which is somewhat surprising
+because of it's being generated by such a simple procedure in a very limited
+space from the curves of finite length.</div>
+
+<div class="MsoNormal">The similarity dimension of the snowflake curve
+is finite. This is arrived at in the following manner. If it were a straight
+line we could split it into to smaller segments</div>
+
+<div class="MsoNormal">each half the length of the "parent" line. The length
+of the line would be the sum of the two smaller segments. If we were talking
+about areas, then taking a square and</div>
+
+<div class="MsoNormal">splitting it into 4 smaller squares with areas 1/4
+of the "parent" square. We would observe that the four smaller areas sum
+up to the original size. Notice that when the</div>
+
+<div class="MsoNormal">side of a square is halved, its area decreases by
+the factor of 4 which is (1/2)2. For a cube, acting similarly, decreasing
+its size by a factor of 2, results in smaller cubes each with the volume
+1/8=(1/2)3 of the "parent" cube. We can detect a commonality in these three
+examples. Given a shape of size S. It's split into N similar smaller shapes
+each with the size (S/N) so that N*(S/N)=S. In each of the three cases
+we used a different function S. If a is a linear dimension of the shape
+we have S(a)=a for a line segment and S(a)=a2 and S(a)=a3 for the square
+and cube, respectively. Thus, N*(S/N)=S can be rewritten as N*(a/M)D=aD
+where a is the</div>
+
+<div class="MsoNormal">"linear size" of the shape, M is the number of linear
+parts, and N is the total number of the resulting smaller shapes. This
+gives N*M-D=1 or N=MD. In all three cases we took M=2 and D was successively
+1, 2, and 3. We see that D=log(N)/log(M) is what we would call the dimension
+in all three cases.</div>
+
+<div class="MsoNormal">This quantity D is known as the similarity dimension.
+It applies to shapes that are composed of a few copies of themselves whose
+"linear" size is smaller than that of</div>
+
+<div class="MsoNormal">the "parent" shape by a factor of M. Returning to
+the snowflake, we have N=4 and M=3. In this case D=log(4)/log(3) is somewhere
+between 1 and 2.</div>
+
+<div class="MsoNormal">The Koch's snowflake has no self-intersection and
+is obtained from a line segment as an image of a continuous function. By
+one of Brouwer's theorems this function</div>
+
+<div class="MsoNormal">preserves the topological dimension of the segment
+(which is, of course 1). Finally, the curve has topological dimension 1
+whereas its Hausdorff-Besicovitch dimension is log(4)/log(3).</div>
+
+<br>&nbsp;
+
+<p class="MsoNormal">Note that for the <u>Hilbert</u> curve that (disregarding
+small links) consists of 4(=N) copies of itself each twice (M=2) as short
+as the whole, we get D=log(4)/log(2)=2.
+<div class="MsoNormal">Which is not surprising as the curve covers the
+whole of the square whose dimension is 2. From the above mentioned Brouwer's
+theorem it follows that the</div>
+
+<div class="MsoNormal">limiting curve must have self-intersections. For
+otherwise it would be a topological (in particular, dimension preserving)
+transformation. But a line is of (topological)</div>
+
+<div class="MsoNormal">dimension 1 whereas a square has dimension 2.</div>
+
+<div class="MsoNormal">Fractals and plane filling curves are two of many
+applications of difference equations. Another important application is
+for the numerical solution of differential equations. Two of the most important
+are called the <b><a href="http://mathworld.wolfram.com/Runge-KuttaMethod.html">Runge-Kutta
+method</a></b>, based on the work of Martin Kutta(1867-1944), and the method
+of <b>successive approximations</b>, based on the work of Emile Picard
+(1856-1941). We begin by discussing the Runge Kutta Method, which is quite
+simple to use. This method for solving initial value problems of the form</div>
+
+<center><font color="#3333FF">y’ = f(t,y),&nbsp;&nbsp;&nbsp; y(t<sub>0</sub>)
+= y<sub>0</sub></font></center>
+
+<div class="MsoNormal">numerically.
+<br>&nbsp;
+<br>&nbsp;</div>
+
+<center><font color="#006600"><font size=+3>Runge-Kutta Methods</font></font></center>
+
+<br><font color="#006600"><font size=+3></font></font>&nbsp;
+<p><br>
+<p>The Runge-Kutta formula involves a weighted average of values of&nbsp;
+f (t,y) at different points in the interval [t<sub>n&nbsp; </sub>,t<sub>n+1</sub>].
+<br>It is given by
+<center><font color="#3333FF">y<sub>n+1</sub> = y<sub>n</sub> + h/6(k<sub>n1</sub>+2k<sub>n2</sub>+2k<sub>n3</sub>+k<sub>n4</sub>)</font></center>
+where,
+<center>
+<p><font color="#3333FF">k<sub>n1</sub>= f ( t<sub>n&nbsp; </sub>,y<sub>n</sub>
+)</font>
+<br><font color="#3333FF">k<sub>n2</sub>= f ( t<sub>n&nbsp; </sub>+h/2,
+y<sub>n</sub> +h k<sub>n1</sub>/2)</font>
+<br><font color="#3333FF">k<sub>n3</sub>= f ( t<sub>n&nbsp; </sub>+h/2,
+y<sub>n</sub> +h k<sub>n2</sub>/2)</font>
+<br><font color="#3333FF">k<sub>n4</sub>= f ( t<sub>n&nbsp; </sub>+h, y<sub>n</sub>
++h k<sub>n3</sub>)</font></center>
+
+<p><br>
+<br>
+<br>
+
+<p class="MsoNormal">Successive application of this formula yields increasingly
+more accurate results. This method is of two orders&nbsp; more accurate
+(the results oscillate less) than the Improved <u>Euler </u>Formula and
+the three term <u><a href="http://mathworld.wolfram.com/TaylorSeries.html">Taylor</a></u>Method.
+<br>&nbsp;
+<br>&nbsp;
+<br>
+<br>
+<br>
+<center>
+<p><font color="#006600"><font size=+3>Picard Iteration</font></font></center>
+
+<br><font color="#006600"><font size=+3></font></font>&nbsp;
+<p><br>
+<p>We can write an ordinary <a href="http://mathworld.wolfram.com/PicardsExistenceTheorem.html">differential
+equation</a> as a fixed point formula. If we have a starting guess, we
+can iterate the equation to find an approximate solution to the original
+equation. For example, suppose we have the first order ordinary differential
+equation
+<center>
+<p><font color="#3333FF">y’(x) = f(x,y)</font></center>
+
+<p>with initial condition y(x<sub>0</sub> )= y<sub>0</sub> . This equation
+can be written as an integral equation in the form
+<center>
+<p><img SRC="theronform1.gif" height=71 width=192></center>
+Note that the above already incorporates the initial conditions. If we
+had a guess of y(x), say&nbsp; y<sub>1</sub>(x), then we might be able
+to improve our guess by forming y<sub>2</sub>(x) as follows
+<center><img SRC="theronform2.gif" height=78 width=208></center>
+
+<p>Then, knowing y<sub>2</sub>(x) we could form y<sub>3</sub>(x)&nbsp;
+by the same technique. We can continue this process indefinitely, each
+time using the formula
+<center>
+<p><img SRC="theronform3.gif" height=78 width=233></center>
+What we take for y<sub>1</sub>(x) is arbitrary; it is often easiest to
+take y<sub>1</sub>(x) = y<sub>0</sub> .
+<br>&nbsp;
+<br>&nbsp;
+<p>Additional information and interesting web sites:
+<p><a href="http://www-uk.hpl.hp.com/brims/art/gallery/hilbert/background.html#applications">http://www-uk.hpl.hp.com/brims/art/gallery/hilbert/background.html#applications</a>
+<p><a href="http://dir.yahoo.com/Arts/Visual_Arts/Computer_Generated/Fractals/">http://dir.yahoo.com/Arts/Visual_Arts/Computer_Generated/Fractals/</a>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>
