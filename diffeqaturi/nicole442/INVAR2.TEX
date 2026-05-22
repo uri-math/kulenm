@@ -1,0 +1,402 @@
+
+\vsize 18cm
+\hsize 15.4cm
+\magnification=1200
+\item{}
+\vskip 1cm
+\font\r=cmr10 scaled\magstep2
+
+\centerline{\r INVARIANTS AND RELATED LIAPUNOV}
+\medskip
+\centerline{\r FUNCTIONS FOR DIFFERENCE EQUATIONS}
+\bigskip
+\centerline{by}
+\bigskip
+\centerline{M.R.S.Kulenovi\'c}
+
+\centerline{Department of Mathematics}
+
+\centerline{University of Rhode Island}
+
+\centerline{Kingston, RI 02881}
+
+\vskip 1.5cm
+\centerline{\bf Abstract}
+\vskip 1.5cm
+Consider the difference equation
+$${\bf x_{n+1}}={\bf f( x_n)},$$
+where ${\bf x_n}$ is in $R^k$ and ${\bf f}: D\to D$ is continuous where $D \subset R^k$.
+Suppose that $I:R^k\to R$ is a continuous invariant that is, $I({\bf f(x)})=I({\bf x})$
+for every ${\bf x}\in D$. We will show that if $I$ attains an isolated minimum
+or maximum value
+at the  equilibrium (fixed) point ${\bf p}$  of this system, then there exists a
+Liapunov function, namely  $\pm(I({\bf x}) - I({\bf p}))$ and so the equilibrium
+${\bf p}$ is stable. This result is then applied to some difference equations
+appearing in different fields of applications.
+
+\vskip 4.5cm
+
+\noindent{\bf Key Words:} invariants, stability, Lyness' equation
+
+\noindent{\bf AMS 1991 Subject Classification: Primary-39A11, Secondary-39Al0}
+
+
+\vfill\eject
+\vglue 2cm
+
+{\r 1. Introduction}
+\bigskip
+Consider Lyness' equation
+$$x_{n+1}={{a + x_n}\over x_{n-1}},$$
+where $a>0$ is a parameter and $x_{-1}>0, x_0>0$. Recently, this equation
+attracted a lot of attention, see [KL] and [GJKL], and its stability has been
+proved showing that it
+can be transformed to an area preserving map, see [KLTT]. Also KAM theory has
+been applied
+to provide another proof of stability, see [KLTT]. However, no Liapunov function
+has been found so far. Here we will construct the Liapunov function for this
+equation, using the well known invariant:
+$$I(x_n,x_{n-1})=\left(1+{1\over x_n}\right)\left(1+{1\over x_{n-1}}\right)(a+x_n+x_{n-1}).$$
+In fact, we will show that the Liapunov function $V(x,y)$ is given by
+$$V(x,y)=I(x,y)-I(p,p)=I(x,y)-{(p+1)^3\over p},$$
+where
+$$p= {{1\pm \sqrt{1+4a}}\over 2}$$
+is the equilibrium of this equation.
+
+One of the possible third order generalizations of Lyness' equation is Todd's
+equation which has the form:
+$$x_{n+1}={{a + x_n + x_{n-1}}\over x_{n-2}},$$
+where $a>0$ is a parameter and $x_{-1}, x_0, x_1>0$.
+Here we will construct the Liapunov function for this equation using well
+known invariant:
+$$I(x_n,x_{n-1},x_{n-2})=\left(1+{1\over x_n}\right)\left(1+{1\over x_{n-1}}\right)\left(1+{1\over x_{n-2}}\right)(a+x_n+x_{n-1}+x_{n-2}).$$
+In fact, we will show that the Liapunov function $V(x,y,z)$ is given by
+$$V(x,y,z)=I(x,y,z)-I(p,p,p)=I(x,y,z)-{(p+1)^4/p^2},$$
+where $p$ is the equilibrium of this equation.
+\bigskip
+\vfill\eject
+{\r 2. Main Result. }
+\bigskip
+For the sake of completeness, we provide the definition of
+stability that will be used in this paper.
+\medskip
+{\bf DEFINITION} ([KP], p.171) Let {\bf u} belong to ${\bf R}^n$ and $r>0$. The open
+ball centered at {\bf u} with radius $r$ is the set
+$$B({\bf u},r) = \{{\bf v} \in {\bf R}^n: |{\bf v} - {\bf u}|<r\}.$$
+Let {\bf p} be a fixed point of {\bf f}. Then {\bf p} is stable provided that,
+given any ball B({\bf p},$\epsilon$), there is a ball B({\bf p},$\delta$) so that
+if {\bf u} is in B({\bf p},$\epsilon$), then ${\bf f}^k ({\bf p })$ is in B({\bf p},$\epsilon$)
+for $k=1,2,...$. Here ${\bf f}^k ({\bf p })$ denotes $k$-th iterate of ${\bf p}$.
+\medskip
+Our main result is the following
+\bigskip
+{\bf THEOREM.} Consider the  difference equation
+$${\bf x_{n+1}}={\bf f( x_n)}$$
+where ${\bf x_n}$ is in $R^k$ and ${\bf f}: D\to D$ is continuous, where
+$D \subset R^k$. Suppose that $I:R^k\to R$ is a continuous invariant that is
+$I({\bf f(x)})=I({\bf x})$
+for every ${\bf x}\in D$. If $I$ attains an isolated local minimum or maximum value
+at the equilibrium (fixed) point ${\bf p}$  of this system, then there exists a
+Liapunov function equal to  $\pm(I({\bf x}) - I({\bf p}))$ and so the equilibrium
+${\bf p}$ is stable.
+\medskip
+{\bf Proof.} Assume that $I$ attains a local isolated minimum at ${\bf p}$. Then there
+exists some neighborhood $D_p$ of $\bf p$ such that $I({\bf x})>I({\bf p})$ for
+every ${\bf x}\in D_p$. In view of this we have
+
+1. $V({\bf p}) = I({\bf p})  - I({\bf p}) = 0.$
+
+2. $V({\bf x}) = I({\bf x}) - I({\bf p}) > 0$ , for {\bf x} in $D_p $.
+
+3. $(V {\bf f})({\bf x}) = I({\bf f({\bf x})}) - I({\bf p}) = I({\bf x}) - I({\bf p}) = V({\bf x}).$
+
+where in 3. we use the fact that $I$ is an invariant. Thus, all three conditions
+in [KP, p.177] are satisfied and so $V$ is Liapunov function. Consequently,
+${\bf p}$ is stable.
+
+The proof in the case where $I$ attains its maximum follows immediately from
+the result that was just proved by observing the simple fact that negative of
+an invariant is also an invariant.
+\bigskip
+{\bf REMARK 1.} This theorem shows that whenever certain
+conditions are satisfied, there exists a Liapunov function which
+is actually a special invariant of considered equation. As is well
+known, see [GM] and [M] the invariant is not uniquely determined
+but rather if one invariant is given then any appropriate function
+(continuous, analytic) of this invariant is invariant itself.
+Furthermore, the difference equation can have several
+"independent" invariants (eg. two invariants neither of which can
+be derived from the other through homeomorphic changes of
+variable), see [BB]. As we will mention later we have developed
+{\it Mathematica} package that can almost automatically find the
+rational invariant for a given equation (if there is one) and
+using our result here construct the corresponding Liapunov
+function, if such function exists.
+\medskip
+{\bf REMARK 2.} An important question that could be raised here is
+what are the implications of this theorem on the linearized
+stability theory for this difference equation. In particular, is
+it true that all the eigenvalues of the linearized system
+(assuming that {\bf f} is differentiable) $${\bf y_{n+1}}={\bf
+f'(p) y_n}$$ necessarily lie on the unit circle ? The long
+standing conjecture is that the difference equation $${\bf
+x_{n+1}}={\bf f( x_n)}$$ has an invariant if and only if the
+corresponding linearized equation has an invariant, which in turn
+is equivalent to the fact that the matrix ${\bf f'(p)}$ does not
+have all eigenvalues inside or outside unit circle.
+
+
+\bigskip
+{\r 3. Applications.}
+\bigskip
+Here, we will give several equations with known invariants and using the above
+result we will obtain the Liapunov function, and prove the stability of their
+equilibria. We note that the positive definiteness of the Hessian at the critical
+point is verified by checking that all the principal minors are positive.
+\bigskip
+{\bf 1.} Lyness' equation (see [KL] and [KLTT]):
+
+$$x_{n+1}={{a + x_n}\over x_{n-1}},$$
+where $a>0$ is a parameter and $x_1>0, x_0>0$.
+Invariant:
+$$I(x_n,x_{n-1})=\left(1+{1\over x_n}\right)\left(1+{1\over x_{n-1}}\right)(a+x_n+x_{n-1}).$$
+Equilibrium: $p= {{1\pm \sqrt{1+4a}}\over 2}$ satisfies $p^2-p-a=0$.
+
+The necessary conditions for the extremum give:
+$${\partial I \over \partial x}\equiv \left(1+{1\over y}\right)\left(1-{{y+a}\over x^2}\right)=0,$$
+$${\partial I \over \partial y}\equiv \left(1+{1\over x}\right)\left(1-{{x+a}\over y^2}\right)=0,$$
+which leads to $x=y$ and to the equation $x^2-x-a=0$. This shows that the
+critical points are exactly the equilibrium points. Now, we will check the Hessian
+at a positive critical point $p_+= {{1+ \sqrt{1+4a}}\over 2}$, which will be
+denoted as $p$
+
+$$H=\left(\matrix{A&B\cr
+                  B&C\cr}\right),$$
+where
+$$A={\partial^2 I\over \partial x^2}(p,p)=2{{(p+1)(p+a)}\over p^4}>0, $$
+
+$$B={\partial^2 I\over {\partial x \partial y}}(p,p)={{a - 2p^2}\over p^4}, $$
+and
+$$C= A.$$
+Now,
+$$det\; H=AC - B^2 = {(3a + 2(a+1)p)(a+2(a+1)p + 4p^2)/p^8}>0,$$
+which implies that the invariant $I$ attains its minimum at $(p,p)$. Thus,
+$$\min \{I(x,y): (x,y)\in D\}=I(p,p)={{(p+1)^2 (a+2p)}\over p^2},$$
+and so by our theorem $V(x,y)=I(x,y) - {{(p+1)^2 (a+2p)}\over p^2}$, which shows  that $p$
+is stable.
+\bigskip
+{\bf 2.} Todd's equation (see [KL]):
+$$x_{n+1}={{a + x_n + x_{n-1}}\over x_{n-2}},$$
+where $a>0$ is a parameter, and $x_1>0, \; x_0>0, \; x_1>0$.
+
+Invariant: 
+$$I(x_n,x_{n-1},x_{n-2})=\left(1+{1\over x_n}\right)\left(1+{1\over x_{n-1}}\right)\left(1+{1\over x_{n-2}}\right)(a+x_n+x_{n-1}+x_{n-2}).$$
+Equilibrium:\quad $p=1\pm\sqrt{1+a}$ satisfies $p^2-2p-a=0$.
+
+The necessary conditions for the extremum give:
+$${\partial I \over \partial x}\equiv \left(1+{1\over y}\right)\left(1+{1\over z}\right)\left(1-{{a+y+z}\over x^2}\right)=0,$$
+$${\partial I \over \partial y}\equiv \left(1+{1\over x}\right)\left(1+{1\over z}\right)\left(1-{{a+x+z}\over y^2}\right)=0,$$
+and
+$${\partial I \over \partial z}\equiv \left(1+{1\over x}\right)\left(1+{1\over y}\right)\left(1-{{a+x+y}\over z^2}\right)=0.$$
+
+This leads to $x=y=z$, and to the equation $x^2-2x-a=0$, which shows that the
+critical points are exactly the equilibrium points. Now, we will check the Hessian
+at a positive critical point $(p,p,p)$ where $p= 1+ \sqrt{1+a}$.
+
+$$H=\left(\matrix{A&B&B\cr
+                  B&A&B\cr
+                  B&B&A\cr}\right),$$
+where
+$$A={\partial^2 I\over \partial x^2}(p,p) ={\partial^2 I\over \partial y^2}(p,p)={\partial^2 I\over \partial z^2}(p,p) =2{{(p+1)^2 (a+2p)}\over p^5}>0, $$
+and
+$$B={\partial^2 I\over {\partial x \partial y}}(p,p)=
+{\partial^2 I\over {\partial y \partial z}}(p,p)=
+{\partial^2 I\over {\partial x \partial z}}(p,p)={{(p+1)(a+p-2p^2)}\over p^5}. $$
+Now,
+$$det\; H_1=A >0,\quad det$$
+$$H_2=det{\left(\matrix{A&B\cr
+                                  B&A\cr}\right)}={{(p+1)^2 (a+(2a+3)p+6p^2)(3a+(2a+5)p+2p^2)}\over p^10}>0 ,$$
+and
+$$det H=det{\left(\matrix{A&B&B\cr
+                  B&A&B\cr
+                  B&B&A\cr}\right)} = (A-B)^2(A+2B)$$
+$$= 2 {{ (p+1)^3(2a+(a+3)p)(a+(2a+3)p+6p^2)}\over{p^{15}}}>0,$$
+which shows, that the invariant $I$ attains its minimum at $(p,p,p)$. Thus,
+$$\min \{I(x,y,z): (x,y,z)\in D\}=I(p,p,p)={{(p+1)^3(a+3p)}\over p^3},$$
+and so by our theorem $V(x,y,z)=I(x,y,z)-{{(p+1)^3(a+3p)}\over p^3}$, which shows, that
+$p$ is stable.
+
+\bigskip
+{\bf 3.} $k+2$-th order Lyness' equation (see [KL]):
+$$x_{n+1}={{a + x_n + x_{n-1}+...+x_{n-k}}\over x_{n-k-1}},$$
+where $a>0$ is a parameter, and $x_-k>0,...,x_-1>0$.
+
+Invariant:
+$$I(x_n,...,x_{n-k-1})=\left(1+{1\over x_n}\right)\left(1+{1\over x_{n-1}}\right)...\left(1+{1\over x_{n-k-1}}\right)(a+x_n+x_{n-1}+...+x_{n-k-1}).$$
+
+Equilibrium:\quad $p={{k+1\pm\sqrt{(k+1)^2+4a}}\over 2}$ satisfies $p^2-(k+1)p-a=0$.
+The necessary conditions for the extremum give:
+$${\partial I \over \partial x_{n-i}}\equiv \prod_{j=0,j\neq i}^{k+1}\left(1+{1\over x_{n-j}}\right)
+\left(1-{{a+\sum_{j=0,j\neq i}^{k+1} x_{n-j}}\over x_{n-i}^2}\right)=0,\quad i=1,...,k+1,$$
+which gives
+$$x_{n-i}^2-a- \sum_{j=0, j\neq i}^{k+1} x_{n-j}=0,\quad i=1,...,k+1.$$
+Subtracting the consecutive equations we get $x_n=x_{n-1}=...=x_{n-k-1}=p$,
+which shows that the critical point is $(p,p,...,p)$.
+
+Now, we will check the Hessian at a positive critical point $(p_+,...,p_+) $,
+which  for simplicity will be denoted by $(p,...,p)$.
+Computing the second order derivatives of $I$ with respect to $x_{n-i}$ we get
+$${\partial^2 I\over \partial x_{n-i}^2}={2\over x_{n-i}^3}\left(a+\sum_{j=0, j\neq i}^{k+1} x_{n-j}\right)
+\prod_{j=0,j\neq i}^{k+1}\left(1+{1\over x_{n-j}}\right),$$
+and
+$${\partial^2 I\over {\partial x_{n-i}}{\partial x_{n-j}}}=\prod_{p=0,p\neq i,j}^{k+1}\left(1+{1\over x_{n-p}}\right)
+\left({{a+\sum_{p=0, p\neq i,j}^{k+1} x_{n-p}}\over{x_{n-i}^2 x_{n-j}^2}}-{1\over x_{n-i}^2}-{1\over x_{n-j}^2} \right),$$
+$i=1,...,k+1$ at the equilibrium $(p,p,...,p)$, we get
+$$A={\partial^2 I\over \partial x_{n-i}^2}|(p,p,...,p)=2{{(p+1)^{k+1} (a+(k+1)p)}\over p^{k+4}}>0,$$
+and
+$$B={\partial^2 I\over {\partial x_{n-i}}{\partial x_{n-j}}}|(p,p,...,p)={{(p+1)^{k} (a+kp-2p^2)}\over p^{k+4}}.$$
+Thus, the Hessian takes the form
+$$H=\pmatrix{A&B&\ldots&B\cr
+             B&A&\ldots&B\cr
+             \vdots&\vdots&\ddots&\vdots\cr
+             B&B&\ldots&A\cr}.$$
+
+Now,
+$$det\; H_1=A >0,$$
+$$det\;H_m=det{\pmatrix{A&B&\ldots&B\cr
+                                             B&A&\ldots&B\cr
+                                             \vdots&\vdots&\ddots&\vdots\cr
+                                             B&B&\ldots&A\cr}}=(A-B)^{m+1}[A+(m-1)B]$$
+
+$$={(p+1)^{(m+2)k}\over p^{(k+4)(m+2)}} [2(k+2)p^2 + (k+2+a)p + a]^{m+1} [(2(k-m)+4)p^2 + (2a+(m+1)k +2)p +(m+1)a]>0,$$  $k=1,...,m,$ where $H_m$ is m-th order principal minor of the Hessian $H$.
+
+This shows, that the invariant $I$ attains its minimum at $(p,p,...,p)$. Thus,
+$$\min \{I(x_n,x_{n-1},...,x_{n-k-1}):(x_n,x_{n-1},...,x_{n-k-1}) \in D\}=I(p,p,...,p)$$
+$$={{(p+1)^{k+2} (a+(k+2)p)}\over p^{k+2}}$$
+and so, by our theorem   
+
+$$V(x_n,x_{n-1},...,x_{n-k-1})=I(x_n,x_{n-1},...,x_{n-k-1})-{{(p+1)^{k+2} (a+(k+2)p)}\over p^{k+2}},$$
+which shows, that $p$ is stable.
+
+Obviously, for $k=0$ and $k=1$ we get Lyness' and Todd's equation
+respectively, and so this example generalizes the examples 1. and
+2. Another generalization of Lyness' equation is given in the
+following example.
+\bigskip
+{\bf 4.} Generalized Lyness' equation (see [FJL], [GJKL] and [KL]):
+$$x_{n+1}={{a x_n + b}\over {(cx_n+d)x_{n-1}}},$$
+where $a,b,c,d$ are positive parameters and $x_{-1}>0, x_0>0$.
+
+Invariant:
+$$I(x_n,x_{n-1})={{ab}\over {x_{n-1}x_n}} + (a^2+bd)\left({1\over x_n} +{1\over x_{n-1}}\right)$$
+$$ + ad\left({x_{n-1}\over x_n} + {x_{n}\over x_{n-1}}\right) +
+(ac + d^2)(x_n+x_{n-1}) + cdx_{n-1}x_n. $$
+Equilibrium: $p$ satisfies  $cp^3+dp^2-ap-b=0$. Obviously, this equation has at
+least one positive solution and we will investigate the stability of this
+equilibrium.
+The necessary conditions for the extremum give:
+$${\partial I \over \partial x}\equiv -{{ab}\over {x^2y}} + cdy - {{a^2+bd}\over x^2} + ad\left({1\over y} - {y\over x^2}\right) +ac + d^2=0,$$
+and
+$${\partial I \over \partial y}\equiv -{{ab}\over {xy^2}} + cdx - {{a^2+bd}\over y^2} + ad\left({1\over x} - {x\over y^2}\right) +ac + d^2 =0,$$
+which after some manipulations leads to $x=y$ and to the equation
+$$cdx^4+(ac+d^2)x^3-(a^2+bd)x-ab= (dx+a)(cx^3+dx^2-ax-b)=0.$$
+This shows that the critical points are exactly the equilibrium points. Now, we
+will check the Hessian at a positive critical point $(p_+,p_+)$ which will be
+denoted simply as $(p,p)$:
+$$H=\left(\matrix{A&B\cr
+                  B&A\cr}\right),$$
+where
+$$A={\partial^2 I\over \partial x^2}(p,p)={2\over p^4}[adp^2+(a^2+bd)p+ab]>0,$$
+and
+$$B={\partial^2 I\over {\partial x \partial y}}(p,p)={{cdp^4-2adp^2+ab}\over p^4}. $$
+Now,
+$$det\; H=A^2 - B^2 = (A-B)(A+B)={1\over p^8}[cdp^4+2(a^2+bd)p+3ab]E,$$
+where by using the equilibrium equation
+$$E=-cdp^4+4adp^2+2(a^2+bd)p+ab=d^2p^3+3adp^2+2a^2p+ab>0,$$
+which shows, that the Hessian $H$ is positive definite at the point $(p,p),$
+which means that the invariant $I$ attains its minimum at $(p,p)$. Thus,
+$$\min \{I(x,y): (x,y)\in D\}=I(p,p),$$
+and so by our theorem $V(x,y)=I(x,y)-I(p,p)$ which shows, that $p$ is stable.
+\bigskip
+{\bf 5.}  Gumovski-Mira equation (see [GM],[M] and [L]):
+$$x_{n+1}={{2ax_n}\over {1+x_n^2}} - x_{n-1},$$
+where $a>1$ is a parameter.
+
+Invariant: $I(x_n,x_{n-1})={x_n}^2 {x_{n-1}}^2 + {x_n}^2 + {x_{n-1}}^2 - 2ax_n x_{n-1}$.
+
+Equilibrium: $p=\sqrt{a-1}>0$ satisfies  $p^2=a-1$.
+
+The necessary conditions for the extremum give:
+$${\partial I \over \partial x}\equiv 2xy^2+2x-2ay=0,$$
+and
+$${\partial I \over \partial y}\equiv 2x^2y+2y-2ax=0,$$
+which immediately leads to $x=y=p$.
+This shows that the critical point is exactly the equilibrium point.
+Now, we will check the Hessian at a positive critical point $(p,p)$.
+$$H=\left(\matrix{A&B\cr
+                  B&A\cr}\right),$$
+where
+$$A={\partial^2 I\over \partial x^2}(p,p)=2p^2+2>0,$$
+and
+$$B={\partial^2 I\over {\partial x \partial y}}(p,p)=4p^2-2a. $$
+Now, by using the equilibrium equation we get
+$$det\; H=A^2 - B^2 = (A-B)(A+B)=4(a+1-p^2)(3p^2+1-a)=16(a-1)>0.$$
+This shows, that the Hessian $H$ is positive definite at the point $(p,p)$
+which means that the invariant $I$ attains its minimum at $(p,p)$. Thus,
+$$\min \{I(x,y): (x,y)\in D\}=I(p,p)=-(a-1)^2,$$
+and so by our theorem $V(x,y)=I(x,y)+(a-1)^2,$ which shows, that $p$ is stable.
+\bigskip
+{\bf REMARK 3.} It is worth mentioning that all equations with
+their invariants were known, and that we have proved the stability
+of the equilibrium point using our result. The result that we have
+proved emphasizes the importance of the invariants and of finding
+some general methods for their construction. Especially we are
+interested in automatic construction of the invariants and
+corresponding Liapunov functions, (if they exist) that can be
+implemented by using some of CAS (Computer Algebra System). In
+this regard, we have developed {\it Mathematica} package, see [MK]
+which was successfully tested on all applications of this paper.
+More applications of this package will be presented in the coming
+communications.
+
+{\bf ACKNOWLEDGMENT.} The author is grateful to the referee for some helpful
+comments.
+
+\vfill\eject
+
+\centerline{\bf REFERENCES}
+\vskip 2cm
+\item{[BB]} {{\bf J.M. Borwein and P.B. Borwein,} {\it Pi and the AGM,}
+Wiley, 1987.}
+\bigskip
+\item{[FJL]} {{\bf J.Feuer, E.Janowski and G.Ladas,} Invariants for Some
+Rational Recursive Sequences with Periodic Coefficients, {\it  J. Diff. Equa. Appl.} 2(1996), 167-174.}
+\bigskip
+\item{[GJKL]} {{\bf E.A.Grove, E.J.Janowski, C.M.Kent and G. Ladas,} On
+the rational recursive sequence  $x_{n+1}=(\alpha x_n + \beta)/((\gamma x_n+\delta)x_{n-1})$,
+{\it Comm. Applied Nonlinear Anal.} 1(1994), 61-72.}
+\bigskip
+\item{[GM]} {{\bf I.Gumovski and C.Mira,} {\it Recurrences and discrete dynamic
+systems,} Lecture Notes in Mathematics, Springer, 1980.}
+\bigskip
+\item{[KL]}  {{\bf V.L.Kocic and G.Ladas,} {\it Global Behavior of Nonlinear
+Difference Equations of Higher Order with Applications,} Kluwer Academic
+Publishers, 1993.}
+\bigskip
+\item{[KLTT]}  {{\bf V.L.Kocic, G.Ladas, G.Tzanetopoulos and E.Thomas,} On
+the Stability of Lyness' Equation, {\it Dynam. Contin. Discrete Impuls. Systems}, 1(1995),245-254.}
+\bigskip
+\item{[KP]} {{\bf W.G.Kelley and A.C.Peterson,} {\it Difference Equations,}
+Academic Press, 1991}
+\bigskip
+\item{[L]}  {{\bf H.Lauwerier,} {\it Fractals,} Princeton University Press, 1991.}
+\bigskip
+\item{[M]}  {{\bf C.Mira,} {\it Chaotic Dynamics,} World Scientific, 1987.}
+\bigskip
+\item{[MK]} {{\bf O.Merino and M.R.S.Kulenovi\'c,} IFL-Invariants and Liapunov
+Functions for Difference Equations in Mathematica, (to appear).}
+
+
+
+
+\end

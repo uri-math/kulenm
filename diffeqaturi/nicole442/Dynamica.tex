@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\textwidth 6.in
+\textheight 8.5in
+\hoffset-0.5in
+\voffset-.5in
+
+
+\title{Dynamica \\
+A computer package for the study of Difference Equations}
+\author{M. R. S. Kulenovic and Orlando Merino \\
+Department of Mathematics \\
+University of Rhode Island \\
+Kingston, RI 02881}
+\date{}
+
+\begin{document}
+\maketitle
+
+{\it Dynamica} is a computer package, written in Mathematica,
+intended for use in the study of difference equations and discrete dynamical systems.
+
+Let $k$ be a positive integer and let
+$f:R^k \rightarrow R$ be a given function.
+A relation of the form
+\begin{equation}
+\label{difference equation}
+x_{n+1} = f(x_n, x_{n-1} , \ldots , x_{n-k+1})
+\end{equation}
+is called a difference equation of order $k$.
+
+Difference equations arise in virtually all areas of science,
+mathematics and engineering.  Difference equations are discrete
+analogs of differential equations.
+
+{\it Dynamica} implements a series of tools and techniques
+of algebraic, numerical, and graphical nature used
+in the study of difference equations (\ref{difference equation}).
+These include:
+\begin{itemize}
+\item  Finding equilibrium and periodic points.
+\item  Classifying the stability character of equilibrium and periodic points.
+\item  Semicycle analysis of solutions.
+\item Calculation and visualization of invariants (first integrals).
+\item Calculation and visualization of Lyapunov functions.
+\item Plotting bifurcation diagrams.
+\item Visualization of stable and unstable manifolds.
+\item Calculation and visualization of Lyapunov numbers.
+\item Calculation of Box Dimension.
+\end{itemize}
+
+{\it Dynamica} consists of a series of programs and a two sets of notebooks.
+
+The first set of {\it Dynamica} notebooks serve as a tutorial of the 
+programs and the different techniques.  The necessary concepts and 
+results are provided in the text, as well as references to research publications, and suggested problems.  However, the presentation style 
+emphasizes use of the software and not theoretical discussions.
+
+The second set of {\it Dynamica} notebooks consists of case studies 
+of well known difference equations, which come under name such as Henon, Lyness, Mira, Todd, and others.  An interesting feature of the notebooks
+is that they show how to prove, with help of the tools provided with
+{\it Dynamica}, many results published recently.  
+
+{\it Dynamica} is easy to learn and use.  In very little time the new user
+may be ready to study complex difference equations of which not
+much (maybe almost nothing!) is known.
+\end{document}

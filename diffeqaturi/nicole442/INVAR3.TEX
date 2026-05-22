@@ -1,0 +1,459 @@
+
+\vsize 18cm
+\hsize 15.4cm
+\magnification=1200
+\item{}
+\vskip 1cm
+\font\r=cmr10 scaled\magstep2
+
+\centerline{\r INVARIANTS AND RELATED LIAPUNOV} 
+\medskip
+\centerline{\r FUNCTIONS FOR DIFFERENCE EQUATIONS II}
+
+\bigskip 
+\centerline{by}
+\bigskip
+\centerline{M.R.S.Kulenovi\'c}
+
+\centerline{Department of Mathematics}
+
+\centerline{University of Rhode Island}
+
+\centerline{Kingston, RI 02881}
+
+\vskip 1.5cm
+\centerline{\bf Abstract}
+\vskip 1.5cm
+Consider the difference equation 
+$${\bf x_{n+1}}={\bf f( x_n)},$$
+where ${\bf x_n}$ is in $R^k$  and ${\bf f}: D\to D$, is continuous  
+where $D \subset R^k$. 
+Suppose that $I:R^k\to R$ is continuous invariant that is, $I({\bf f(x)})=I({\bf x})$ 
+for every ${\bf x}\in D$. Using our previous result which states 
+that the  Liapunov function is equal to  $\pm(I({\bf x}) - I({\bf p}))$, 
+where ${\bf p}$ is an isolated  equilibrium (fixed) point  of this system in 
+which $I$ attains the minimum or maximum value, see [K], we prove the stability of some 
+difference equations that appear in mathematical physics such as: 
+$$(x_{n+1} + x_{n-1})(1+{1\over 2}x_n^2) - (a+2)x_n=0,$$ 
+where $a>0$ is a parameter. Using our result we obtain the Liapunov function 
+$$V(x,y)=x^2y^2-2(a+2)xy+2(x^2+y^2)+a^2.$$
+We also give the method for constructing the invariants for a class of 
+equations that involves rational functions. 
+
+
+\vskip 2cm
+
+AMS 1980 Subject Classification: Primary-39A11, Secondary-39Al0
+
+
+\vfill\eject
+\vglue 2cm
+
+{\r 1. Introduction}
+\bigskip
+Consider the soliton equation 
+$$(x_{n+1} + x_{n-1})(1+{1\over 2}x_n^2) - (a+2)x_n=0,$$ 
+where $a>0$ is a parameter, and $x_{-1}>0, x_0>0$. Recently, this equation 
+attracted a lot of attention and its invariant (first integral) has been found,  
+see [QRT],[RQ] and [HBQC]:
+$$I(x_n,x_{n-1})= x_n^2 x_{n-1}^2 - 2(a+2)x_n x_{n-1} + 2(x_n^2 + x_{n-1}^2).$$ 
+Here,  we will construct the Liapunov function for this equation using this  
+invariant. 
+In fact, we will show that the Liapunov function $V(x,y)$ is given by
+$$V(x,y)=I(x,y)-I(p,p)=I(x,y)+a^2,$$
+where 
+$$p= \sqrt a,$$
+is an equilibrium (fixed point) of this equation. To do this, we will use the 
+following result obtained in [K]:
+\bigskip
+{\bf THEOREM A.} {\it Consider the  difference equation 
+$${\bf x_{n+1}}={\bf f( x_n)}$$
+where ${\bf x_n}$ is in $R^k$, and ${\bf f}: D\to D$ is continuous, where $D \subset R^k$. 
+Suppose that $I:R^k\to R$ is an invariant that is, $I({\bf f(x)})=I({\bf x})$ 
+for every ${\bf x}\in D$. If $I$ attains an isolated local minimum or maximum value 
+at the  equilibrium (fixed) point ${\bf p}$  of this system, then there exists a 
+Liapunov function equal to  $\pm(I({\bf x}) - I({\bf p}))$, and so the equilibrium 
+${\bf p}$ is stable.} 
+\bigskip
+The stability considered here is taken in the sense of [KP]: 
+\medskip
+{\bf DEFINITION} ([KP], p.171) Let {\bf u} belong to ${\bf R}^n$ and $r>0$. The open
+ball centered at {\bf u} with radius $r$ is the set
+$$B({\bf u},r) = \{{\bf v} \in {\bf R}^n: |{\bf v} - {\bf u}|<r\}.$$
+Let {\bf p} be a fixed point of {\bf f}. Then {\bf p} is stable provided that,
+given any ball B({\bf p},$\epsilon$), there is a ball B({\bf p},$\delta$) so that
+if {\bf u} is in B({\bf p},$\epsilon$), then ${\bf f}^k ({\bf p })$ is in B({\bf p},$\epsilon$)
+for $k=1,2,...$. Here ${\bf f}^k ({\bf p })$ denotes $k$-th iterate of ${\bf p}$.
+\medskip
+{\bf REMARK 1.} This theorem shows that whenever some conditions are satisfied, 
+there exists a Liapunov function which is a special invariant of considered equation. 
+This emphasizes the importance of developing the methods for finding the invariants. 
+Some methods has been developed in [GKL], [GM] and [QRT].  
+In this paper, we will elaborate on the method developed in [QRT]. 
+As is well known, see [GM] and [M], the invariant is not uniquely determined but 
+rather if one invariant is given then any appropriate function (continuous, 
+analytic) of this invariant is invariant itself. Furthermore, the difference equation can 
+have several "independent" invariants (eg. two invariants neither of which can
+be derived from the other through homeomorphic changes of variable), see [BB]. As we will 
+mention later we have developed {\it Mathematica} package that can almost automatically find the
+rational invariant for a given equation (if there is one) and using our result here construct the 
+corresponding Liapunov function, if such function exists.
+\bigskip
+{\r 2. Main Result. }
+\bigskip
+Our main result is based on the following lemmas:
+\bigskip
+{\bf LEMMA 1.} {\it Consider the vectors ${\bf x}=((g(x))^2,g(x),1)^T$,  and ${\bf z}=
+(z^2,z,1)^T$, and the vector-valued function 
+$${\bf f(y)} = (f_1 (y), f_2 (y), f_3 (y))^T,$$
+where $g,f_1,f_2,f_3$ are the given functions and 
+$$z\neq g(x), \quad f_2(y) - g(x)f_3(y)\neq 0.\leqno(1)$$
+Then, the mixed product of ${\bf x,z}$ and ${\bf f(y)}$ is zero, that is 
+$${\bf x \times f(y) \cdot z}=0,$$ 
+if and only if 
+$$z={{f_1(y) - g(x)f_2(y)}\over {f_2(y) - g(x)f_3(y)}}. \leqno(2)$$}
+\medskip
+{\bf Proof.}  
+$$0={\bf x \times f(y)\cdot z} = f_1(y)(z-g(x)) + f_2(y)((g(x))^2 - z^2) + 
+f_3(y) (g(x)z^2 - z(g(x))^2)$$
+$$=(z-g(x))[f_1(y) - f_2(y) (g(x) + z) + f_3(y) g(x)z].$$
+If $(1)$ holds, we conclude that the last equality is equivalent to $(2)$, 
+which completes the proof of lemma.
+\bigskip
+{\bf REMARK 2.} Taking in $(2)$ $z=x_{n+1},\quad y=x_n$, and $x=x_{n-1}$ we get 
+the following difference equation 
+$$x_{n+1}={{f_1(x_n) - g(x_{n-1})f_2(x_n)}\over {f_2(x_n) - g(x_{n-1})f_3(x_n)}}, \leqno(3)$$
+\medskip
+\noindent
+while if we take $z=x_{n+1},\quad y=x_{n-1}$, and $x=x_n$ we obtain the similar 
+difference equation:
+$$x_{n+1}={{f_1(x_{n-1}) - g(x_{n})f_2(x_{n-1})}\over {f_2(x_{n-1}) - g(x_{n})f_3(x_{n-1})}}. \leqno(4)$$
+\medskip
+The next result establishes the necessary connection between the difference 
+equations of the types $(3)$, and $(4)$ and their invariants.
+\bigskip
+{\bf LEMMA 2.} {\it Suppose that in Lemma 1 ${\bf x\neq 0,\quad f(y) = A_1 y \times A_2 y}$ where 
+$${\bf y}= (f(y)^2, f(y), 1)^T,$$ 
+where $f$ is a given function, and ${\bf A_i},\; i=1,2$ are given matrices 
+
+$${\bf A}_i=\left(\matrix{a_i&b_i&c_i\cr
+                  d_i&e_i&f_i\cr
+                  g_i&h_i&k_i\cr}\right),$$
+$i=1,2$. Then, for every vector ${\bf x}$, such that ${\bf (A_2 y)\cdot x}\neq 0$,  
+the expression 
+$${{{\bf (A_1 y)\cdot x}}\over {{\bf (A_2 y)\cdot x}}}, \leqno(5)$$ 
+is independent of ${\bf x}$, that is:
+$${{{\bf (A_1 y)\cdot x}}\over {{\bf (A_2 y)\cdot x}}} ={{{\bf (A_1 y)\cdot z}}\over {{\bf (A_2 y)\cdot z}}},\leqno(6)$$ 
+for every ${\bf z}$, for which ${\bf (A_2 y)\cdot z}\neq 0$.}
+\medskip
+{\bf Proof.}  Using the fact that ${\bf (a\times b)\times c} = 
+{\bf (a\cdot c) b - (a\cdot b)c}$, we get 
+$$0={\bf x \times f(y)\cdot z} = {\bf x \cdot (f(y)\times z)} =  
+{\bf x\cdot [(A_1y\times A_2y)\times z]} $$ 
+$$= -{\bf x\cdot [(z\cdot A_2y) A_1y - (z\cdot A_1y) A_2y}],$$
+which, by ${\bf x\neq 0}$, is equivalent to 
+$${\bf (z\cdot A_2y) (A_1y\cdot x)= (z\cdot A_1y) (A_2y \cdot x)},$$
+which in view of the conditions of lemma implies the condition $(6)$.
+\bigskip
+{\bf REMARK 3.} The expression $(5)$ is exactly an invariant and $(6)$ is the 
+corresponding condition for the invariance of this expression. In fact, 
+taking in $(6)$, $ y=x_n,\quad \hbox{and} \quad x=x_{n-1}$ we get a polynimal-like 
+invariant:
+$$I(x_n,x_{n-1})= \leqno(7)$$
+$$(a_1 + Ka_2)(g(x_{n-1}))^2 (f(x_n))^2 + (b_1 + Kb_2) (g(x_{n-1}))^2 (f(x_n)) + 
+(d_1 + Kd_2)(g(x_{n-1})) (f(x_n))^2 $$
+$$+ (c_1 + Kc_2)(g(x_{n-1}))^2 + (e_1 + Ke_2)g(x_{n-1}) f(x_n) + (g_1 + Kg_2) (f(x_n))^2  $$
+$$+ (f_1 + Kf_2) g(x_{n-1}) + (h_1 + Kh_2) f(x_n) + k_1 + Kk_2,$$
+where $K$ is a constant with the value determined  by the initial points $x_0$,  
+and $x_1$ as 
+$$K= - {{{\bf (A_1 y_0)\cdot x_0}}\over {{\bf (A_2 y_0)\cdot x_0}}},$$
+where ${\bf y_0}=((f(x_1))^2,f(x_1),1)$, and ${\bf x_0}=((g(x_0))^2,g(x_0),1)$. 
+Equating the right hand side of $(7)$ to $0$ and solving it for $K$, we get the rational-like invariant. The expression $(7)$ is exactly the invariant of equation $(3)$. 
+
+Taking in $(6)$, $ y=x_{n-1},\quad \hbox{and} \quad x=x_n$, we get a polynimal-like 
+invariant:
+$$I(x_n,x_{n-1})= \leqno(8)$$
+$$(a_1 + Ka_2)(f(x_{n-1}))^2 (g(x_n))^2 + (b_1 + Kb_2) (g(x_n))^2 (f(x_{n-1})) + 
+(d_1 + Kd_2)(g(x_n)) (f(x_{n-1}))^2 $$
+$$+ (c_1 + Kc_2)(g(x_n))^2 + (e_1 + Ke_2)g(x_n) f(x_{n-1}) + (g_1 + Kg_2) (f(x_{n-1}))^2  $$
+$$+ (f_1 + Kf_2) g(x_n) + (h_1 + Kh_2) f(x_{n-1}) + k_1 + Kk_2,$$
+where $K$ is a constant with the value determined  by the initial points $x_0$,  
+and $x_1$ in a similar way as above. The expression $(8)$ is an invariant of 
+the equation $(4)$.
+
+In the special case,  when $g(x)=x$, and $f(y)=y$, we get the rational-like equations 
+$$x_{n+1}={{f_1(x_n) - x_{n-1}f_2(x_n)}\over {f_2(x_n) - x_{n-1}f_3(x_n)}}, \leqno(3')$$
+and
+$$x_{n+1}={{f_1(x_{n-1}) - x_{n}f_2(x_{n-1})}\over {f_2(x_{n-1}) - x_{n}f_3(x_{n-1})}}, \leqno(4')$$
+with corresponding rational invariants:
+$$(a_1 + Ka_2)x_{n-1}^2 x_n^2 + (b_1+Kb_2)x_n x_{n-1}^2 + (d_1+Kd_2)x_n^2 x_{n-1} + 
+(c_1+Kc_2)x_{n-1}^2 \leqno(7')$$
+$$+(e_1+Ke_2)x_{n-1} x_n + (g_1+Kg_2)x_n^2 + (f_1+Kf_2)x_{n-1} + (h_1+Kh_2)x_n+k_1+Kk_2,$$
+and
+$$(a_1 + Ka_2)x_{n-1}^2 {x_n}^2 + (b_1+Kb_2)x_n^2 x_{n-1} + (d_1+Kd_2)x_n x_{n-1}^2 + 
+(c_1+Kc_2)x_n^2 \leqno(8')$$
+$$+(e_1+Ke_2)x_{n-1} x_n + (g_1+Kg_2)x_{n-1}^2 + (f_1+Kf_2)x_n + (h_1+Kh_2)x_{n-1}+k_1+Kk_2,$$
+respectively. This special case has been obtained in [QRT], and used in many papers 
+refered in [RQ] and [HBQC]. Further simplifications can be obtained by assuming that 
+the matrices ${\bf A_i}, i=1,2$ are symmetric, that is ${\bf A_i^T=A_i} , i=1,2$ 
+which reduces the invariants $(7')$ and $(8')$ to the same form
+$$(a_1 + Ka_2)x_{n-1}^2 x_n^2 + (b_1+Kb_2)(x_n^2 x_{n-1} + x_n x_{n-1}^2) + 
+(c_1+Kc_2)(x_n^2+x_{n-1}^2) \leqno(9)$$
+$$+(e_1+Ke_2)x_{n-1} x_n  + (f_1+Kf_2)(x_n + x_{n-1}) + k_1+Kk_2.$$
+Some of these results can be formulated as a theorem.
+\bigskip        
+{\bf THEOREM.} {\it The expression $(7)$ (resp. $(7')$ is an invariant of the difference 
+equation $(3)$ (resp. $(3')$). Similarly, the expression $(8)$ (resp. $(8')$ is an 
+invariant of the difference equation $(4)$ (resp. $(4')$).}
+\bigskip
+{\r 3. Applications.}
+\bigskip
+In this part, we will use our result to find the invariants of several well known 
+equations such as Lyness' equation, May's host parasitoid model, soliton model, 
+Gumovski-Mira's equation as well as some new types of equations. We will also 
+combine some of these results with Theorem A, to obtain the Liapunov function 
+and prove the stability of their equilibria.
+\bigskip
+{\bf Example 1.} (see [GKL]):
+\medskip
+$$x_{n+1}={{a+b x_n + cx_n^2}\over {(c + dx_n+ ex_n^2)x_{n-1}}},\leqno(10)$$  
+where $a,b,c,d,e$ are positive parameters. This equation can be obtained by 
+taking $a_1=b_1=c_1=f_1=k_1=0$, and $a_2=e, b_2=d, c_2=c, f_2=b, k_2=a$ in the 
+equation $(3')$, and the corresponding invariant $(7')$ which results in an 
+invariant of the form (it is solved for $K$):
+
+$$I(x_n,x_{n-1})={a\over {x_n x_{n-1}}} + b({1\over x_n} + {1\over x_{n-1}}) + 
+c({x_{n-1}\over x_n} + {x_n\over x_{n-1}}) + d(x_n + x_{n-1}) + ex_n x_{n-1}.\leqno(11)$$
+
+Equilibrium $p$ of this equation satisfies $ep^4+dp^3-bp-a=0.$ Now, we try to 
+apply Theorem A. The necessary conditions for the extremum give:
+$${\partial I \over \partial x}\equiv -{{a}\over {x^2y}} - {b\over {x^2}} + 
+c({1\over y} - {y\over{x^2}}) + d + ey =0,$$
+and
+$${\partial I \over \partial x}\equiv -{{a}\over {xy^2}} - {b\over {y^2}} + 
+c({1\over x} - {x\over{y^2}}) + d + ex =0,$$
+which after some manipulations leads to $x=y$, and to the equation 
+$$ex^4+dx^3-bx-a= 0.$$ 
+This shows that the 
+critical points are exactly equilibrium points. Now, we will check the Hessian 
+at the positive critical point $(p_+,p_+)$, which will be denoted simply as $(p,p)$: 
+$$H=\left(\matrix{A&B\cr
+                  B&A\cr}\right),$$
+where 
+$$A={\partial^2 I\over \partial x^2}(p,p)={2\over p^4}(a+bp+cp^2)>0,$$
+and
+$$B={\partial^2 I\over {\partial x \partial y}}(p,p)={{ep^4-2cp^2+a}\over p^4}. $$
+Now,  
+$$det\; H=A^2 - B^2 = (A-B)(A+B)={1\over p^7}(dp^2+4cp+b)(ep^4+2bp+3a)>0,$$ 
+which shows that the Hessian $H$ is positive definite at the point $(p,p)$,  
+which means that the invariant $I$ attains its minimum at $(p,p)$. Thus,   
+$$\min \{I(x,y): (x,y)\in D\}=I(p,p),$$ 
+and so by our theorem $V(x,y)=I(x,y)-I(p,p)$ which shows  that $p$ is stable. 
+\noindent
+Liapunov function is given by: 
+$$V(x,y)=I(x,y)-I(p,p)= I(x,y)-{{dp^3+2cp^2+3bp+2a}\over {p^2}}.$$ 
+In the special case, where $a_2=0, b_2=c_2=1, k_2=a, f_2=a+1$ we obtain Lyness' 
+equation 
+$$x_{n+1}={{a + x_n}\over x_{n-1}},$$  
+with invariant 
+$$I(x_n,x_{n-1})=(1+{1\over x_n})(1+{1\over x_{n-1}})(a+x_n+x_{n-1}),$$
+whose stability was established in [K]. 
+
+In the special case where $a_2=f_2=k_2=0, b_2=c_2=1$, we get a special case 
+of May's host-parazitoid model 
+$$x_{n+1}={{x_n^2}\over {(1+x_n)x_{n-1}}}$$
+which invariant is 
+$$I(x_n,x_{n-1})=x_n + x_{n-1} + {{x_n}\over {x_{n-1}}} + {{x_{n-1}}\over {x_n}}.$$
+
+In the special case $c=d=0$, and $a=-d, b=d^2, e=1$, we get well known Yang-Baxter's 
+equation, see [QRT]
+$$x_{n+1}={{d^2 x_n - d}\over {x_{n-1}x_n^2}},$$  
+which invariant is given by 
+$$I(x_n,x_{n-1})\equiv x_n^2x_{n-1}^2 + Kx_nx_{n-1} + d^2(x_n+x_{n-1})-d=0.$$
+
+This equation is a special case of the class of equations that can be obtained 
+from $(2)$ by taking that $f_2(y)\equiv 0$, that is the equations of the type 
+$$x_{n+1}=-{{f_1(x_n)}\over {f_3(x_n) x_{n-1}}}. $$
+Assuming that $f_1(y)$ and $f_3(y)$ are polynomials of the above type, we will  
+get again equation $(10)$.
+
+\bigskip
+{\bf Example 2.} Gumovski-Mira equation (see [GM] and [La]):
+\medskip
+$$x_{n+1}={{2x_n}\over {A^2-x_n^2}} - x_{n-1},$$  
+where $a$ is a positive parameter. This equation is a special case of the class 
+of equations that can be obtained from $(2)$ by taking that $f_3(y)\equiv 0$, that 
+is the equations of the type 
+$$x_{n+1}={{f_1(x_n)}\over {f_2(x_n)}} - x_{n-1}. \leqno(12)$$
+Assuming that $f_1(y)$ and $f_2(y)$ are polynomials of the above type, and taking 
+that $a_1=b_1=c_1=e_1=f_1=0$  and droping the indices in other coefficients, we 
+get the following equation 
+$$x_{n+1}={{bx_n^2+ex_n+f}\over {ax_n^2+bx_n+c}} - x_{n-1}, \leqno(13)$$
+with an invariant:
+$$ Ka_2 x_{n-1}^2 x_n^2 + Kb_2 x_n x_{n-1}^2 + (d_1+Kd_2)x_n^2 x_{n-1} + 
+Kc_2 x_{n-1}^2 $$
+$$+Ke_2 x_{n-1} x_n + (g_1+Kg_2)x_n^2 + Kf_2 x_{n-1} + (h_1+Kh_2)x_n+k_1+Kk_2=0,$$
+or in symmetric form $(9)$
+$$ Ka_2 x_{n-1}^2 x_n^2 + Kb_2 (x_n^2 x_{n-1} + x_n x_{n-1}^2) + 
+Kc_2 (x_n^2+x_{n-1}^2) $$
+$$+Ke_2 x_{n-1} x_n  + Kf_2 (x_n + x_{n-1}) + k_1+Kk_2=0, $$
+or
+$$ a_2 x_{n-1}^2 x_n^2 + b_2 (x_n^2 x_{n-1} + x_n x_{n-1}^2) + 
+c_2 (x_n^2+x_{n-1}^2) +e_2 x_{n-1} x_n  + f_2 (x_n + x_{n-1}) = \widetilde K, \leqno(14)$$
+where $\widetilde K$ is the constant determined by the initial values $x_0$, and $x_1$. 
+
+Taking in $(13)$, and $(14)$  $b=f=0$, and $a=-1, c=A^2, a=1$ we get Gumovski-Mira 
+equation, with an invariant of the form:
+$$I(x_n,x_{n-1})=x_n^2 x_{n-1}^2 - A^2(x_n^2 + x_{n-1}^2) + 2x_nx_{n-1}.$$
+
+\bigskip
+{\bf Example 3.} (see [QRT]):
+\medskip
+
+Taking in $(13)$  and $(14)$ $b=f=0$ and $e=\omega +2, a=1/2, c=1$ we get 
+the soliton's equilibrium equation from [QRT] 
+$$x_{n+1}={{(\omega +2)x_n}\over {1+{x_n^2}/ 2}} - x_{n-1},$$  
+with an invariant of the form:
+$$I(x_n,x_{n-1})=x_n^2 x_{n-1}^2 + 2(x_n^2 + x_{n-1}^2) - 2(\omega +2)x_nx_{n-1}.$$
+Equilibrium $p$ of this equation satisfies $p^2-\omega=0$, that is $p=\pm \sqrt{\omega}$,  
+if we additionaly assume that $\omega\geq 0$. Now, we try to 
+apply Theorem A. The necessary conditions for the extremum give:
+$${\partial I \over \partial x}\equiv 2xy^2-2(\omega +2)y + 4x =0,$$
+and
+$${\partial I \over \partial x}\equiv 2x^2y-2(\omega +2)x + 4y =0,$$
+which leads to $x=y$, and to the equations $x^2-\omega=0$, and $x=0$. This shows 
+that the critical points are exactly the equilibrium points. Now, we will check the 
+Hessian at the positive critical point $p= \sqrt{\omega}$ :
+
+$$H=\left(\matrix{A&B\cr
+                  B&A\cr}\right),$$
+where 
+$$A={\partial^2 I\over \partial x^2}(p,p)=2 \omega +2 >0, $$
+and
+
+$$B={\partial^2 I\over {\partial x \partial y}}(p,p)=4\omega - 2(\omega +2)=2\omega -4.$$
+Now,  
+$$det\; H=A^2 - B^2 = 32\omega>0,$$ 
+which shows that the invariant $I$ attains its minimum at $(p,p)$. Thus,   
+$$\min \{I(x,y): (x,y)\in D\}=I(p,p)=-\omega^2,$$ 
+and so by our theorem $V(x,y)=I(x,y)+ \omega^2$, which shows that $p$ is stable. 
+\bigskip
+{\bf Example 4.} 
+\medskip
+Taking in $(3')$  and $(7')$ $f_1(x)=x+c-c^2, \, f_2(x)=-cx$ and $f_3(x)=-x^2$ 
+we get the following equation: 
+$$x_{n+1}={{cx_nx_{n-1}+x_n+c-c^2}\over {x_n(x_nx_{n-1}-c)}},$$  
+with an invariant of the form:
+$$I(x_n,x_{n-1})=(1+x_{n-1})(1+x_n)(1+{1\over{x_nx_{n-1}-c}}).$$
+This equation  was considered by C. Schinas and I. Schinas, and the stability 
+was established by using KAM theory, see [L].
+
+Equilibrium $p$ of this equation satisfies $p^4-2cp^2-p+c^2-c=0$, or 
+$$(p^2-c)^2=p+c.$$
+It is not hard to see that this equation has a positive root $p_+$, which will 
+be denoted as $p$ in what follows. The above equilibrium equation implies that 
+$p^2>c$. We will be interested in stability of this 
+root. Now, we try to apply Theorem A. The necessary conditions for the extremum 
+give:
+$${\partial I \over \partial x}\equiv (1+y)(1+{1\over{xy-c}}-{{y+xy}\over{(xy-c)^2}})=0,$$
+and
+$${\partial I \over \partial x}\equiv (1+x)(1+{1\over{xy-c}}-{{x+xy}\over{(xy-c)^2}})=0,$$
+which leads to $x=y$, and to the above equilibrium equation. Thus, $x=y=p$. 
+This shows that the critical points are exactly the equilibrium points. Now, 
+we will check the Hessian at the positive critical point $p$ :
+
+$$H=\left(\matrix{A&B\cr
+                  B&A\cr}\right),$$
+where 
+$$A={\partial^2 I\over \partial x^2}(p,p)={{2p(1+p)}\over {p^2-c}} >0, $$
+and
+
+$$B={\partial^2 I\over {\partial x \partial y}}(p,p)=
+{{(p^2-c)(p+c)+(c+1)p^2+4cp+c-c^2}\over{(p^2-c)(p+c)}}.$$
+Now,  
+$$det\; H=A^2 - B^2 = {{(p+1)(p^2-c)+2c^2}\over {(p^2-c)(p+c)}}>0,$$ 
+which shows that the invariant $I$ attains its minimum at $(p,p)$. Thus,   
+$$\min \{I(x,y): (x,y)\in D\}=I(p,p),$$ 
+and so by our theorem $V(x,y)=I(x,y)-I(p,p)$, which shows that $p$ is stable. 
+\bigskip
+{\bf Example 5.} 
+\medskip
+So far all our examples have been limited to the equations and related invariants 
+to be the rational functions, which is also the case with all examples in the 
+literature. Now, we will make the advantage of our results which also allow 
+the other types of the functions. In this regard, we consider the special case of 
+equation $(3)$ where we take $f_3(y)\equiv 0$ to get 
+$$x_{n+1}={{f_1(x_n)}\over {f_2(x_n)}} - g(x_{n-1}). $$
+Assuming for simplicity that $f_1(y)$, and $f_2(y)$ are polynomials of the above  
+type and taking 
+that $a_1=b_1=c_1=e_1=f_1=0$,  and droping the indices in other coefficients  we 
+get the following equation 
+$$x_{n+1}={{bx_n^2+ex_n+f}\over {ax_n^2+bx_n+c}} - g(x_{n-1}),$$
+with the invariant in a special symmetric case:
+$$I(x_n,x_{n-1})= ag(x_{n-1})^2 x_n^2 + b_2 (x_n^2 g(x_{n-1}) + x_n g(x_{n-1})^2) + 
+c (x_n^2+g(x_{n-1})^2) +$$
+$$e g(x_{n-1}) x_n  + f (x_n + g(x_{n-1})).$$
+\bigskip
+{\bf REMARK 4.} These examples emphasize the  importance of the 
+invariants and of finding some general methods for their construction. 
+Especially, we are interested in the automatic construction of the invariants and 
+corresponding Liapunov functions (if they exist) that can be implemented by 
+using some of CAS (Computer Algebra System). In this regard, we have developped 
+{\it Mathematica} package, see [MK] which was succesfully tested on all applications 
+of this paper. More applications of this package will be presented in the 
+coming communications. 
+
+\vfill\eject
+
+\vskip 1cm
+\centerline{\r References}
+\vskip 1cm
+\item{[BB]} {{\bf J.M. Borwein and P.B. Borwein,} {\it Pi and the AGM,}
+Wiley, 1987.}
+\bigskip
+\item{[FJL]} {{\bf J.Feuer, E.Janowski and G.Ladas,} {\it Invariants for Some 
+Rational Recursive Sequences with Periodic Coefficients,}  J. Difference Equations 
+and Appl. 2(1996), 167-174.}
+\bigskip
+\item{[GKL]} {{\bf E.A.Grove, V.L.Kocic and G.Ladas,} {\it Classification of 
+Invariants for Certain Difference Equations,} Proc. 2nd Int. Conf. on Difference 
+Eq. and Appl.,7-11,?}
+\bigskip
+\item{[GM]} {{\bf I.Gumovski and C.Mira,} {\it Recurences and Discrete Dynamic  
+Systems,} Lecture Notes in Mathematics, Springer, 1980.}
+\bigskip
+\item{[HBQC]} {{\bf F.A.Haggar, G.B. Byrnes, G.R.W. Quispel and H.W.Capel,}
+{\it k-Integrals and k-Lie Symmetries in Discrete Dynamical Systems,} (to appear)}
+\bigskip
+\item{[KP]} {{\bf W.G.Kelley and A.C.Peterson,} {\it Difference Equations,} 
+Academic Press, 1991}
+\bigskip
+\item{[KL]}  {{\bf V.L.Kocic and G.Ladas,} {\it Global Behavior of Nonlinear 
+Difference Equations of Higher Order with Applications,} Kluwer Academic 
+Publishers, 1993.}
+\bigskip
+\item{[K]}  {{\bf M.R.S.Kulenovi\'c,} {\it Invariants and Related Liapunov 
+Functions for Difference Equations,} Appl. Math. Letters (to appear)}
+\bigskip
+\item{[L]}  {{\bf G.Ladas,} {\it personal communication.}
+\bigskip
+\item{[La]}  {{\bf H.Lauwerier,} {\it Fractals,} Princeton University Press, 1991.}
+\bigskip
+\item{[MK]} {{\bf O.Merino and M.R.S.Kulenovi\'c,} {\it IFL-Invariants and Liapunov  
+Functions for Difference Equations in Mathematica,} 1996.}
+\bigskip
+\item{[M]}  {{\bf C.Mira,} {\it Chaotic Dynamics,} World Scientific, 1987.}
+\bigskip
+\item{[QRT]} {{\bf G.R.W.Quispel, J.A.G.Roberts and C.J.Thompson,} {\it Integrable 
+Mappings and Soliton Equations I,II,} Phys. Lett. A 126 (1988) 419-421; Physica D 
+34 (1989) 183-192.}
+\item{[RQ]} {{\bf J.A.G.Roberts and G.R.W.Quispel,} {\it Chaos and Time-reversal 
+Symmetry. Order and Chaos in Reversible Dynamical Systems} Phys. Rep. 216(1992), 
+53-117.}
+\bigskip
+
+
+
+
+\end
+

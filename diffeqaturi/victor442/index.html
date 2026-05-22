@@ -1,0 +1,100 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Arnold's Cat Map
+</title>
+</head>
+<body text="#FFFFFF" bgcolor="#000000" link="#00AAFF" vlink="#00FFFF" alink="#00FFAA">
+
+<center>
+<h2>
+Arnold's Cat Map</h2></center>
+
+<p><br>
+<p><font size=+1>This page gives a rough overview of the transformation
+known as Arnold's Cat Map. This is a transformation which stretches an
+image that is composed of n by n pixels and effectively wraps the streched
+portions around to restore the original dimensions. It is of interest to
+people doing research in chaos and difference equations because it shows
+properties that many chaotic systems do. For instance after a certain number
+of iterations the original image is restored. The Arnold's Cat Map transform
+is then said to be periodic with the given number of iterations. This interesting
+transform is shown geometrically in the following image:</font>
+<center><img SRC="cat.gif" ></center>
+
+<p><font size=+1><a href="http://mathworld.wolfram.com/ArnoldsCatMap.html">The
+Wolfram webpage </a>has a good detailed discussion on finding the Lyaponuv
+exponents and eigenvectors of the Arnold's Cat Map. If you do not know
+what Lyaponov exponents are, <a href="http://mathworld.wolfram.com/LyapunovCharacteristicExponent.html">The
+Wolfram webpage </a>has a good introduction on the matter.</font>
+<p><font size=+1>The following brief discussion covers the method used
+to generate the transformation. The transform that is applied to every
+pixel in the image is something of the form:</font>
+<center><table BORDER=0 >
+<tr>
+<td>[x]</td>
+
+<td>&nbsp;</td>
+
+<td>[x+y&nbsp; ]</td>
+</tr>
+
+<tr>
+<td>[&nbsp; ]</td>
+
+<td>--></td>
+
+<td>[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] mod
+<i>n</i></td>
+</tr>
+
+<tr>
+<td>[y]</td>
+
+<td>&nbsp;</td>
+
+<td>[x+2y]</td>
+</tr>
+</table></center>
+
+<p><font size=+1>Here the point is essentially sheared. The mod <i>n</i>
+is what causes the sheared image to wrap back around to restore the original
+n by n image.</font>
+<p><font size=+1>As previously stated, images of certain size n, have a
+definite period fo iterations where they will restore the original image.
+This fact is shown with the following 124 by 124 image of the Earth which
+just happens to have a period of 15 iterations.</font>
+<center><img SRC="earth.gif" ></center>
+
+<p><font size=+1>As you can see after the 2nd iteration or so, the image
+becomes barely discernable, but order reemerges after 15 iterations.</font>
+<p>A Java Applet to apply the Transformation to user defined images is
+currently in the works for this webpage and will be added in the near future.
+However, for now you may learn more about the Arnold's Cat Map, by navigating
+via the following links or by searching for <i>Arnold's Cat Map</i> in
+your favorite search engine.
+<br>&nbsp;
+<br>&nbsp;
+<p>
+<hr>
+<h3>
+Related links on Arnold's Cat Map</h3>
+<a href="http://bloch.ciens.ucv.ve/~felix/Java/NonLinear/ArnoldCat">This
+page has a related Java Applet on Arnold's Cat Map</a>
+<br>You can also find in the archives at Wolfram an <a href="http://library.wolfram.com/mathgroup/archive/1996/Nov/msg00053.html">algorithm
+for Mathematica</a> to implement Arnold's Cat Map.
+<br><a href="http://online.redwoods.cc.ca.us/instruct/darnold/maw/catmap.htm">A
+Good introductory paper on the Arnold's Cat Map.</a>
+<br><a href="http://math.gmu.edu/~sander/movies/arnold.html">Several Movies
+of the Cat Map Transormation</a>
+<br><a href="http://www.nd.edu/~aellings/chaos.html">A Basic description
+of Chaos</a>
+<br><a href="http://amath-www.colorado.edu/appm/faculty/jdm/faq.html">An
+online FAQ for the beginner to Nonlinear Science</a>
+<br><a href="http://www.ele.uri.edu/~dobratzp/de.html">Click here to simulate
+the solutions of this equation for different choices of parameters and
+initial points</a>
+</body>
+</html>

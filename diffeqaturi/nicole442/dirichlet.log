@@ -1,0 +1,55 @@
+This is TeX, Version 3.14159 (MiKTeX 1.11c) (preloaded format=latex 1999.5.18)  21 JUL 2000 14:27
+**&latex dirichlet
+(dirichlet.tex
+LaTeX2e <1998/06/01>
+Babel <v3.6j> and hyphenation patterns for english, german, loaded.
+(article.cls
+Document Class: article 1998/05/05 v1.3y Standard LaTeX document class
+(size10.clo
+File: size10.clo 1998/05/05 v1.3y Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (amssymb.sty
+Package: amssymb 1996/11/03 v2.2b
+ (amsfonts.sty
+Package: amsfonts 1996/11/03 v2.2c
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 128.
+))
+No file dirichlet.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
+(umsa.fd
+File: Umsa.fd 1995/01/05 v2.2e AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
+ (umsb.fd
+File: Umsb.fd 1995/01/05 v2.2e AMS font definitions
+) [1
+
+] (dirichlet.aux) )
+Output written on dirichlet.dvi (1 page, 1260 bytes).
