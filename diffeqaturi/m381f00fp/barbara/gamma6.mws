@@ -1,0 +1,17 @@
+{VERSION 4 0 "IBM INTEL NT" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "Gamma(x):=(2^(x-1)/s
+qrt(pi))*(Gamma(x/2)*Gamma((x+1)/2));" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#>-%&GammaG6#%\"xG*&*()\"\"#,&F'\"\"\"F-!\"\"F--F%6#,$F'#F-F+F--F%6#
+,&F'F2F2F-F-F-*$-%%sqrtG6#%#piGF-F." }}}{EXCHG {PARA 11 "" 1 "" {TEXT 
+-1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "A[n]:=2*pi^(n/2)*
+R^(n-1)/Gamma(n/2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>&%\"AG6#%\"nG,
+$*&*&)%#piG,$F'#\"\"\"\"\"#F/)%\"RG,&F'F/F/!\"\"F/F/-%&GammaG6#F-F4F0
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "0 1 0" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

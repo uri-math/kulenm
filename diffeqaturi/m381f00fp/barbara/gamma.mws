@@ -1,0 +1,17 @@
+{VERSION 4 0 "IBM INTEL NT" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "Gamma(x+1):=x*Gamma(
+x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>-%&GammaG6#,&%\"xG\"\"\"F)F)*&
+F(F)-F%6#F(F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "Gamma(n+1)
+:=n!;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>-%&GammaG6#,&%\"nG\"\"\"F)F)
+-%*factorialG6#F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Gamma(
+1/2):=sqrt(pi);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>-%&GammaG6##\"\"\"
+\"\"#*$-%%sqrtG6#%#piGF(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}}{MARK "0 1 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 
+0 1 2 33 1 1 }
