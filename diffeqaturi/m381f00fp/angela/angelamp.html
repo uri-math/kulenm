@@ -1,0 +1,388 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (WinNT; U) [Netscape]">
+   <title>Prime numbers</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<center>
+<h1>
+<font color="#006600"><font size=+2>Difference Equations</font></font></h1></center>
+
+<center>
+<h1>
+<font color="#006600"><font size=+2>and</font></font></h1></center>
+
+<center>
+<h1>
+<font color="#006600"><font size=+2>Recursive Relations</font></font></h1></center>
+
+<center><b><font color="#3333FF"><font size=+2>1876-1900</font></font></b>
+<br>
+<hr></center>
+
+<center><table BORDER=0 CELLSPACING=0 CELLPADDING=4 BGCOLOR="#CCCCFF" >
+<tr>
+<td><a href="http://www-groups.dcs.st-and.ac.uk/~history/HistTopics/Number_Theory.html">Difference
+Equations and Recursive Relations index</a></td>
+
+<td ALIGN=RIGHT><a href="http://www-groups.dcs.st-and.ac.uk/~history/Indexes/HistoryTopics.html">History
+Topics Index</a></td>
+</tr>
+</table></center>
+
+<hr>Difference equations and recursive relations were first studied extensively
+by the ancient Greek mathematicians.
+<br>The major contributors to the theory of difference equations and recursive
+relations during the period of 1876-1900 were: <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Hermite.html">Hermite</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Christoffel.html">Christoffel</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Routh.html">Routh</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Laguerre.html">Laguerre</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Lucas.html">Lucas</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gegenbauer.html">Gegenbauer</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Poincare.html">Poincare</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Markov.html">Markov</a>,
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Chebychev.html">Chebychev
+</a>and
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Peano.html">Peano.</a>
+<br>
+<hr WIDTH="100%">
+<br>Charles <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Hermite.html">Hermite</a>
+is known for introducing <a href="http://mathworld.wolfram.com/HermiteDifferentialEquation.html">Hermite
+equations</a>:
+<center>
+<p><font color="#3333FF">y" - 2xy' + 2<font face="Symbol">n</font>y = 0</font></center>
+
+<p><font color="#000000">where <font face="Symbol">n</font> is a constant,
+not necessarily an integer.&nbsp; Hermite functions is the solutions of
+an equation related to Hermite's equations.&nbsp; By the method of solution
+in series, the general solution of Hermite's equation is</font>
+<center>
+<p><font color="#3333FF">y(x) = c<sub>1</sub>y<sub>1</sub>(x) + c<sub>2</sub>y<sub>2</sub>(x)</font></center>
+
+<p><font color="#000000">where c<sub>1</sub> and c<sub>2</sub> are arbitraty
+constants and the functions y<sub>1</sub>(x) and y<sub>2</sub>(x) are defined
+by the equations</font>
+<center>
+<p><font color="#3333FF">y<sub>1</sub>(x) = 1 - 2 <font face="Symbol">n/</font>2!
+x<sup>2 </sup>+ 2<sup>2</sup><font face="Symbol">n(n-2)/4! </font>x<sup>4</sup>
+-&nbsp;<font face="Symbol"> </font>2<sup>3</sup><font face="Symbol">n(n-2)(n-4)/6!
+</font>x<sup>6</sup>
++ ...</font>
+<p><font color="#3333FF">y<sub>2</sub>(x) = x [ 1 - 2 (<font face="Symbol">n-1)/3</font>!
+x<sup>2 </sup>+ 2<sup>2(</sup><font face="Symbol">n-1)(n-3)/5! </font>x<sup>4</sup>&nbsp;
++ ...].</font></center>
+
+<p><font color="#000000">In solutions of the Hermite equation, when <font face="Symbol">n</font>
+is a positive integer; it then has a polynomial solution.</font>
+<br><font color="#000000">If <font face="Symbol">n </font>is an even integer
+n, we take</font>
+<center>
+<p><font color="#3333FF">c<sub>1</sub>=(-1)<sup>1/2n</sup> n!/(1/2n)!&nbsp;&nbsp;&nbsp;&nbsp;
+(c<sub>2</sub>=0)</font></center>
+to obtain the solution:
+<center>
+<p><font color="#3333FF">y=H<sub>n</sub>(x)</font></center>
+<font color="#000000">where</font>
+<center>
+<p><img SRC="angelapic2.gif" height=93 width=363></center>
+
+<p>with (<font face="Symbol">a)</font><sub>r</sub>=<font face="Symbol">a(a+1)...
+(a</font>+r-1).&nbsp; On the other hand, if <font face="Symbol">n </font>is
+an odd integer, we take
+<center>
+<p><font color="#3333FF">c<sub>1</sub>=0,&nbsp;&nbsp; c<sub>2</sub>=(-1)<sup>1/2n-1/2</sup>n!/[(1/2n-1/2)!]2</font></center>
+
+<p>to obtain the same solution.&nbsp; The polynomial H<sub>n</sub>(x) is
+called the <a href="http://mathworld.wolfram.com/HermitePolynomial.html">Hermite
+polynomial</a> of degree n.
+<br><font color="#000000">The Hermite polynomial is</font>
+<center>
+<p><img SRC="angelapic2.gif" height=93 width=363></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<p>From this defintion it can be deduced that
+<center><img SRC="angelapic1.gif" height=73 width=216></center>
+
+<p><br>
+<br>
+<br>
+<br>
+<p><font color="#000000">and satisfies the recurrence relations</font>
+<center><font color="#3333FF">2nH<sub>n-1</sub>(x)=H'<sub>n</sub>(x),</font>
+<p><font color="#3333FF">2xH<sub>n</sub>(x)=2nH<sub>n-1</sub>(x)+H<sub>n+1</sub>(x)</font></center>
+
+<p>
+<hr WIDTH="100%">
+<br>Elwin <font color="#000000"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Christoffel.html">Christoffel</a>
+is known for contributing continued fractions.&nbsp; <a href="http://mathworld.wolfram.com/ContinuedFraction.html">Continued
+fractoins</a> is an expression of a number r of the form:</font>
+<center>
+<p><img SRC="cfraction1.gif" height=99 width=155></center>
+
+<p><font color="#000000">If r is a rational number this expansion terminates.
+If r is an irrational number this expansion never terminates.</font>
+<p><b><i><font color="#006600">Visit</font></i></b><font color="#000000"><a href="http://mathworld.wolfram.com/ChristoffelNumber.html">Christoffel
+Number</a></font>
+<br>
+<hr WIDTH="100%">Edmond <font color="#000000"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Laguerre.html">Laguerre</a>
+is known for contributing the Laguerre equation and polynomials.&nbsp;
+The Laguerre equation is the name given to the <a href="http://mathworld.wolfram.com/LaguerreDifferentialEquation.html">differential
+equation</a>:</font>
+<center><font color="#3333FF">xy" + (1+x)y' + <font face="Symbol">n</font>y
+= 0</font></center>
+
+<p><font color="#000000">where <font face="Symbol">n</font> is a constant
+but not necessarily an integer.&nbsp; In the special case in which the
+parameter v occurring in the Laguerre equation is a positive integer n,
+the solution y<sub>1</sub>(x) reduces t the polynomial</font>
+<center>
+<p><img SRC="angelapic3.gif" height=77 width=111></center>
+
+<p><font color="#000000">so that the polynomial</font>
+<center>
+<p><img SRC="angelapic4.gif" height=77 width=200></center>
+
+<p><br>
+<br>
+<br>
+<p><font color="#000000">is a solution of</font>
+<center><font color="#3333FF">xy'+(1-x)y'+ny=0</font></center>
+
+<p><font color="#000000">The polynomial L<sub>n</sub>(x) is called the
+<a href="http://mathworld.wolfram.com/LaguerrePolynomial.html">Laguerre
+polynomial </a>of degree n.&nbsp; The first five are:</font>
+<center><font color="#3333FF">L<sub>0</sub>(x) = 1,</font>
+<br><font color="#3333FF">L<sub>1</sub>(x) = 1 - x,</font>
+<br><font color="#3333FF">L<sub>2</sub>(x) = 2 - 4x + x<sup>2</sup>,</font>
+<br><font color="#3333FF">L<sub>3</sub>(x) = 6 - 18x + 9x<sup>2</sup>-
+x<sup>3</sup>,</font>
+<br><font color="#3333FF">L<sub>4</sub>(x) = 24 - 96x + 72x<sup>2 </sup>+16x<sup>3
+</sup>+
+x<sup>4</sup></font></center>
+
+<p><font color="#000000">The <a href="http://mathworld.wolfram.com/RodriguesRepresentation.html">formula
+of Rodrigue</a>'s type is</font>
+<center>
+<p><font color="#3333FF">L<sub>n</sub>(x) = (e<sup>x</sup>) d<sup>n </sup>/
+dx<sup>n</sup> (x<sup>n</sup>e<sup>-x</sup>)</font></center>
+
+<p><font color="#000000">The L(x) satisfy the <a href="http://mathworld.wolfram.com/RecurrenceEquation.html">recurrence
+relations</a></font>
+<center>
+<p><font color="#3333FF">L<sub>n+1</sub>(x) + (x-2n-1)L<sub>n</sub>(x)
++ n<sup>2</sup>L<sub>n-1</sub>(x) = 0,</font>
+<p><font color="#3333FF">L'<sub>n</sub>(x) - nL'<sub>n-1</sub>(x) + nL<sub>n-1</sub>(x)
+= 0</font></center>
+
+<p>
+<hr WIDTH="100%">
+<br>Francois <font color="#000000"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Lucas.html">Lucas</a>
+is known for contributing Tower of Hanoi and<a href="http://mathworld.wolfram.com/LucasNumber.html">
+Lucas' numbers</a>.&nbsp; Tower of Hanoi puzzle is stated in terms of three
+pegs and several disks of different sizes.&nbsp; What is the least number
+of moves, one disk at a time, necessary to move n disks from one peg to
+another, all three pegs can be used, and no disk may be placed on top of
+a smaller disk.</font>
+<br><font color="#000000">The <a href="http://mathworld.wolfram.com/LucasSequence.html">Lucas
+sequence</a> is 2,1,3,4,7,11,18,...&nbsp; Each term beginning with three
+is the sum of the two immediately preceding terms.&nbsp; Same as Fibonacci
+sequence with different first two terms, they are intimately related to
+each other by hundreds of identities.</font>
+<p>If you like to view the Tower of Hanoi click <a href="http://cut-the-knot.com/recurrence/hanoi.html">here</a>.
+<br>
+<hr WIDTH="100%">
+<br>Leopold <font color="#000000"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Gegenbauer.html">Gegenbauer</a>
+is known for introducing <a href="http://mathworld.wolfram.com/GegenbauerPolynomial.html">Gegenbauer
+polynomials</a>.&nbsp; The Gegenbauer polynomial C<sub>n</sub><sup><font face="Symbol">n</font></sup>(z),
+with n a positive integer, is defined by the expansion</font>
+<center><img SRC="angelapic41.gif" height=78 width=269>,</center>
+
+<p>It has the series expansion
+<center><font color="#3333FF">C<sub>n</sub><sup><font face="Symbol">n</font></sup>(z)
+=
+<font face="Symbol">G </font>(n+2<font face="Symbol">n</font>)/n!<font face="Symbol">G
+</font>(2<font face="Symbol">n)
+<sub>2</sub></font>F<sub><font face="Symbol">1
+</font></sub>(-n,
+n+2<font face="Symbol">n; n+1/2; 1/2-1/2</font>z<font face="Symbol">).</font></font></center>
+
+<p>The Gegenbauer polynomials satisfy this<a href="http://mathworld.wolfram.com/GegenbauerDifferentialEquation.html">
+differential equation</a>
+<center>
+<p><font color="#3333FF">(1-z<sup>2</sup>)w" - (1+2<font face="Symbol">n)</font>zw'
++ n(n+2<font face="Symbol">n</font>)w = 0</font></center>
+
+<p>
+<hr WIDTH="100%">
+<br><font color="#000000">Jules Henri <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Poincare.html">Poincare</a>
+is known for contributing <a href="http://www.physics.cornell.edu/sethna/teaching/sss/jupiter/Web/L5Poinc.htm">Poincare
+sections</a>.&nbsp; Start with</font>
+<center>
+<p><font color="#3333FF">x = x(t) and y = y(t)</font>
+<p><font color="#3333FF">x' = f(x,y) and y' = g(x,y).</font></center>
+
+<p><font color="#000000">For differential equations of the type under consideration,
+it is easy to implement the method of Poincare sections.&nbsp; In general,
+the difficulty&nbsp; is to find a suitable surface which the orbit must
+pierce repeatedly; for a periodically driven system the phase plane provides
+such a surface.&nbsp; It is pierced once, and once only, for each value
+of the time, allowing us to record the positions at a convenient sequence
+of times.</font>
+<p><font color="#000000">Phase of section - Given an initial time t<sub>0</sub></font>,
+the corresponding phase of section is given by
+<center>
+<p><img SRC="omegapic2.gif" height=52 width=96><font color="#3333FF">,</font>&nbsp;&nbsp;&nbsp;
+<font color="#3333FF">mod<font face="Symbol"> </font>2<font face="Symbol">p,</font></font></center>
+
+<p><font color="#000000">meaning that </font><font color="#3333FF"><font face="Symbol">f</font><sub>0</sub></font><font color="#000000">
+is reduced by an integer multiple of 2<font face="Symbol">p </font>so as
+to lie in the range x in [0,2<font face="Symbol">p].</font></font>
+<br><font color="#000000">Poincare sections-Given a phase of section </font><font color="#3333FF"><font face="Symbol">f</font><sub>0</sub></font>,
+the orbit of the map
+<center>
+<p><font color="#3333FF">(x<sub>0</sub>,y<sub>0</sub>)&nbsp; therefore&nbsp;
+(x<sub>1</sub>,y<sub>1</sub>) therefore . . .&nbsp; (x<sub>k</sub>,y<sub>k</sub>)
+. . .</font></center>
+
+<p>generating by sampling positions in the phase plane at the sequence
+of times
+<center>
+<p><font color="#3333FF">t=t<sub>0</sub></font>
+<p><font color="#3333FF">therefore</font>
+<p><img SRC="omega54.gif" height=45 width=105>. . .
+<p><font color="#3333FF">therefore</font>
+<p><img SRC="omega55.gif" height=45 width=130>. . .</center>
+
+<p>is a Poincare section of the corresponding orbit of the differential
+equation.
+<p><b><i><font color="#006600">Visit&nbsp;</font></i></b> <a href="http://www.math.umd.edu/~lvrmr/History/Recurrence.html">Poincare
+Recurrence Theorem</a>
+<br>
+<hr WIDTH="100%">
+<br>Andrei <font color="#000000"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Markov.html">Markov</a>is
+known for his contribution of discovering <a href="http://mathworld.wolfram.com/MarkovChain.html">Markov
+chains</a>.&nbsp; <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Markov.html">Markov</a>gained
+fame after 1900 when he used the theory of continued fractions to explain
+the probability theory.&nbsp; <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Markov.html">Markov</a>
+later proved the central limit theory.&nbsp; Markov chains are sequences
+of variables that are determined by the term proceding them.&nbsp; The
+common analogy is a person walking.&nbsp; A person goes for a walk and
+never returns to his past position.</font>
+<br>
+<hr WIDTH="100%">Pafnuty <font color="#000000"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Chebychev.html">Chebychev</a>
+is known for contributing two kinds of polynomials generally described
+as Chebychev polynomials.&nbsp; Chebychev polynmials of the <a href="http://mathworld.wolfram.com/ChebyshevPolynomialoftheFirstKind.html">first
+kind</a> are defined by the relation</font>
+<center>
+<p><font color="#3333FF">T<sub>n</sub>(x)=cos(n cos<sup>-1</sup> x),&nbsp;&nbsp;
+x in [-1,1],</font></center>
+
+<p><font color="#000000">which, on putting x=cos<font face="Symbol">q,
+q </font>in [0, <font face="Symbol">p], </font>is seen to be equivalent
+to the relation</font>
+<center>
+<p><font color="#3333FF">T<sub>n</sub>(cos <font face="Symbol">q</font>)=cos
+n<font face="Symbol">q,&nbsp; q </font>in [0, <font face="Symbol">p].</font></font></center>
+
+<p><font color="#000000">Chebychev polynomials of the <a href="http://mathworld.wolfram.com/ChebyshevPolynomialoftheSecondKind.html">second
+kind</a> are defined by the equation</font>
+<center>
+<p><font color="#3333FF">U<sub>n</sub>(cos <font face="Symbol">q</font>)
+= sin (n+1)<font face="Symbol">q </font>/ sin<font face="Symbol">q, </font>cos
+<font face="Symbol">q
+</font>=x,&nbsp;&nbsp;&nbsp;&nbsp;
+x in [-1,1].</font></center>
+
+<p><font color="#000000">The two kinds of the polynomials are connected
+by means of the relations</font>
+<center>
+<p><font color="#3333FF">T<sub>n</sub>(x) = U<sub>n</sub>(x)-xU<sub>n+1</sub>(x)</font>
+<p><font color="#3333FF">(1-x<sup>2</sup>)U<sub>n-1(x) = </sub>xT<sub>n</sub>(x)-T<sub>n+1</sub>(x)</font></center>
+
+<p><font color="#000000">The Chebychev polynomial of the first kind of
+degree n satisfies the differential equation</font>
+<center>
+<p><font color="#3333FF">(1-x)d<sup>2</sup>y/dx<sup>2</sup> - x(dy/dx)
++ n<sup>2</sup>y = 0</font></center>
+
+<p><font color="#000000">and that of the second kind satisfies the equation</font>
+<center>
+<p><font color="#3333FF">(1-x)d<sup>2</sup>y/dx<sup>2 </sup>- 3x(dy/dx)
++ n(n+2)y = 0</font></center>
+
+<p><font color="#000000">The relation</font>
+<center><font color="#3333FF">z<sub>n+1</sub>(x) = 2x z<sub>n</sub>(x)
+- z<sub>n-1</sub>(x)</font></center>
+
+<p><font color="#000000">connects three consecutive Chebychev polynomials,
+where z<sub>n</sub> is either T<sub>n</sub>(x) or U<sub>n</sub>(x).&nbsp;
+If primes denote differentialtion with respect to x, then</font>
+<br>&nbsp;
+<br>&nbsp;
+<center><table COLS=1 WIDTH="53%" >
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#3333FF">[n/2]</font></td>
+</tr>
+
+<tr>
+<td><font color="#3333FF">T<sub>n</sub>(x) =(n/2)&nbsp;<font size=+1> <font face="Symbol">S</font></font><font face="Symbol">&nbsp;
+(-1)</font><sup>m </sup>(n-m-1)!/(m! (n-2m)!) (2x)<sup>n-2m&nbsp;</sup></font></td>
+</tr>
+
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<sub><font color="#3333FF">m=0</font></sub></td>
+</tr>
+</table></center>
+
+<br>&nbsp;
+<center><table COLS=1 WIDTH="46%" >
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#3333FF">[n/2]</font></td>
+</tr>
+
+<tr>
+<td><font color="#3333FF">U<sub>n</sub>(x) =<font size=+1> <font face="Symbol">S</font></font><font face="Symbol">&nbsp;
+(-1)</font><sup>m </sup>(n-m)!/(m!(n-2m)!) (2x)<sup>n-2m&nbsp;</sup></font></td>
+</tr>
+
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s<sub><font color="#3333FF">m=0</font></sub></td>
+</tr>
+</table></center>
+
+<center>
+<p>
+<hr WIDTH="100%"></center>
+Giuseppe <font color="#000000"><a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Peano.html">Peano</a>
+is famous for his major contribution of the <a href="http://mathworld.wolfram.com/Peano-GosperCurve.html">Peano's
+Space Filling Curve</a>.
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Peano.html">Peano's</a>
+original construction was entirely analytic-there were no drawings to assist
+anybody's intuition.&nbsp; Start with a basic staple like shape, and all
+the rest of the curves are created sequentially one from another using
+the same algorithm.&nbsp; This process will never end.&nbsp; For this very
+reason none of the curves thus obtained ever fills the square.&nbsp; The
+space is filled with the continuous curve.</font>
+<p>If you would like to view an example of Peano's Space Filling Curve
+<font color="#3333FF"><a href="http://cut-the-knot.com/do_you_know/hilbert.html/">click</a></font>
+here.
+<center>
+<hr WIDTH="100%"><b><font color="#000066">Article by:</font></b><font color="#006600">
+Angela Esposito</font>
+<br>
+<hr WIDTH="100%"></center>
+
+<p><br>
+<br>
+</body>
+</html>

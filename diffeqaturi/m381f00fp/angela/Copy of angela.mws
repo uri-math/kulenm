@@ -1,0 +1,29 @@
+{VERSION 3 0 "IBM INTEL NT" "3.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 0 
+0 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 0 
+0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "exp(2*t*x-t^2)=Sum('
+H[n](x)*(t^n/n!)','n'=0..infinity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#/-%$expG6#,&*&%\"tG\"\"\"%\"xGF*\"\"#*$)F)F,\"\"\"!\"\"-%$SumG6$*&*&-
+&%\"HG6#%\"nG6#F+F*)F)F:F*F/-%*factorialGF9!\"\"/F:;\"\"!%)infinityG" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "H[n](x)=(2*x)^n*Sum('(-n/
+2)[r]*(1/2-n/2)[r]/(r!)*(-1/x^2)^r','r'=0..1/2*n);" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#/-&%\"HG6#%\"nG6#%\"xG*&),$F*\"\"#F(\"\"\"-%$SumG6$*&
+*(&,$F(#!\"\"F.6#%\"rGF/&,&#F/F.F/F(F7F9F/),$*&\"\"\"FA*$)F*\"\"#FA!\"
+\"F8F:F/FA-%*factorialGF9FE/F:;\"\"!,$F(F=F/" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 37 "Sum('((-n)[r]/(r!)^2)*x^r','r'=0..n);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#-%$SumG6$*&*&&,$%\"nG!\"\"6#%\"rG\"\"\")%\"x
+GF-F.\"\"\"*$)-%*factorialGF,\"\"#F1!\"\"/F-;\"\"!F*" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 46 "L[n](x)=n!*Sum('(-n)[r]/(r!)^2*x^r','r'=0
+..n);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/-&%\"LG6#%\"nG6#%\"xG*&-%*fa
+ctorialGF'\"\"\"-%$SumG6$*&*&&,$F(!\"\"6#%\"rGF.)F*F8F.\"\"\"*$)-F-F7
+\"\"#F:!\"\"/F8;\"\"!F(F." }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+59 "1/(1-2*h*z+z^2)^nu=Sum('(C^nu)[n](z)*h^n','n'=0..infinity);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#/*&\"\"\"F%),(\"\"\"F(*&%\"hGF(%\"zGF(
+!\"#*$)F+\"\"#F%F(%#nuG!\"\"-%$SumG6$*&-&)%\"CGF06#%\"nG6#F+F()F*F;F(/
+F;;\"\"!%)infinityG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+}{MARK "5 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 }
