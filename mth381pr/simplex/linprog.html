@@ -1,0 +1,334 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (Win95; I) [Netscape]">
+   <TITLE>OSL Terms and Concepts </TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<CENTER>
+<H1>
+<FONT COLOR="#660000">Mathematical programming and Simplex method</FONT></H1></CENTER>
+
+<CENTER>
+<H2>
+<FONT COLOR="#660000">Introduction</FONT></H2></CENTER>
+
+<CENTER>
+<H2>
+<FONT COLOR="#660000">Mathematical Programming</FONT></H2></CENTER>
+
+<CENTER>Mathematical programming techniques can be applied to problems
+where one wants to minimize (or maximize) a function, called the <B><I><FONT COLOR="#006600">objective
+function</FONT></I></B>, subject to a set of constraints. A solution is
+said to be <B><I><FONT COLOR="#006600">feasible</FONT></I></B> if it satisfies
+the constraints. A solution is said to be <B><I><FONT COLOR="#006600">optimal</FONT></I></B>
+if it is feasible and yields the smallest (or largest) value of the objective
+function among all feasible solutions. A problem may have more than one
+solution that yields the optimal value.</CENTER>
+
+<CENTER>&nbsp;</CENTER>
+
+<CENTER>
+<H2>
+<FONT COLOR="#660000">Linear Programming</FONT></H2></CENTER>
+In linear programming, both the objective function and the constraints
+are linear and so a linear programming (LP) problem can be formulated in
+the following form:
+<PRE>'minimize'&nbsp;&nbsp;&nbsp;<FONT COLOR="#CC33CC"> </FONT><B><FONT COLOR="#0000FF">c'x
+
+</FONT></B>subject to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT COLOR="#3366FF"> </FONT><FONT COLOR="#0000FF">lb(i) &lt;= <B>A</B>(i,*)<B>x</B> &lt;= ub(i)&nbsp; for i = 1,..., <I>m
+
+</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc(j) &lt;= x(j) &lt;= uc(j)&nbsp;&nbsp; for j = 1,..., <I>n</I></FONT></PRE>
+where:
+<MENU>
+<LI>
+<B>x</B> is a column vector of the problem variables, x (j). It has length
+<I>n</I>.</LI>
+
+<LI>
+<B>c</B> is the column vector of coefficients of the objective function,
+c(j). It has length <I>n</I>.</LI>
+
+<LI>
+<B>A</B> is the coefficient matrix of the constraints. It has dimension
+<I>m * n</I>.</LI>
+
+<LI>
+lb(i) is the lower bound for the row activity <B>A</B>(i,*)<B>'x</B>.</LI>
+
+<LI>
+ub(i) is the upper bound for the row activity <B>A</B>(i,*)<B>'x</B>.</LI>
+
+<LI>
+lc(i) is the lower bound for the variable x(j).</LI>
+
+<LI>
+uc(i) is the upper bound for the variable x(j).</LI>
+</MENU>
+Another way of defining a linear programming problem is the following:
+<PRE>'minimize'&nbsp;&nbsp;&nbsp; <B><FONT COLOR="#0000FF">c'x
+
+</FONT></B>subject to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT COLOR="#0000FF"> <B>A</B>(i,*)<B>x</B> <I>sgn</I> b(i)&nbsp; for i = 1,..., <I>m
+
+</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lc(j) &lt;= x(j) &lt;= uc(j)&nbsp;&nbsp; for j = 1,..., <I>n</I></FONT></PRE>
+where:
+<MENU>
+<LI>
+<I>sgn</I> is either =, &lt;= or >=.</LI>
+
+<LI>
+b(i) is the right-hand side for the row activity <B>A</B>(i,*)<B>'x</B>.
+It has length <I>m</I>.</LI>
+
+<LI>
+<B>x</B> is a column vector of the problem variables, x (j). It has length
+<I>n</I>.</LI>
+
+<LI>
+<B>c</B> is the column vector of coefficients of the objective function.
+It has length <I>n</I>.</LI>
+
+<LI>
+<B>A</B> is the coefficient matrix of the constraints. It has dimension
+<I>m * n</I>.</LI>
+
+<LI>
+lc(i) is the lower bound for the variable x(j).</LI>
+
+<LI>
+uc(i) is the upper bound for the variable x(j).</LI>
+</MENU>
+To deal with the problem in a form that is easier to manipulate, logical
+variables can be added to create equalities and variable substitution can
+be performed to eliminate negative variables. The result is a more textbook
+oriented form:
+<PRE>'minimize'&nbsp;&nbsp;&nbsp;<FONT COLOR="#0000FF"> <B>c'x
+
+</B></FONT>subject to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR="#0000FF"><B>Ax</B> = <B>b
+
+</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>x >= 0</B></FONT></PRE>
+where:
+<MENU>
+<LI>
+<B>b</B> is the column vector of right-hand sides. It has length <I>m</I>.</LI>
+
+<LI>
+<B>x</B> is a column vector of the problem variables, x (j). It has length
+<I>n</I>.</LI>
+
+<LI>
+<B>c</B> is the column vector of coefficients of the objective function.
+It has length <I>n</I>.</LI>
+
+<LI>
+<B>A</B> is the coefficient matrix of the constraints. It has dimension
+<I>m * n</I>.</LI>
+</MENU>
+Geometrically, the constraints can be thought of as defining an <I>(n -
+m)</I>-dimensional polyhedron, in an <I>n</I>-dimensional space.This is
+known as the <B><I><FONT COLOR="#006600">feasible region</FONT></I></B>.
+The goal is to find a point on the polyhedron that minimizes the objective
+function. This is called the optimal solution. If such a solution exists,
+the problem is feasible; otherwise, the problem is <B><I><FONT COLOR="#006600">infeasible</FONT></I></B>
+or <B><FONT COLOR="#006600"><I>unbounded</I>.</FONT></B>
+
+<P>The above problem is known as the <B><FONT COLOR="#006600"><I>primal</I>
+</FONT></B>problem. There is a related problem called the <B><FONT COLOR="#006600"><I>dual</I>
+</FONT></B>of the primal problem. The dual problem shown below provides
+a lower bound for the primal problem. Also, the optimal value for the primal
+problem is equal to the optimal value of the dual problem.
+<PRE>'maximize'<FONT COLOR="#CC33CC"> </FONT><B><FONT COLOR="#0000FF">y'b
+</FONT></B>ubject to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR="#0000FF"><B>y'A &lt;= c
+</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>y</B> unrestricted</FONT></PRE>
+where:
+<MENU>
+<LI>
+<B>y</B> is a column vector of the dual problem variables. It has length
+<I>m</I>.</LI>
+
+<LI>
+<B>b</B> is the column vector of (primal) right-hand sides (dual objective).
+It has length <I>m</I>.</LI>
+
+<LI>
+<B>c</B> is the column vector of coefficients of the (primal) objective
+function (dual right hand side). It has length <I>n</I>.</LI>
+
+<LI>
+<B>A</B> is the coefficient matrix of the constraints. It has dimension
+<I>m * n</I>.</LI>
+</MENU>
+
+<CENTER>For solving linear programming problems, there are several approaches
+which are discussed below.</CENTER>
+
+<CENTER>
+<H2>
+<FONT COLOR="#993366">Linear Programming: Simplex Method</FONT></H2></CENTER>
+The simplex method for solving linear programming problems was developed
+by <A HREF="Dantzig_George.html">Dantzig</A> in 1947.&nbsp; It is an iterative
+procedure for finding an optimal solution. In 1975 the Nobel prize in economics
+has been awarded to the famous mathematician&nbsp; L. V. <A HREF="Kantorovich.html">Kantorovich</A>
+<BR>for his contribution in the application of linear programming to the
+solution of&nbsp; problem of allocation of scarce resources.
+<BR>It can be shown that if an optimum exists, there is an optimal solution
+among the vertices of the polyhedron defining the feasible region. Any
+solution that is a vertex of the polyhedron defining the feasible region
+is called a <B><I><FONT COLOR="#006600">basic feasible solution (BFS)</FONT></I></B>.
+
+<P>The primal simplex method searches for an optimal solution among the
+BFSs. A BFS corresponds to using <TT>m</TT> columns of the coefficient
+matrix <B>A</B> as a basis for the vector space spanned by the columns
+of <B>A</B>. Given an initial BFS, a new BFS is computed by choosing one
+of the remaining <TT>(n - m)</TT> columns to enter the basis and one of
+the current <TT>m</TT> basic columns to leave the basis. The entering column
+is chosen so the value of the primal objective function decreases, or at
+least does not increase, when this column enters the basis; the exiting
+column is chosen so that the new BFS is still primal feasible.
+
+<P>In the primal simplex algorithm, you begin with a primal feasible solution
+which may be dual infeasible. At each step the primal objective function
+is reduced by introducing variables into the basis corresponding to infeasibilities
+in the dual problem. An optimum BFS is detected when there are no remaining
+dual infeasibilities.
+
+<P>In the dual simplex algorithm, you begin with a dual feasible solution
+which may be primal infeasible. At each step, the dual objective function
+is increased by removing variables from the basis corresponding to infeasibilities
+in the primal problem. An optimum BFS is detected when there are no remaining
+primal infeasibilities.
+<BR>&nbsp;
+<BR>&nbsp;
+<H4>
+Linear Programming: Interior-Point Barrier Method</H4>
+Interior-point methods for linear programming problems have only been shown
+to be computationally efficient in recent years. Interior-point methods
+are also iterative techniques for finding an optimal solution.
+
+<P>While the simplex algorithm searches for the optimal solution among
+the vertices of the feasible polyhedron, interior-point methods search
+for solutions in the interior of the feasible region. OSL contains three
+interior-point methods that are types of the logarithmic barrier method.
+These are the primal barrier method, the primal-dual barrier method, and
+the primal-dual method with the predictor-corrector feature. The latter
+will often be referred to simply as the predictor-corrector method. The
+primal barrier method takes a primal linear programming problem and solves
+a sequence of subproblems of the form:
+<PRE>'minimize'&nbsp; <FONT COLOR="#0000FF">F(<B>x</B>;<FONT FACE="Symbol">m</FONT>)&nbsp; =&nbsp; <B>c'x</B> - <FONT FACE="Symbol">m</FONT>* <FONT FACE="Symbol"><FONT SIZE=+2>S</FONT> </FONT>ln x(j)
+
+</FONT>subject to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR="#0000FF"><B>Ax = b
+
+</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <I>mu</I> > 0.</FONT></PRE>
+Here c, x, A, and b are as defined above. The scalar <FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>
+is known as the <B><I><FONT COLOR="#006600">barrier parameter</FONT></I></B>
+and is specified for each subproblem. The equality constraints are handled
+directly. Then each function F(<B>x</B>;<FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>)>
+is approximately optimized to obtain a solution <B>x(</B><FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT><B>)</B>.
+If <B>x*</B> is an optimal solution to the primal linear programming problem,
+then the sequence of approximate solutions <B>x(</B><FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT><B>)</B>
+converge to <B>x*</B> as <FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>
+converges to 0.
+
+<P>Given an initial feasible interior solution, a new solution is computed
+by choosing a direction to travel from the initial point and a distance
+to travel along that direction. The direction and distance are chosen so
+that the value of the objective function decreases along the step and so
+that the step taken is relatively long. Primal-dual barrier methods consider
+not only the primal problem but the dual as well. The dual problem can
+be written as:
+<PRE>'maximize' <B><FONT COLOR="#0000FF">b'y
+</FONT></B>ubject to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT COLOR="#0000FF"><B>A'y + z = c
+</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>z >= 0
+</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>y</B> unrestricted</FONT></PRE>
+Using a barrier parameter <FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>,
+this problem may be considered as a sequence of subproblems of the form:
+<PRE>'maximize'&nbsp;&nbsp;&nbsp; <FONT COLOR="#0000FF"><B>b'y</B>&nbsp; + <FONT FACE="Symbol">m</FONT> * <FONT FACE="Symbol"><FONT SIZE=+2>S</FONT>&nbsp;</FONT> ln z(i)
+</FONT>subject to:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT COLOR="#CC33CC"> </FONT><B><FONT COLOR="#0000FF">A'y + z = c
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT FACE="Symbol">m</FONT><I> > 0</I></FONT></B></PRE>
+Assuming the same sequence of <FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>
+values for the primal and dual problems, the necessary conditions for optimality
+of each subproblem are:
+<PRE><FONT COLOR="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>Ax = b
+</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>A'y + z = c
+</B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <B>XZ e = </B><FONT FACE="Symbol">m </FONT><B>e</B></FONT></PRE>
+
+<CENTER>where <B>e</B> is a vector of 1's and <B>X</B> and <B>Z</B> are
+diagonal matrices with the elements of <B>x</B> and <B>z</B>, respectively,
+as the diagonal elements. Note that this product of variables makes the
+subproblem nonlinear. It may be solved (or partially solved) by the classical
+approach of Newton's method for each value of <FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>
+considered. In practice, only one Newton iteration is performed for each
+value of <FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>. When
+<B>x</B>, <B>y</B>, and <B>z</B> are feasible, they approach primal and
+dual optimal solutions as <FONT FACE="Symbol"><FONT COLOR="#000000">m</FONT></FONT>
+approaches zero. That the feasible primal and dual problems must have identical
+optimal solution values provides a check-and-control mechanism for convergence.</CENTER>
+
+<CENTER>&nbsp;</CENTER>
+
+<CENTER>
+<H3>
+<FONT COLOR="#993366">Linear Programming: Sensitivity Analysis</FONT></H3></CENTER>
+
+<CENTER>Sensitivity analysis determines the effect that changes in objective
+function coefficients (costs) or the row and column bounds (for example,
+limits on availability) have on the solution. Suppose an oil company blends
+gasoline using a few types of oil out of the many available. There may
+be many choices of types of oil that give the desired results, but one
+mixture optimizes the objective function. Solving the LP gives the optimal
+answer, that is, how much of which types of oil should be used to give
+gasoline meeting the requirements at the minimum cost.</CENTER>
+
+<CENTER>After obtaining the optimal solution you may want to know how sensitive
+the choices of oil types are to the coefficients in the objective function.
+These coefficients might represent the current selling prices of gasoline
+and the purchase prices of oil. You may also want to know how sensitive
+the solution is to the upper and lower bounds on rows and columns. These
+bounds may represent availability. Sensitivity analysis determines how
+much these factors have to change to cause the optimal solution to occur
+at a different set of activity values. This is essentially asking: What
+changes would cause the solution to occur with a different basis? This
+is what is meant by sensitivity analysis.</CENTER>
+
+<CENTER>
+<H3>
+<FONT COLOR="#993366">Linear Programming: Parametrics</FONT></H3></CENTER>
+Parametric analysis is similar to sensitivity analysis, but instead of
+asking what changes in a single cost or bound are necessary to cause the
+solution to occur at a different basis, a range of values is specified
+for the objective function coefficients and bounds. OSL then determines
+what happens to the solution as the objective function coefficients and
+bounds are varied simultaneously through their specified ranges.
+
+<P>Again, think of the oil company that has an optimal solution for blending
+gasoline from crude oils. Instead of just answering how much of a change
+in the assumptions is required to cause a basis change, parametric analysis
+gives the optimal for a entire range of assumptions. For example, assume
+that when the oil company LP was solved, type 1 crude oil cost $20 per
+barrel. Sensitivity analysis might say that the basis would change if the
+price of type 1 crude oil rose to $23 per barrel or fell to $18 per barrel.
+Parametric analysis, however, can answer the question: ``What is the optimal
+solution for every price of type 1 crude oil between $10 and $20 in $2
+increments?'' In addition, the parametric algorithm reports on all the
+solutions at basis changes between $10 and $20.
+
+<P>It should be noted that parametric analysis usually requires the solution
+of many LP problems, and so it may take considerably longer to run than
+sensitivity analysis.
+<BR>
+<HR>
+<CENTER><A HREF="../HistoryTopics.html">Return To Index</A></CENTER>
+
+
+<P>&nbsp; <A HREF="http://www.statslab.cam.ac.uk/~rrw1/opt95/dantzig.html">To
+read more about Dantzig and optimization click here.</A>
+</BODY>
+</HTML>

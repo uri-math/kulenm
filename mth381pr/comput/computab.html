@@ -1,0 +1,577 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="mustafa">
+   <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+   <title>Computability and Complexity - Introduction</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#FF0000" alink="#000088">
+
+<center>
+<h1>
+<font color="#3333FF">Computability</font></h1></center>
+
+<center><img SRC="downloadgif.cgi.gif" NOSAVE height=96 width=72></center>
+
+<hr>
+<center>
+<h2>
+<font color="#663366">Introduction</font></h2></center>
+This part of the project deals with the issue of assessing how <b>difficult</b>
+specific computational problems are to solve. Given a description of a
+particular problem a number of questions arise:
+<ul>
+<li>
+Is it <b><font color="#006600">possible</font></b> to design an algorithm
+which solves the problem?</li>
+
+<li>
+Is it possible to design an <b><font color="#006600">efficient algorithm</font></b>
+which solves the problem?</li>
+
+<li>
+How can one tell if a given algorithm is the <font color="#006600">`<b>best
+possible'</b></font>?</li>
+</ul>
+More precise formulations of these questions should specify the following
+:
+<ul>
+<li>
+What exactly is meant by the term `problem'?</li>
+
+<li>
+What distinguishes algorithms which can be <b><font color="#006600">implemented</font></b>
+from those which cannot?</li>
+
+<li>
+What is meant by terms such as:</li>
+
+<ul>
+<li>
+Difficulty</li>
+
+<li>
+Efficient</li>
+
+<li>
+Best</li>
+</ul>
+</ul>
+<font size=+0>Computability theory<b> </b>and computational complexity
+theory </font>are the fields of Computer Science concerned with the questions
+raised earlier.
+<h3>
+<font color="#663300">Computability Theory</font></h3>
+is concerned with identifying one particular class of
+<h4>
+<b><font color="#333300">INTRACTABLE PROBLEMS</font></b></h4>
+(Those for which no `effective' algorithm exists) One aim of <font size=+0>computational
+complexity theory </font>is to identify<b><i><font color="#006600"> solvable
+problems</font></i></b> that are intractable in the sense that <b><font color="#990000">No
+Efficient Algorithm Exists </font></b>which solves them.
+<p>Both areas require a formal definition of the concepts:
+<h3>
+<font color="#3333FF">Problem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Algorithm</font></h3>
+At the lowest level of abstraction any computer program may be viewed as
+a means of producing
+<h3>
+<b><font color="#993366">Specific Output Values</font></b></h3>
+
+<h3>
+<font color="#993366">from</font></h3>
+
+<h3>
+<b><font color="#993366">Given Input Data</font></b></h3>
+i.e. Programs compute <b><font color="#993300"><i>functions</i> </font></b>whose
+domain is the set of valid inputs and whose range is the set of possible
+outputs. In practice the input and output are (ultimately) represented
+in <i><b><font color="#993300">binary</font></b>.&nbsp;</i> Hence any program
+may be viewed as (computing) some <b><i><font color="#993300">function:</font></i></b>
+<pre><b><i><font color="#993300">f: {0,1}^* -> {0,1}^*</font></i></b></pre>
+(<b><i><font color="#993300">{0,1}^*&nbsp;</font></i></b> is the set of
+all finite strings (or <i>words</i>) containing only 0s and 1s.
+<p>It is only necessary to consider such functions as have range <i>{0,1}</i>.
+These are known as <b>Decision Problems.</b>
+<p>Hence the question
+<h3>
+<font color="#000099">What problems can be solved by computers?</font></h3>
+is <i>equivalent</i> to
+<h3>
+<font color="#000099">What <i>decision problems</i> can be solved?</font></h3>
+
+<h3>
+<b><font color="#660000">Decision Problems</font></b></h3>
+Any binary string can be viewed as the representation of some natural number.
+Thus for decision problems on binary strings we can concentrate on the
+set of functions of the form
+<pre><b><i><font color="#993300">f : N&nbsp; -> {0,1}</font></i></b></pre>
+That is `problems' of the form
+<p><i>Input</i>: <i>n</i> a natural number
+<p><i>Output</i>: <i>1</i> if <i>n</i> satisfies some property; <i>0</i>
+if <i>n</i> does not satisfy it.
+<p><b>Examples:</b>
+<ul>
+<li>
+<i>EVEN</i>: Returns 1 if <i>n</i> is an even number; <i>0</i> if <i>n</i>
+is an odd number</li>
+
+<li>
+<i>PRIME</i>: Returns 1 if <i>n</i> is a prime number; <i>0</i> if <i>n</i>
+is a composite number.</li>
+</ul>
+Notice that the last example shows that we are not restricting attention
+to merely `arithmetic' decision problems.
+<h3>
+<b>What is a `reasonable' algorithm?</b></h3>
+In all programming systems
+<ul>
+<li>
+Programs have a <i>finite</i> number of instructions.</li>
+
+<li>
+Progams make use of instructions and operations from a finite set of <i>basic
+operations</i></li>
+
+<li>
+Programs should come to a halt for any valid input data.</li>
+</ul>
+An <i>effective algorithm</i> is one which meets these criteria.
+<p>Why should one take this as evidence that <b><font color="#006600">NO
+PROGRAM (ALGORITHM) AT ALL </font></b>exists for the problem?
+<p>In other words
+<p>How can it be argued that results on computability apply to <i>all</i>
+types of computer? (Past, Present, and Future)
+<p>The answer is that such results are proved with respect to abstract
+<i>models
+of computation</i> that capture all the essential elements of a typical
+computer. A `typical computer' has
+<ul>
+<li>
+Memory</li>
+
+<li>
+Input and Output Mechanisms</li>
+
+<li>
+A processor handling a finite instruction set.</li>
+</ul>
+In an abstract model we can permit an <i>infinite</i> supply of memory.
+The only restraint on an algorithm is that it can only use a finite amount
+of memory when dealing with any single input (which, if the algorithm terminates,
+is all that could be accessed).
+<p>This is <b>not</b> an unrealistic assumption: we do not want to classify
+a problem as unsolvable just because on <i>some</i> real machines there
+may not be enough memory available.
+<p>The first abstract model of computation was defined by <a href="turing.htm">Alan
+Turing</a> in 1936. This had:
+<ul>
+<li>
+An infinite memory of single bit cells.</li>
+
+<li>
+Its `processor' dealt with only two types of `instruction'</li>
+
+<li>
+A <b>stop</b> instruction which would return a result (0 or 1).</li>
+
+<li>
+A <b>test</b> instruction which would read and write to a single bit of
+memory, examine an adjacent memory location, and jump to another instruction.</li>
+</ul>
+Although the instruction set of the <b><i><font color="#663366">Turing
+Machine</font></i></b> is extremely limited Turing machine programs can
+be written to solve <b>any</b> decision problem that can be solved on a
+`normal' computer.
+<p><b>The <a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Church.html">Church</a>-Turing
+Hypothesis</b>
+<ul>
+<li>
+The class of decision problems that can be solved by <i>any reasonable
+model of computation</i> is <b>exactly the same</b> as the class of decision
+problems that can be solved by Turing machine programs.</li>
+</ul>
+Since 1936 several thousand different models of computation have been proposed,
+e.g.
+<ul>
+<li>
+Post Systems</li>
+
+<li>
+Markov Algorithms</li>
+
+<li>
+<i>lambda</i>-calculus</li>
+
+<li>
+<a href="http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Godel.html">Godel</a>-Herbrand-Kleene
+Equational Calculus</li>
+
+<li>
+Horn Clause Logic</li>
+
+<li>
+Unlimited Register Machines</li>
+
+<li>
+ADA programs on unlimited memory machines</li>
+</ul>
+Every single one of these satisfies the Church-Turing hypothesis, i.e.
+anything that can be solved by a Turing machine program can be programmed
+in any one of the system above and <i>vice-versa</i>
+<p>The importance of the Church-Turing hypothesis is that it allows us,
+without any loss of generality, to consider computability results solely
+with respect to some specific computer language.
+<br>Suppose <i>P</i> is some <i>decision problem</i>.
+<p>The Church-Turing hypothesis asserts
+<h3>
+<b>There is no Turing machine program that computes </b><i>P</i></h3>
+
+<h3>
+<b>IF AND ONLY IF</b></h3>
+
+<h3>
+<b>There is no C (or any other computer language)&nbsp; program which solves
+</b><i>P</i></h3>
+
+<center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The Halting Theory The Theory of Computation Summary of the Chapter in
+the book by John L. Casti: Five Golden Rules</center>
+
+<p>In 1935, Alan Turing devised a theoretical gadget [which is also a model
+for a primitive computer] that he believed could settle the famous Hilbert
+Decision Problem. The Hilbert Decision Problem queries whether there exists
+an effective procedure for determining in advance if a certain conclusion
+follows logically from a given set of assumptions. This interesting problem
+was only hampered in Turing’s mind by the notion of an "effective procedure,"
+or computation, which after thousands of years of use still had no clear
+cut definition. So Turing designed an imagined machine which utilizes an
+algorithm to carry out a computation.
+<p>This Turing Machine (TM) as it is called is composed of an infinitely
+long tape of ruled off squar4s that can each contain one of a finite set
+of symbols [in the simplest case: 1 and 0], and a scanning head that can
+write read and erase symbols of these squares. The algorithm for this machine
+is in all intents and purposes the program: the set of instructions that
+tells the machine what to do.
+<p>So how does this machine work?
+<p>First the data [the tape with a string of 1’s and 0’s] is fed into the
+Machine and then the Machine reacts to the data as the program calls. An
+example of a set of instructions by which such a machine is governed is
+as follows: 1. Go right one square. 2. Go to step 1 if the current square
+contains a 1. 3. Print 1 on the current square. 4. Go left one square.
+5. Go to step 4 if the current square contains a 1. 6. Print 1 on the current
+square. 7. Stop. This program changes the zeroes at the end of a string
+of 1’s into 1’s. This program can either be imbedded permanently into the
+machine, so this machine can only perform these instructions or the instructions
+themselves can be fed into the machine on a tape so that the machine can
+perform any set of steps. This machine that can perform any set of steps
+is called a Universal Turning Machine (UTM)..
+<p>What can this machine compute?
+<p>An integer n can be computed is there is a TM that can produce it. So
+a number is computable if there is such a TM that will stop after printing
+n number of 1’s on an input tape of zeroes. Other real numbers can also
+be computed simply by printing a string of 1’s that represents each digit
+of the real number. Even irrational numbers are computable in this sense
+but the program will run on forever. But Turing says that these computable
+numbers constitute a small part of the set of all numbers and for the most
+part the great percentage of numbers are not computable.
+<p>So what is this Halting Problem?
+<p>The Halting Problem asks if there is a program that accepts a program
+P and input data I that after a finite number of steps halts, at which
+point the final configuration of the tape tells whether the program P will
+stop after a finite number of steps of processing data I. The Halting Theorem
+a la Turing states that no such program exists. And furthermore any thing
+that is computable can be computed by a suitable TM. A formal system is
+a system which is composed of abstract symbols. These symbols have no intrinsic
+meaning (such as words have a meaning in a sentence) other than the meaning
+the framework within which they are created gives to them (the sentence
+is either true or false, i.e. provable or unprovable). This framework of
+symbols is called a formal system. In this formal system a string of symbols
+may or may not constitute a theorem. A string is a theorem if and only
+if the string can be deduced from the set of axioms which defines the formal
+system. The formal system is equivalent to a TM.
+<p>What are the implications?
+<p>A formal system of arithmetic, per Hilbert, is finitely describable,
+consistent, complete [i.e., every mathematical truth translates to a theorem
+and every theorem translates to a mathematical truth], and sufficiently
+powerful enough to represent all statements that can be made about the
+natural numbers.
+<p>Hilbert believed that the system was formalizable, that is to say, that
+there is a finite procedure for deciding the truth or falsity of a statement.
+Goedel said that arithmetic is not formalizable. He also noted that formalized
+systems are ones that for which we have created a mathematical framework
+within which to speak about whatever it is we wanted to formalize. The
+formal system is a mathematical object itself. Goedel goes on to say that
+there may be a formal system powerful enough to represent arithmetic but
+that there exists truths that are not provable within that system. So this
+is the same as the Halting theorem in that there are statement sin arithmetic
+that cannot be proven or disproven just as there is no TM that will determine
+whether a program with input data will ever halt. So there is no Turing
+Machine that can print out the true statements of arithmetic. Truth is
+bigger than truth. This led Turing to embark on the quest to determine
+if a machine can or ever be able to think. His view was that if the machine
+appeared to think then it does think.
+<center>Like the Skinnerian behaviorists only external behaviors count
+not the "black box" that "determines" what those behaviors are. I appear
+to think therefore I think. But others view of thinking takes into account
+that the human mind can transcend rational [algorithmic] thought an know
+unprovable things. So humans have this one up on all machine which are
+limited by the theorem of Halting and the theorem of formal systems. Also
+the mind asserts its own consistency whereby a machine cannot. But consider
+the statement: A person cannot consistently assert this sentence. Assertion
+of truth cannot take place even though it is true. So there are statements
+that neither a machine nor a person can assert. But Goedel leaves open
+the possibility that a machine that can prove any theorem is possible but
+cannot be constructed. A machine too complex to design could nevertheless
+exist. An Example of Turing Machines</center>
+
+<br>&nbsp;
+<center>
+<h1>
+&nbsp;&nbsp;&nbsp; <b>An Example of Turing Machines</b></h1></center>
+
+<center>
+<h5>
+(<i>The Analytical Engine</i> by Rick Decker and Stuart Hirshfield has
+a very good example of how the Turing Machine works. Here is a shortened
+version of it.)</h5></center>
+
+<h4>
+The Turing Machine's control device embodies the program. It uses a set
+of rules, it's notion of "states", and the content of the tape to determine
+how to process the input symbols. The state that the machine regards itself
+as being in when the computation begins is called the "initial state".
+Each rule is stated in the form: "In state n, if the head is reading symbol
+x, write symbol y, move left or right one cell on the tape, and change
+the state to m."&nbsp;<br>
+<img SRC="fig.jpg" height=259 width=554><br>
+Here are a set of rules for a Turing Machine (TM) with five states,<br>
+the initial state being 1.</h4>
+
+<table BORDER=3 CELLSPACING=7 cellpading="3" >
+<tr>
+<td>Present State</td>
+
+<td>Present Symbol</td>
+
+<td>Write</td>
+
+<td>Move</td>
+
+<td>New State</td>
+</tr>
+
+<tr>
+<td>1</td>
+
+<td>0</td>
+
+<td>0</td>
+
+<td>Right</td>
+
+<td>2</td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>0</td>
+
+<td>0</td>
+
+<td>Right</td>
+
+<td>3</td>
+</tr>
+
+<tr>
+<td>2</td>
+
+<td>1</td>
+
+<td>1</td>
+
+<td>Right</td>
+
+<td>2</td>
+</tr>
+
+<tr>
+<td>3</td>
+
+<td>0</td>
+
+<td>Blank</td>
+
+<td>Left</td>
+
+<td>5</td>
+</tr>
+
+<tr>
+<td>3</td>
+
+<td>1</td>
+
+<td>0</td>
+
+<td>Left</td>
+
+<td>4</td>
+</tr>
+
+<tr>
+<td>4</td>
+
+<td>0</td>
+
+<td>1</td>
+
+<td>Right</td>
+
+<td>2</td>
+</tr>
+</table>
+You could simplify the table by writing each row in statements like (1,
+0, 0, R, 2),
+<br>(2, 0, 0, R, 3), (2, 1, 1, R, 2), (3, 0, b, L, 5), (3, 1, 0, L, 4),
+and (4, 0, 1, R, 2).
+<br>This series of statements actually accomplishes integer addition. Say
+the input represents two numbers in unary notation that you want to add.
+To represent a pair of integers (x, k) in unary notation, you would start
+with a 0, followed by x 1's separated by another 0 followed by k 1's, you
+then end with a 0. So if you had the pair (2, 3) you would have a unary
+notation of 01101110. Now, using 01101110 for input and the rules for the
+TM from the table above you would get an output of 0111110. Here are the
+steps:
+<br>&nbsp;
+<table BORDER=3 CELLSPACING=5 cellpading="3" >
+<tr>
+<td>Number (In Unary)</td>
+
+<td>Machine State</td>
+
+<td>Movement</td>
+</tr>
+
+<tr>
+<td><b>0</b>1101110</td>
+
+<td>1</td>
+
+<td>Write a Zero, Go to state two</td>
+</tr>
+
+<tr>
+<td>0<b>1</b>101110</td>
+
+<td>2</td>
+
+<td>Scan past 1's</td>
+</tr>
+
+<tr>
+<td>011<b>0</b>1110</td>
+
+<td>2</td>
+
+<td>End of first string, go to next</td>
+</tr>
+
+<tr>
+<td>0110<b>1</b>110</td>
+
+<td>3</td>
+
+<td>Change 1 to 0, go back.</td>
+</tr>
+
+<tr>
+<td>011<b>1</b>0110</td>
+
+<td>4</td>
+
+<td>Copy the 1, return to second string.</td>
+</tr>
+
+<tr>
+<td>0111<b>0</b>110</td>
+
+<td>2</td>
+
+<td>End of first string, go to next.</td>
+</tr>
+
+<tr>
+<td>01110<b>1</b>10</td>
+
+<td>3</td>
+
+<td>Change 1 to 0, go back.</td>
+</tr>
+
+<tr>
+<td>0111<b>0</b>010</td>
+
+<td>4</td>
+
+<td>Copy the 1, return to second string.</td>
+</tr>
+
+<tr>
+<td>01111<b>0</b>10</td>
+
+<td>2</td>
+
+<td>End of first string, go to next.</td>
+</tr>
+
+<tr>
+<td>011110<b>1</b>0</td>
+
+<td>3</td>
+
+<td>Change 1 to 0, go back.</td>
+</tr>
+
+<tr>
+<td>01111<b>0</b>10</td>
+
+<td>4</td>
+
+<td>Copy the 1, return to second string.</td>
+</tr>
+
+<tr>
+<td>0111110<b>0</b></td>
+
+<td>3</td>
+
+<td>No second string. Erase last 0.</td>
+</tr>
+
+<tr>
+<td>011111<b>0</b></td>
+
+<td>5</td>
+
+<td>Halt--no further move possible.</td>
+</tr>
+</table>
+There was no rule for symbol 0 in state 5 so the TM halts. This works correctly,
+because 2 and 3 equals 5. In unary notation five would be represented as
+0111110 which is the answer gotten from the step through. Of course this
+is a very simple TM. When programmed correctly a TM Model can add, subtract,
+multiply, divide compute logs and powers, compare two data elements for
+equality or size, and perform other remarkably complex functions.
+<p><img SRC="aim10.gif" height=10 width=100%>
+<br><a href="http://www.btinternet.com/~derek.thompson/Turing2.html" target="If you would like to learn more about the technical fact click here.">&nbsp;Click
+here for an Applet that simulates Turing Machine.</a>
+<p><br>
+<center>
+<p><a href="../HistoryTopics.html">Return To Index</a></center>
+
+</body>
+</html>

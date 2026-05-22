@@ -1,0 +1,300 @@
+<HTML> <BODY BGCOLOR=#FFE3B8 TEXT=#35142E ALINK=#FFFF8F LINK=#0000BD VLINK=#007C00>
+<title>Computability and Complexity - The Halting Problem</title>
+<p>
+<h3><B>The Halting Problem</b></h3>
+<p>
+Diagonalisation indicates that undecidable decision problems
+<p>
+<h3><B>exist</B>
+</h3>
+It does not help in <I>finding</I> an
+<p>
+<h3><I>explicitly defined</I>
+</h3>
+undecidable decision problem.
+<p>
+That is:
+It does not identify an undecidable decision problem whose input and output
+behaviour can be given with a <I>finite</I> description.
+<p>
+The decision problems
+<ul>
+<li>
+EVEN
+<li>
+PRIME
+<li>
+ADA_PROGRAM
+</ul>
+are explicitly defined (we can give a finite description of each problem; we
+do not have to state each individual output for each individual input: that
+would be an infinite length description)
+<p>
+But, all three of these are obviously, 
+<p>
+<h3><B>decidable</B>
+</h3>
+i.e. an algorithm (ADA program) can be written to solve them.
+<p>
+Alan Turing in 1936 exhibited the first explicit example of an undecidable decision
+problem:
+<p>
+<h3><B>The Halting Problem</B>
+</h3>
+<p>
+The Halting Problem, <i>HP</i>, is the following decision problem:
+<p>
+<B>Input:</B> An ADA program, <i>P</i>, (which takes as input a single number, <i>n</i>) and
+an input <i>w</i> for <i>P</i>.
+<p>
+<B>Output:</B> <i>1</i> if <i>P</i> comes to a halt when run with input <i>w</i>
+; <i>0</i> if <i>P</i> never
+halts when started with input <i>w</i>.
+<p>
+It may be objected that <i>HP</i> is not a decision problem in the sense that we
+have been using to date since:
+<ul>
+<li>
+It has 2 items of input instead of one.
+<li>
+One of its inputs is a `program' not a number.
+</ul>
+However we can define an <I>equivalent</I> decision problem <i>HP2</i> to which 
+such objections do not apply.
+<p>
+<i>HP2</i> takes as input a single number, <i>m</i>. This number is a <I>valid</I> input if
+<ul>
+<li>
+<i>m</i> has a binary representation of the form
+<p>
+<h3><B>x 00000000 y</B>
+</h3>
+where <B>x</B> and <B>y</B> are binary strings; 
+<li>
+<B>x</B> is the ASCII binary representation of an 
+ADA program, <i>Px</i> say,
+which takes a single number as input and returns a zero or one as output.
+</ul>
+Clearly 
+<ul>
+<li>
+The problem of checking whether an input is valid is decidable.
+<li>
+No algorithm exists for <i>HP</i> if and only if no algorithm exists for <i>HP2</i> (since we
+can translate from inputs for <i>HP</i> to inputs for <i>HP2</i> and vice-versa).
+</ul>
+(Note: the `encoding trick' described above can be applied to transform any decision
+problem with `multiple inputs' into an equivalent one with a <B>single number</B> as input).
+Given this fact we will deal with the more `natural' problem <i>HP</i> instead of the
+precisely encoded version <i>HP2</i>.
+<p>
+<h3><B>THEOREM</B>
+</h3>
+<p>
+<B>The Halting Problem</B> (<i>HP</i>) <B>is</B> <B>undecidable</B>
+<p>
+Thus there is no algorithm which solves the Halting Problem.
+<p>
+<h3><B>PROOF</B>
+</h3>
+Suppose that there <I>is</I> an ADA program, <i>HALT</i>, which solves the Halting Problem, <i>HP</i>.
+That is:
+<p>
+There is an ADA program, <i>HALT</i>, which 
+<ul>
+<li>
+Reads an ADA program, <i>P</i>, and a single number, <i>w</i>, as its input.
+<li>
+If <i>P</i> halts when given <i>w</i> as input then <i>HALT</i> returns <i>1</i>
+ as output.
+<li>
+If <i>P</i> does not halt when given <i>w</i> as input then <i>HALT</i> returns 
+<i>0</i> as output.
+</ul>
+<p>
+Since <i>HALT</i> is assumed to exist we can write an ADA program, <i>BAD</i> say, which uses
+<i>HALT</i> as a sub-procedure.
+<p>
+<pre>
+<B>procedure</B><I> BAD </I><B>is</B>
+   <I>Q</I> : <B>integer</B>;
+   <B>function</B><I> HALT (</I><I>P</I><B> integer</B>; 
+                        <I>w</I><B> integer</B>) 
+                       <B>return boolean is</B>
+      <B>if</B> <I>ADA_PROGRAM(P)</I> <B>then</B>
+       --**********************************
+       -- Halting problem program goes
+       -- here.
+       --*********************************
+      <B>end if</B>;
+  <B>end</B> <I>HALT</I>;
+  <B>begin</B>
+     <I>get (Q);</I>
+     <B>if</B> <I>HALT (Q,Q)</I> <B>then</B>
+        <B>loop</B>
+           <I>put ("NOT OK");</I>
+        <B>end loop</B>;
+     <B>else</B>
+        <I>put ("OK");</I>
+     <B>end if</B>;
+  <B>end</B> <I>BAD</I>;
+</pre>
+</ul>
+What does <i>BAD</i> do?
+<ul>
+<li>
+<i>BAD</i> reads a single number, <i>Q</i>, as input.
+<li>
+If <i>Q</i>, written in binary, corresponds to an ADA program which
+takes a single number as input then:
+<li>
+<i>BAD</i> tests whether the program represented by <i>Q</i> halts when given th
+e
+<B>number</B> <i>Q</i> as input (using the Halting Problem procedure, <i>HALT</i>, to
+perform the test).
+<li>
+If the Halting problem procedure says that <i>Q</i> halts when started with
+input <i>Q</i> then <i>BAD</i> goes into a <B>non-terminating loop</B>.
+<li>
+If the Halting problem procedure says that <i>Q</i> fails to halt when started with
+input <i>Q</i> then <i>BAD</i> prints a message and <B>stops</B>.
+<li>
+</ul>
+<p>
+<i>HP</i> (which <i>HALT</i> solves) takes an ADA program and single number as input.
+<ul>
+<li>
+The input for <i>BAD</i> should be a number which (when written in binary) is an
+ADA program which takes a single number as input.
+<li>
+<i>BAD</i> is an ADA program (since <i>HALT</i> is an ADA program).
+</ul>
+<p>
+<h3><B>THEREFORE</B>
+</h3>
+<p>
+<h3><B>There is a number, 
+</h3>
+BAD_NUMBER, 
+<p>
+which when written in binary
+corresponds exactly to the
+ASCII representation of the
+ADA program BAD</B>
+<P>
+<i>BAD_NUMBER</i> is therefore a valid input for the ADA program <i>BAD</i>.
+<p>
+<h3>What happens if <i>BAD</i> is given
+</h3>
+<i>BAD_NUMBER</i>
+<p>
+as input?
+<p>
+<h3><B>EITHER</B>
+</h3>
+<p>
+<h3><i>BAD</i> halts on input 
+</h3>
+<i>BAD_NUMBER</i>
+<p>
+<h3><B>OR</B>
+</h3>
+<p>
+<h3><i>BAD</i> does NOT halt on input
+</h3>
+<i>BAD_NUMBER</i>
+<p>
+Suppose 
+<p>
+<h3><i>BAD</i> halts on input <i>BAD_NUMBER</i>.
+</h3>
+<p>
+This can <I>only</I> happen if 
+<p>
+<h3><i>HALT( BAD_NUMBER, BAD_NUMBER )</i> 
+</h3>
+is <B>false</B>,
+<p>
+But what does this mean? It means that 
+The program corresponding to <i>BAD_NUMBER</i> does not halt on input
+<i>BAD_NUMBER</i>.
+<p>
+But `the program corresponding to <i>BAD_NUMBER</i>' is <i>BAD</i>
+i.e. 
+<p>
+<h3><i>HALT( BAD_NUMBER, BAD_NUMBER )</i> 
+</h3>
+is <B>false</B>,
+<p>
+means that 
+<p>
+<h3><i>BAD</i> does <B>NOT</B> halt on input
+</h3>
+<I>BAD_NUMBER</I>
+<p>
+On the other hand, suppose 
+<p>
+<h3><i>BAD</i> does NOT halt on input 
+</h3>
+<i>BAD_NUMBER</i>.
+<p>
+This can <I>only</I> happen if 
+<p>
+<h3><i>HALT( BAD_NUMBER, BAD_NUMBER )</i> 
+</h3>
+is <B>true</B>,
+<p>
+But what does this mean? It means that 
+<p>
+The program corresponding to <i>BAD_NUMBER</i> halts on input
+<i>BAD_NUMBER</i>.
+<p>
+But `the program corresponding to <i>BAD_NUMBER</i>' is <i>BAD</i>
+i.e. 
+<p>
+<h3><i>HALT( BAD_NUMBER, BAD_NUMBER )</i> 
+</h3>
+is <B>true</B>,
+<p>
+means that 
+<p>
+<h3><i>BAD</i> DOES halt on input <I>BAD_NUMBER</I>
+</h3>
+In summary we have shown that:
+<ul>
+<li>
+If a program to solve the Halting problem, <i>HP</i>, exists then the program, <i>BAD</i> exists.
+<li>
+<i>BAD</i> on <I>any</I> valid input either halts or does not halt.
+<li>
+<i>BAD_NUMBER</i> is a valid input for <i>BAD</i>.
+<li>
+<i>BAD</i> on input <i>BAD_NUMBER</i> fails to halt only if <i>BAD</i> on
+input <i>BAD_NUMBER</i> halts.
+<li>
+<i>BAD</i> on input <i>BAD_NUMBER</i> halts only if <i>BAD</i> on input <i>BAD_NUMBER</i>
+fails to halt.
+</ul>
+We can therefore conclude that
+<p>
+<h3><B>No program to solve the </B>
+<B>Halting Problem, </B><i>HP</i>, 
+<B>can be written</B>
+</h3>
+i.e. 
+<p>
+<h3><B>The Halting Problem </B>
+<B>is </B>
+<B>undecidable.</B>
+</h3>
+<p>
+<ul>
+<li><a href=comput.html>Overview</a>
+<li><a href=intcom.html>Introduction to Computability and Complexity</a>
+<li><a href=diag.html>Existence of unsolvable problems</a>
+<li><a href=complex.html>Computational Complexity Theory</a>
+<li><a href=npcomp.html>NP and NP-completeness</a>
+</ul>
+<p>
+<img src=../../ped3.gif>
+<a href=../../ped.html><b>PED Home Page</b></a>

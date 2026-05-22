@@ -1,0 +1,442 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="description" content="Biography of John von Neumann (1903-1957)">
+   <meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.75 [en] (WinNT; U) [Netscape]">
+   <title>Von_Neumann</title>
+</head>
+<body bgcolor="#FFFFFF" link="#0000FF" vlink="#800080">
+
+<center>
+<h1>
+<img SRC="Image1.gif" height=156 width=190><font color="#800080">Game Theory</font></h1></center>
+
+<p>&nbsp;
+<br>&nbsp;
+<br>
+<p>
+<hr>
+<center><b><font color="#008000"><font size=+2>Introduction</font></font></b>
+<p>Conflict has been a central theme throughout human history. It arises
+whenever two or more individuals, with different values, compete to try
+to control the course of events. <b><i><font color="#800080">Game theory
+</font></i></b>uses
+mathematical tools to study situations involving both conflict and cooperation.</center>
+
+<p>The <b>players </b>in a game, who may be people or organizations, choose
+from a list of options available to them - these choices are called <b>strategies.
+</b>The
+strategies chosen by the players lead to <b>outcomes</b>, which describe
+the consequences of their choices. We assume that the players have <b>preferences</b>
+for the outcomes: they like some more than others.
+<br>Game theory analyzes the <b>rational choice of strategies</b> - that
+is strategies that lead to the preferred outcomes.
+<p>Game theory has been successfully applied to areas such as the military
+choices in warfare and in international crises, resource-allocation decisions
+in political campaigns, bargaining tactics in labor-management disputes,
+gambling theory, and statistics.
+<center>
+<p>In the next section we present the short history of the subject. Then
+we present several examples of <b>two-person zero-sum games</b>, in which
+what one player wins the other player loses, so cooperation never benefits
+the players. We distinguish two different kinds of solutions to such games.
+Next we analyze some well-known games of <b>partial conflict,
+</b>in which
+the players can benefit from cooperation but may have strong incentives
+not to cooperate.
+<p><b><font color="#008000"><font size=+2>History</font></font></b></center>
+
+<p>As early as the seventeenth century, such outstanding mathematicians
+as Christiaan Huygens (1629-1695) and Gottfried W. Leibniz (1646-1716)
+proposed the creation of a discipline that would make use of the scientific
+method to study human conflict and interactions. Throughout the nineteenth
+century, several leading economists created simple mathematical examples
+to analyze particular examples of competitive situations. The first general
+mathematical theorem in this subject was proved by the distinguished mathematician
+Ernst Zermelo (1871-1956) in 1912. It stated that any finite game with
+<b>perfect
+information</b>, such as tic-tac-toe, checkers or chess, has an optimal
+solution in pure strategies, which means that no randomization or secrecy
+is necessary. A game is said to have perfect information if at each stage
+of the play, every player is aware of all past moves by himself and others
+as well as all future choices that are allowed. This theorem is an example
+of an <b>existence theorem</b>: it demonstrates that there must exist a
+best way to play such a game, but it does not provide its construction
+that is a detailed plan for playing that game.
+<p>The mathematician&nbsp; <a href="http://hypatia.math.uri.edu/~kulenm/mth381pr/GAMETH/Borel.html">Emile
+Borel</a> (1871-1956) introduced the notion of a <b>mixed</b>, or <b>randomized,
+strategy</b> when he investigated some elementary duels around 1920. John
+<a href="http://hypatia.math.uri.edu/~kulenm/mth381pr/GAMETH/von_neumann.html">von
+Neumann&nbsp;</a> proved in 1928, that every two-person, zero-sum game
+must have optimal mixed strategies and an expected value for the game.
+His result was extended to the existence of equilibrium outcomes in&nbsp;
+mixed strategies for multiperson games that are either constant-sum or
+variable-sum by <b>John F. Nash Jr</b>. (1931-), in 1951.
+<p>Modern game theory dates from the famous minimax theorem that was proven
+by <a href="http://hypatia.math.uri.edu/~kulenm/mth381pr/GAMETH/von_neumann.html">von
+Neumann.</a> He gradually expanded his work in game theory, and with co-author
+Oskar Morgenstern, he wrote the classic text <i>Theory of Games and Economic
+Behaviour</i> (1944). They introduced the first general model and solution
+concept for multiperson cooperative games, which are primarily concerned
+with coalition formation (economic, voting blocs, and military alliances)
+and the resulting distribution of gains or losses.
+<p>The Nobel Memorial Prize in Economics was awarded to three game theorists
+in 1994.The recipients were <b>John C. Harsanyi</b> (1920-&nbsp;&nbsp;&nbsp;
+) of the University of California, Berkeley, <b>John F. Nash </b>of Princeton
+University, and <b>Reinhard Selten</b> (1930-&nbsp;&nbsp;&nbsp; ) of the
+University of Bonn, Germany.
+<center>Game theory has provided important theoretical foundations in economics,
+political science especially in the study of voting, elections, and international
+relations. In addition, game theory has contributed major insights in environmental
+sciences, particularly in understanding the evolution of species and conditions
+under which animals fight each other for territory or act cooperatively.
+<br>&nbsp;
+<p>&nbsp; <font color="#008000"><font size=+2>Game Theory - The Minimax
+Theorem</font></font></center>
+
+<p>The starting point of the mathematical theory of games is the situation
+in which the outcome of the game is determined by the strategies employed
+by the players. The notion of a <b>minimax </b>point, a set of optimal
+strategies for all players in the game, is what makes this a theory and
+not a heuristic. When the payoffs for all players in a game add up to zero,
+this is called a "<b>zero-sum</b> situation". A payoff matrix is used to
+express the overall situation. The entries in the matrix are the payoffs
+to the "row player" and the "column player". A "risk-averse" decision is
+one that forsakes possible gains in order to avoid incurring unnecessary
+losses. Examples of payoff matrices will follow.
+<p>A combination of actions, in which the maximum of the row minimax equals
+the minimum of the column maxima is called an equilibrium point of the
+game. This is because by choosing these actions the two players can guarantee
+themselves a certain minimal payoff - regardless of what their opponent
+chooses to do. The equilibrium solution is "bulletproof", or stable, in
+the sense that either player can announce his choice in advance to the
+opponent, secure in the knowledge that the opponent cannot make use of
+this information to get a better payoff. An equilibrium decision point
+is often termed a <b>saddle point</b>. Such a point is often also known
+as a <b>minimax point</b>. What's important about a saddle point is that
+it represents a decision by two players that neither can improve upon by
+unilaterally departing from it.
+<center><img SRC="grid1.gif" height=252 width=572>
+<br><a href="http://hypatia.math.uri.edu/~kulenm/mth381pr/GAMETH/animsadd.gif">Click
+here for an animation of the saddle surface</a>
+<br>&nbsp;
+<p>&nbsp; <b><font color="#FF0000"><font size=+1>Saddle Point</font></font></b></center>
+
+<p>The best choice for each player is at the saddle point, which is called
+a "solution" to the game in pure strategies. The optimal choice for each
+player is to always take his/her saddle point decision, if such an option
+exists.
+<p>A game of "pure strategy" consists of three interrelated components:
+<dir>
+<dir>
+<dir>
+<dir>
+<li>
+<b><i>Players:</i></b> A game involves a minimum of two players who have
+differing interests.</li>
+
+<br>&nbsp;
+<p>&nbsp;
+<p><b><i>Actions:</i></b> At each stage of play the players choose their
+course of action from a set of possible decisions, which are not usually
+the same for each player. Often, the players must make their decisions
+without knowledge of the actions chosen by the other players. We will assume
+that each player has only a finite number of possible decisions, although
+some interesting and important games make use of decisions sets, which
+are infinite.
+<p><b><i>Payoffs: </i></b>After the decisions have been made, each player
+receives a certain payoff measured in a common unit for all players.</dir>
+</dir>
+</dir>
+</dir>
+A rule for choosing an action is termed a strategy. If the rule says to
+always take the same action it's called a <b>pure strategy</b>; otherwise
+the strategy is known as <b>mixed</b>. A game involving a sequence of choices
+by each player is called a multistage or iterated game. Games where there
+are only two players whose interests are directly opposed are termed <b>two-person,
+zero-sum games</b>.
+<p>In game theory, the way out of what we might term the "no-saddle point
+dilemma" is to invent a new notion of what we mean by rational behavior.
+Without a saddle point all bets are off, since we have then lost our notion
+of what it means to be "rational". It turns out that the way to recapture
+this kind of "immunity from disclosure" is to act in such a way that you
+don't even know yourself what you're going to do until you do it ("<b>no-knowledge</b>")!
+<p>The pivotal result in the mathematical theory of games was <a href="http://hypatia.math.uri.edu/~kulenm/mth381pr/GAMETH/von_neumann.html">John
+von Neumann's</a> Minimax Theorem in 1928. It asserts that for every two-person,
+zero-sum game there is an optimal strategy for each player. The Minimax
+Theorem says that the way to recapture rationality is to use strategies
+that randomize a player's choice over all possible actions. The value of
+the game is the optimal payoff. Von Neumann's Minimax Theorem makes the
+strong assertion that there always exists at least one mixed strategy for
+each player, such that the average payoff to each player is the same when
+he uses these strategies.
+<p><b><i><u>Minimax Theorem:</u></i> For every two-person, zero-sum game
+there exists a mixed strategy for each player such that the expected payoff
+for both is the same value V when the players use these strategies. Furthermore,
+V is the best payoff each can expect to receive from a play of the game;
+hence these mixed strategies are the optimal strategies for the two players
+to employ.</b>
+<p>"As far as I can see, there could be no theory of games… without that
+theorem… I thought there was nothing worth publishing until the 'Minimax
+Theorem' was proved," remarked von Neumann.
+<p>The Minimax Theorem expresses the idea of "rational action". A view
+of rationality we might colloquially describe as "hope for the best, prepare
+for the worst." John Nash proved a theorem that generalizes the Minimax
+Theorem to the case of nonzero-sum games involving two or more players
+when all the players are in direct competition - noncooperative games.
+<p><b><i><u>Nash's Theorem:</u></i> Any n-person, uncooperative game (zero-sum
+or nonzero-sum) for which each player has a finite number of pure strategies
+has at least one equilibrium set of strategies.</b>
+<p>There are three important aspects of this theorem: (1) it generalizes
+the Minimax Theorem in the sense that it establishes the existence of an
+equilibrium solution for both zero-sum and nonzero-sum games, (2) it shows
+that there may be more than one such solution, and (3) it extends to the
+case of any finite number of players.
+<center>The Minimax Theorem defines how to proceed rationally in what were
+previously seen as irrational situations. If nothing else, game theory
+has cut one of the major Gordian knots of philosophy: the barrier between
+rational and irrational behavior. Numerical analyst Richard W. Hamming
+said, "the purpose of game theory is insight, not solutions."
+<br>&nbsp;
+<p>&nbsp; <b><font color="#008000"><font size=+2>Games</font></font></b></center>
+
+<p><b>"<font size=+1>The Prisoner's Dilemma</font>": </b>This is a classic
+two-player nonzero-sum game, which illustrates many points of game theory.
+<p>In this game, the two players are partners in a crime who have been
+captured by the police. Each suspect is placed in a separate cell and offered
+the opportunity to confess to the crime.
+<p>We will now set up the <b>payoff matrix </b>(as discussed earlier).
+In this case, the actions of the first player form the rows and the actions
+of the second player form the columns. The entries in the matrix are two
+numbers representing the payoff to the first and second player respectively.
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=9 WIDTH="331" >
+<tr>
+<td VALIGN=TOP WIDTH="34%" HEIGHT="37">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="36%" HEIGHT="37">Not Confess</td>
+
+<td VALIGN=TOP WIDTH="29%" HEIGHT="37">Confess</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="34%">Not confess</td>
+
+<td VALIGN=TOP WIDTH="36%">5, 5</td>
+
+<td VALIGN=TOP WIDTH="29%">0, 10</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="34%">Confess</td>
+
+<td VALIGN=TOP WIDTH="36%">10, 0&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="29%">1, 1</td>
+</tr>
+</table>
+If neither suspect confesses, they go free, and split the proceeds of their
+crime, which we represent, by 5 units of payoff for each suspect. However,
+if one prisoner confesses and the other does not, the prisoner who confesses
+testifies against the other in exchange for going free and gets the entire
+10 units of payoff, while the prisoner who did not confess goes to prison
+and gets nothing. If both prisoners confess, then both are convicted but
+given a reduced term, which we represent by giving 1 unit of payoff: it's
+better than having just the other prisoner confess, but not so good as
+going free.
+<p>This game is a simple representation of a variety of important aspects
+of game theory. No matter what a suspect believes his partner is going
+to do, it is always best to confess. If the partner in the other cell is
+not confessing, it is possible to get 10 instead of 5 as a payoff. If the
+partner in the other cell <i>is</i> confessing, it is possible to get 1
+instead of 0. Yet the pursuit of individually sensible behavior results
+in each player getting only 1 as a payoff, much less than the 5 which they
+would get if neither confessed. This conflict between the pursuit of individual
+goals and the common good is at the heart of many game theoretic problems.
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i><font size=+1>"Weebles vs. Wobbles": </font></i></b>The following
+is an example of a zero-sum game and illustrates how what seems "rational
+behavior" is not always so. It is a simplified model of price competition
+as can be studied in economics.
+<p>Let us imagine two companies that sell widgets, the Weeble Co and Wobble
+Inc. Each company has a set cost of $5,000 per year, regardless of how
+many widgets they sell or if they sell any at all.
+<p>The two companies are competing for the same market and each firm must
+choose a high price ($2 per widget) or a low price ($1 per widget). Here
+are the rules of the game:
+<p>1) At a price of $2 - 5,000 widgets can be sold for a total revenue
+of $10,000. (These numbers represent the entire widget industry, both companies).
+<p>2) At a price of $1 - 10,000 widgets can be sold for a total revenue
+of $10,000.
+<p>3) If both companies charge the same price, they split the sales evenly
+between them.
+<p>4) If one company charges a higher price, the company with the lower
+price sells the whole amount and the company with the higher price sells
+nothing.
+<p>5) Payoffs are profits - revenue minus fixed cost ($5,000 as mentioned).
+<p>Here is the payoff matrix for these two companies:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Weeble Co
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=9 WIDTH="484" >
+<tr>
+<td VALIGN=TOP WIDTH="25%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="25%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="25%">Price = $1</td>
+
+<td VALIGN=TOP WIDTH="25%">Price = $2</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="25%">Wobble Inc.</td>
+
+<td VALIGN=TOP WIDTH="25%">Price = $1</td>
+
+<td VALIGN=TOP WIDTH="25%">0, 0</td>
+
+<td VALIGN=TOP WIDTH="25%">5000, -5000</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="25%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="25%">Price = $2</td>
+
+<td VALIGN=TOP WIDTH="25%">-5000, 5000</td>
+
+<td VALIGN=TOP WIDTH="25%">0, 0&nbsp;</td>
+</tr>
+</table>
+For two-person, zero-sum games, there is a clear concept of a solution.
+The solution to the game is the maximum criterion - that is, each player
+chooses the strategy that maximizes his/her/its minimum payoff. In this
+game, Weeble Inc's minimum payoff at a price of $1 is zero, and at the
+price of $2 it is -5000, so the $1 price maximizes the minimum payoff.
+The same reasoning applies to the fine people at the Wobble Co, so both
+will choose the $1 price. Here is the reasoning behind the <b>maximin</b>
+solution: Weeble Inc knows that whatever it loses, the Wobble Co gains;
+so, whatever strategy it chooses, the Wobble Co will choose the strategy
+that gives the maximum payoff for that row. Again, the Wobble Co reasons
+conversely.
+<br>&nbsp;
+<br>&nbsp;
+<p><b><i><font size=+1>"Head Over Tails": </font></i></b>This game is another
+example of a zero-sum game but, unlike the Weeble-Wobble example, does
+not lend itself to a pure strategy. Rather, its solution is a <b>mixed-strategy,</b>
+which we discussed earlier.
+<p>The two players of this game are Jack and Jill just prior to their trip
+on the hill. Each has a sack of pennies. On each turn of the game, they
+will reveal pennies simultaneously, and each player may show either a head
+(Abraham Lincoln's head, to be precise) or a tail (the Lincoln monument).
+If both show the same side, Jill wins the penny from Jack; or, if they
+show different sides, Jack wins the penny from Jill. Here is the payoff
+matrix for this game:
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Jack
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=9 WIDTH="441" >
+<tr>
+<td VALIGN=TOP WIDTH="25%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="25%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="25%">Head</td>
+
+<td VALIGN=TOP WIDTH="25%">Tail</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="25%">Jill</td>
+
+<td VALIGN=TOP WIDTH="25%">Head</td>
+
+<td VALIGN=TOP WIDTH="25%">1, -1</td>
+
+<td VALIGN=TOP WIDTH="25%">-1, 1</td>
+</tr>
+
+<tr>
+<td VALIGN=TOP WIDTH="25%">&nbsp;</td>
+
+<td VALIGN=TOP WIDTH="25%">Tail</td>
+
+<td VALIGN=TOP WIDTH="25%">-1, 1</td>
+
+<td VALIGN=TOP WIDTH="25%">1, -1</td>
+</tr>
+</table>
+If we add up the payoffs in each cell, we find 1-1=0. That's what makes
+this a <b>zero-sum</b> game.
+<p>It would at first appear that this game does not have a dominant strategy
+(or unique solution). The minimum payoff for each of the two <b>pure strategies</b>
+is the same: -1. But this is not the whole story. This game actually has
+more than two strategies. In addition to the two obvious strategies (always
+showing a head or always showing a tail), a player can "randomize" his/her
+strategy by offering either a head or a tail, at random, with specified
+probabilities. Such a randomized strategy is called a <b>mixed-strategy
+</b>and
+was explained in von Neumann's Minimax Theorem<b>.</b>
+<p>The solution for this particular game is to offer heads or tails with
+the random probability of 0.5 each way.<b> </b>Here is the reasoning: if
+Jack offers heads with any probability greater than 0.5, then Jill can
+have better than even odds of winning by offering heads with probability
+of 1 (i.e. always) and guaranteeing that more than half the time the two
+coins will match. On the other hand, if Jack offers heads with any probability
+less than 0.5, then Jill can guarantee statistical success by offering
+tails with probability 1. The only way Jack can get even odds of winning
+is to choose a randomized strategy with probability 0.5, and there is no
+way Jill can get better than even odds. The 0.5 probability maximizes the
+minimum payoff over all pure or mixed strategies (and there are an infinite
+number of mixed strategies with every probability between 0 and 0.5).
+<center>Jack and Jill will necessarily reason the same way and so both
+players will choose 0.5. This sort of game presents the unique situation,
+as discusses above, in which the opponents can announce their strategy
+in advance and suffer no ill consequences (that is, this is a "<b>no-knowledge</b>"
+strategy).
+<br>&nbsp;
+<p>&nbsp; <b><font color="#008000"><font size=+2>Parting Thoughts (and
+Links)</font></font></b></center>
+
+<p>As we've shown, Game Theory is more than just a theory <b>of</b> games.
+What it ultimately aims to do is lend insight into the behavior of people
+and groups in complex situations. What is at the heart of the games above
+is "<b>rational behavior</b>" and whether or not it can be defined as a
+certain strategy in a given situation (or game).
+<p>The assumption is that each player in a game will try to maximize his
+or her gains and minimize his or her losses. This hypothesis serves two
+purposes. First, it narrows the range of possible actions - absolutely
+rational behavior is more predictable than irrational behavior. Second,
+it provides a criterion for evaluating the efficiency of a system. If a
+given process leads to a reduction in the rewards to some people while
+not producing an equal compensating reward to other people, then the net
+production is negative and "bad". Pollution can be seen as an example of
+just such a "bad" example. Put plainly, the costs outweigh the benefits.
+<p>The examples of games we chose ran the gamut from economic to sociological
+to just plain childish. The idea that Game Theory applies to a wide range
+of subjects should be obvious: whenever there is conflict (and when isn't
+there?), Game Theory can formalize the relationships involved and the options
+available. Please see our brief synopses of some of <a href="http://hypatia.math.uri.edu/~kulenm/mth381pr/GAMETH/Applications.htm">The
+Applications of Game Theory</a> for more examples.
+<p>To learn more about Game Theory and politics, <a href="http://www.nyu.edu/projects/kaminski/gametheoryandpolitics.html">click
+here</a>.
+<br>&nbsp;
+<p>
+<hr SIZE=0 WIDTH="100%">
+<center><a href="http://hypatia.math.uri.edu/~kulenm/mth381pr/HistoryTopics.html">Return
+To Index</a></center>
+
+</body>
+</html>
